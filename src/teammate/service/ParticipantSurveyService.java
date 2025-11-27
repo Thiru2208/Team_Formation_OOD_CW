@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import teammate.service.LoggerService;
+
 
 public class ParticipantSurveyService {
 
@@ -83,7 +85,11 @@ public class ParticipantSurveyService {
     }
 
     // Survey for an EXISTING logged-in participant (p2, etc.)
-    public void runSurveyForExistingParticipant(Scanner sc, Participant p, AuthService authService) {
+    public void runSurveyForExistingParticipant(Scanner sc,
+                                                Participant p,
+                                                AuthService authService,
+                                                LoggerService logger) {
+
 
         if (p.getPersonalityType() != null &&
                 !p.getPersonalityType().equalsIgnoreCase("Not selected")) {
@@ -97,6 +103,7 @@ public class ParticipantSurveyService {
             System.out.println("Personality: " + p.getPersonalityType());
             System.out.println("Score      : " + p.getPersonalityScore());
 
+            logger.info("Survey skipped (already completed) for participant: " + p.getName());
             return;
         }
 
@@ -144,5 +151,11 @@ public class ParticipantSurveyService {
 
         // 🔹 NOW MAKE IT PERMANENT
         authService.saveAllAccountsToFile();
+        logger.info("Survey completed and saved for participant: " + p.getName() +
+                " | Game=" + game +
+                " | Role=" + role +
+                " | Score=" + personalityScore +
+                " | Type=" + personalityType);
+
     }
 }

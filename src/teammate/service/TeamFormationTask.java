@@ -1,4 +1,4 @@
-package teammate.service;
+/*package teammate.service;
 
 import teammate.model.Participant;
 import teammate.model.Team;
@@ -19,7 +19,7 @@ public class TeamFormationTask implements Runnable {
     }
 
     @Override
-    public void run() {
+    /public void run() {
         System.out.println("▶ Team formation started in thread: " +
                 Thread.currentThread().getName());
         result = builder.buildTeams(participants, teamSize);
@@ -31,3 +31,4 @@ public class TeamFormationTask implements Runnable {
         return result;
     }
 }
+*/

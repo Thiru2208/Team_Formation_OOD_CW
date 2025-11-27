@@ -29,6 +29,7 @@ public class Main {
         LoggerService logger = new LoggerService();
         ParticipantSurveyService surveyService = new ParticipantSurveyService();
 
+        logger.info("Application started");
         System.out.println("==== TeamMate: Intelligent Team Formation System ====\n");
 
         boolean running = true;
@@ -44,7 +45,10 @@ public class Main {
             switch (choice) {
                 case "1":
                     if (authService.organizerLogin(sc)) {
-                        organizerMenu(sc, csvHandler, teamBuilder);
+                        logger.info("Organizer logged in");
+                        organizerMenu(sc, csvHandler, teamBuilder, logger); // pass logger
+                    } else {
+                        logger.info("Organizer login failed");
                     }
                     break;
 
@@ -52,8 +56,10 @@ public class Main {
                     Participant newP = authService.participantSignup(sc);
                     if (newP != null) {
                         participants.add(newP);
+                        logger.info("New participant signed up and added to system: " + newP.getName());
                         System.out.println("✅ New participant added to system: " + newP.getName());
                     } else {
+                        logger.info("Participant signup failed");
                         System.out.println("⚠ Signup failed.");
                     }
                     break;
@@ -62,12 +68,16 @@ public class Main {
                 case "3": {
                     Participant logged = authService.participantLogin(sc);
                     if (logged != null) {
-                        participantMenu(sc, surveyService, authService, logged);
+                        logger.info("Participant logged in: " + logged.getName());
+                        participantMenu(sc, surveyService, logged, logger, authService);
+                    } else {
+                        logger.info("Participant login failed");
                     }
                     break;
                 }
 
                 case "4":
+                    logger.info("Application exiting");
                     running = false;
                     System.out.println("Exiting system...");
                     break;
@@ -81,7 +91,9 @@ public class Main {
     // ================= ORGANIZER MENU ===================
     private static void organizerMenu(Scanner sc,
                                       CSVHandler csvHandler,
-                                      TeamBuilder teamBuilder) {
+                                      TeamBuilder teamBuilder,
+                                      LoggerService logger) {
+
 
         boolean back = false;
         while (!back) {
@@ -100,13 +112,15 @@ public class Main {
                 case "1": {
                     System.out.print("Enter CSV path: ");
                     String path = sc.nextLine().trim();
-                    ArrayList<Participant> loaded = csvHandler.loadParticipants(path);
+                    ArrayList<Participant> loaded = csvHandler.loadParticipants(path, logger);
                     if (!loaded.isEmpty()) {
-                        // 👉 Merge with existing (keep sign-ups also)
                         participants.addAll(loaded);
+                        logger.info("Organizer loaded " + loaded.size() + " participants from CSV: " + path);
+                        // 👉 Merge with existing (keep sign-ups also)
                         System.out.println("✅ Loaded " + loaded.size()
                                 + " participants. Total now: " + participants.size());
                     } else {
+                        logger.info("Organizer attempted to load participants but file was empty/invalid: " + path);
                         System.out.println("⚠ No valid participants loaded.");
                     }
                     break;
@@ -118,7 +132,8 @@ public class Main {
                         break;
                     }
                     int teamSize = askTeamSize(sc, participants.size());
-                    teams = teamBuilder.buildTeams(participants, teamSize);
+                    teams = teamBuilder.buildTeams(participants, teamSize, logger);
+                    logger.info("Teams formed: " + teams.size() + " with team size " + teamSize);
                     System.out.println("✅ Teams formed: " + teams.size());
                     break;
 
@@ -131,16 +146,17 @@ public class Main {
                         System.out.println("⚠ No teams to export.");
                         break;
                     }
-                    String outPath = csvHandler.saveTeamsAuto(teams);
+                    String outPath = csvHandler.saveTeamsAuto(teams, logger);
+                    logger.info("Teams exported to CSV: " + outPath);
                     System.out.println("📁 Exported to: " + outPath);
                     break;
 
                 case "5":
-                    updateParticipantByNumber(sc);
+                    updateParticipantByNumber(sc, logger);
                     break;
 
                 case "6":
-                    deleteParticipantByNumber(sc);
+                    deleteParticipantByNumber(sc, logger);
                     break;
 
                 case "7":
@@ -205,7 +221,8 @@ public class Main {
         }
     }
 
-    private static void updateParticipantByNumber(Scanner sc) {
+    private static void updateParticipantByNumber(Scanner sc, LoggerService logger) {
+
         if (participants.isEmpty()) {
             System.out.println("No participants loaded.");
             return;
@@ -250,9 +267,10 @@ public class Main {
             } catch (NumberFormatException ignore) {}
         }
         System.out.println("✅ Participant updated.");
+        logger.info("Participant updated: " + target.getName());
     }
 
-    private static void deleteParticipantByNumber(Scanner sc) {
+    private static void deleteParticipantByNumber(Scanner sc, LoggerService logger) {
         if (participants.isEmpty()) {
             System.out.println("No participants loaded.");
             return;
@@ -273,13 +291,15 @@ public class Main {
         }
         Participant removed = participants.remove(delIndex - 1);
         System.out.println("✅ Deleted: " + removed.getName());
+        logger.info("Participant deleted: " + removed.getName());
     }
 
     // ================= PARTICIPANT MENU ===================
     private static void participantMenu(Scanner sc,
                                         ParticipantSurveyService surveyService,
-                                        AuthService authService,
-                                        Participant account) {
+                                        Participant account,
+                                        LoggerService logger,
+                                        AuthService authService) {
 
         boolean back = false;
         while (!back) {
@@ -292,13 +312,12 @@ public class Main {
 
             switch (ch) {
                 case "1": {
-                    // ensure this account is inside global participants list
                     if (!participants.contains(account)) {
                         participants.add(account);
                     }
 
-                    // this will ask survey only first time, then reuse
-                    surveyService.runSurveyForExistingParticipant(sc, account, authService);
+                    surveyService.runSurveyForExistingParticipant(sc, account, authService, logger);
+                    logger.info("Survey accessed by participant: " + account.getName());
                     break;
                 }
 

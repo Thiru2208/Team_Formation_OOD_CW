@@ -11,14 +11,20 @@ public class LoggerService {
 
     private static final String LOG_DIR = "src/teammate/Log/";
 
-    // log file changes every hour
+    // info log file: one per hour
     private static final DateTimeFormatter FILE_FORMAT =
             DateTimeFormatter.ofPattern("yyyy-MM-dd_HH");
 
+    // timestamp inside log
     private static final DateTimeFormatter TIME_FORMAT =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    // Ensure folder exists
+    // single error log file
+    private static final String ERROR_FILE = "error.log";
+
+    // -------- Singleton --------
+    private static final LoggerService INSTANCE = new LoggerService();
+
     public LoggerService() {
         File dir = new File(LOG_DIR);
         if (!dir.exists()) {
@@ -26,22 +32,48 @@ public class LoggerService {
         }
     }
 
-    // Log a message
-    public void log(String message) {
-        try {
-            LocalDateTime now = LocalDateTime.now();
+    public static LoggerService getInstance() {
+        return INSTANCE;
+    }
 
-            // File name based on hour
-            String fileName = "log_" + now.format(FILE_FORMAT) + ".log";
-            File file = new File(LOG_DIR + fileName);
+    // -------- Public APIs --------
+    public void info(String message) {
+        writeInfo(message);
+    }
 
-            try (PrintWriter pw = new PrintWriter(new FileWriter(file, true))) {
-                String timestamp = now.format(TIME_FORMAT);
-                pw.println("[" + timestamp + "] " + message);
-            }
+    public void error(String message) {
+        writeError(message, null);
+    }
 
+    public void error(String message, Throwable t) {
+        writeError(message, t);
+    }
+
+    // -------- Internal writers --------
+    private synchronized void writeInfo(String message) {
+        LocalDateTime now = LocalDateTime.now();
+        String fileName = "log_" + now.format(FILE_FORMAT) + ".log";
+        File file = new File(LOG_DIR + fileName);
+
+        try (PrintWriter pw = new PrintWriter(new FileWriter(file, true))) {
+            pw.println("[" + now.format(TIME_FORMAT) + "] " + message);
         } catch (IOException e) {
-            System.out.println("Logging failed: " + e.getMessage());
+            // last fallback – don't crash app
+            e.printStackTrace();
+        }
+    }
+
+    private synchronized void writeError(String message, Throwable t) {
+        LocalDateTime now = LocalDateTime.now();
+        File file = new File(LOG_DIR + ERROR_FILE);
+
+        try (PrintWriter pw = new PrintWriter(new FileWriter(file, true))) {
+            pw.println("[" + now.format(TIME_FORMAT) + "] ERROR: " + message);
+            if (t != null) {
+                t.printStackTrace(pw);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

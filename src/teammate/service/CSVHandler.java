@@ -2,6 +2,7 @@ package teammate.service;
 
 import teammate.model.Participant;
 import teammate.model.Team;
+import teammate.service.LoggerService;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,7 +23,7 @@ public class CSVHandler {
      *
      * ID,Name,Email,PreferredGame,SkillLevel,PreferredRole,PersonalityScore,PersonalityType
      */
-    public ArrayList<Participant> loadParticipants(String filePath) {
+    public ArrayList<Participant> loadParticipants(String filePath, LoggerService logger) {
 
         ArrayList<Participant> participants = new ArrayList<>();
         File file = new File(filePath);
@@ -30,12 +31,14 @@ public class CSVHandler {
         // ----------- 1. Validate File Existence -----------
         if (!file.exists() || !file.isFile()) {
             System.out.println("Error: File not found: " + filePath);
+            logger.error("CSV load failed – file not found: " + filePath);
             return participants;
         }
 
         // ----------- 2. Validate Extension -----------
         if (!filePath.toLowerCase().endsWith(".csv")) {
             System.out.println("Error: File is not a .csv file.");
+            logger.error("CSV load failed – not a CSV: " + filePath);
             return participants;
         }
 
@@ -43,8 +46,10 @@ public class CSVHandler {
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
 
             String line = br.readLine(); // Header
+
             if (line == null) {
                 System.out.println("Error: CSV file is empty.");
+                logger.error("CSV load failed – empty file: " + filePath);
                 return participants;
             }
 
@@ -70,6 +75,7 @@ public class CSVHandler {
 
                 if (data.length < 8) {
                     System.out.println("Warning: Line " + lineNo + " missing columns. Skipping.");
+                    logger.info("CSV load warning: line " + lineNo + " missing columns in " + filePath);
                     continue;
                 }
 
@@ -89,6 +95,8 @@ public class CSVHandler {
                 } catch (NumberFormatException ex) {
                     System.out.println("Warning: Invalid skill value on line " +
                             lineNo + " (" + skillStr + "). Skipping.");
+                    logger.info("CSV load warning: invalid skill '" + skillStr +
+                            "' on line " + lineNo + " in file " + filePath);
                     continue;
                 }
 
@@ -116,8 +124,11 @@ public class CSVHandler {
         // ----------- SUMMARY -----------
         if (participants.isEmpty()) {
             System.out.println("No valid participants found.");
+            logger.info("CSV load finished with 0 valid participants from " + filePath);
         } else {
             System.out.println("Loaded " + participants.size() + " participants successfully.");
+            logger.info("CSV load finished with " + participants.size() +
+                    " participants from " + filePath);
         }
 
         return participants;
@@ -130,7 +141,7 @@ public class CSVHandler {
      * @param teams list of teams
      * @return full path of the created file
      */
-    public String saveTeamsAuto(List<Team> teams) {
+    public String saveTeamsAuto(List<Team> teams, LoggerService logger) {
         try {
             File folder = new File("src/teammate/TeamMembers");
             if (!folder.exists()) folder.mkdirs();
@@ -163,11 +174,16 @@ public class CSVHandler {
 
             }
 
+            logger.info("Teams saved to CSV: " + output.getPath() +
+                    " (teams=" + teams.size() + ")");
             return output.getPath();
 
+
         } catch (Exception e) {
+            logger.error("Error saving teams to CSV", e);
             System.out.println("Error saving teams: " + e.getMessage());
             return null;
         }
+
     }
 }

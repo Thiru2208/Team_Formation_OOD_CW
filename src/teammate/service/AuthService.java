@@ -1,6 +1,7 @@
 package teammate.service;
 
 import teammate.model.Participant;
+import teammate.service.LoggerService;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -13,6 +14,7 @@ public class AuthService {
 
     private static final String ACCOUNTS_FILE =
             "src/teammate/auth/participant_accounts.csv";
+    private final LoggerService logger = LoggerService.getInstance();
 
     // username (lowercase) -> plain password
     private final Map<String, String> participantCredentials = new HashMap<>();
@@ -37,9 +39,11 @@ public class AuthService {
         String pass = sc.nextLine().trim();
 
         if (user.equals("organizer") && pass.equals("org123")) {
+            logger.info("Organizer login success for username=" + user);
             System.out.println("✅ Organizer login successful.\n");
             return true;
         } else {
+            logger.info("Organizer login FAILED for username=" + user);
             System.out.println("❌ Invalid organizer credentials.\n");
             return false;
         }
@@ -121,8 +125,10 @@ public class AuthService {
 
         // increase ID counter for next signup
         nextGeneratedNumericId++;
-
-        System.out.println("✅ Signup successful. You can now log in.\n");
+        logger.info("Participant signup success: username=" + username +
+                ", id=" + id + ", email=" + email);
+        System.out.println("✅ Signup successful. You can now log in. username=" + username +
+                ", id=" + id + ", email=" + email);
         return p;
     }
 
@@ -138,11 +144,14 @@ public class AuthService {
         String stored = participantCredentials.get(key); // loaded from file (decrypted)
 
         if (stored == null || !stored.equals(password)) {
+            logger.info("Participant login FAILED for username=" + username);
             System.out.println("❌ Invalid username or password.\n");
             return null;
         }
 
+        logger.info("Participant login success: username=" + username);
         System.out.println("✅ Login success. Welcome " + username + "!\n");
+
 
         Participant profile = participantProfiles.get(key);
         if (profile == null) {
@@ -265,8 +274,10 @@ public class AuthService {
             System.out.println("Next generated ID will be: P" + nextGeneratedNumericId);
 
         } catch (IOException e) {
+            logger.error("Error loading participant accounts from file: " + ACCOUNTS_FILE, e);
             System.out.println("Error loading participant accounts: " + e.getMessage());
         }
+
     }
 
     // used when signing up a new user (append one row)
@@ -302,6 +313,7 @@ public class AuthService {
                         role + "," + personalityScore + "," + personalityType);
             }
         } catch (IOException e) {
+            logger.error("Error saving single account to file: " + ACCOUNTS_FILE, e);
             System.out.println("Error saving account to file: " + e.getMessage());
         }
     }
@@ -352,9 +364,11 @@ public class AuthService {
                 }
             }
 
+            logger.info("All participant accounts saved to file (with IDs and survey data).");
             System.out.println("All participant accounts saved to file (with IDs and survey data).");
 
         } catch (IOException e) {
+            logger.error("Error saving all accounts to file: " + ACCOUNTS_FILE, e);
             System.out.println("Error saving all accounts: " + e.getMessage());
         }
     }

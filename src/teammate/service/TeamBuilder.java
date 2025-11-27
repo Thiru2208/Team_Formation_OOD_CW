@@ -2,6 +2,7 @@ package teammate.service;
 
 import teammate.model.Participant;
 import teammate.model.Team;
+import teammate.service.LoggerService;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,13 +10,19 @@ import java.util.List;
 
 public class TeamBuilder {
 
-    public ArrayList<Team> buildTeams(ArrayList<Participant> participants, int teamSize) {
+    public ArrayList<Team> buildTeams(ArrayList<Participant> participants,
+                                      int teamSize,
+                                      LoggerService logger) {
 
         ArrayList<Team> teams = new ArrayList<>();
 
         if (participants == null || participants.isEmpty()) {
+            logger.info("TeamBuilder: no participants available to build teams.");
             return teams;
         }
+
+        logger.info("TeamBuilder: building teams. participants=" + participants.size() +
+                ", teamSize=" + teamSize);
 
         // ----- how many teams? -----
         int teamCount = (int) Math.ceil((double) participants.size() / teamSize);
@@ -123,8 +130,13 @@ public class TeamBuilder {
                 }
             }
         }
+        logger.info("TeamBuilder split: Leaders=" + leaders.size() +
+                ", Thinkers=" + thinkers.size() +
+                ", Balanced=" + balanced.size());
 
+        logger.info("TeamBuilder: created " + teams.size() + " teams.");
         return teams;
+
     }
 
     // helper: count people of a personality type inside one team
