@@ -11,14 +11,18 @@ import java.util.Scanner;
 
 public class AuthService {
 
-    // You can keep this path or change to "data/participant_accounts.csv"
     private static final String ACCOUNTS_FILE =
             "src/teammate/auth/participant_accounts.csv";
 
-    // username -> plain password (in memory)
+    // username (lowercase) -> plain password
     private final Map<String, String> participantCredentials = new HashMap<>();
-    // username -> Participant profile
+    // username (lowercase) -> Participant profile
     private final Map<String, Participant> participantProfiles = new HashMap<>();
+    // username (lowercase) -> generated ID (P101, P102, ...)
+    private final Map<String, String> participantIds = new HashMap<>();
+
+    // next numeric ID to generate (101 => P101)
+    private int nextGeneratedNumericId = 101;
 
     public AuthService() {
         loadParticipantAccounts();
@@ -32,7 +36,6 @@ public class AuthService {
         System.out.print("Password: ");
         String pass = sc.nextLine().trim();
 
-        // hard-coded organizer account
         if (user.equals("organizer") && pass.equals("org123")) {
             System.out.println("✅ Organizer login successful.\n");
             return true;
@@ -64,7 +67,7 @@ public class AuthService {
             break;
         }
 
-        // 2) Password + confirm (4 chars, letters + digits only)
+        // 2) Password + confirm (4 chars, letters & digits only)
         String password;
         while (true) {
             System.out.print("Choose a 4-character password (letters & digits only): ");
@@ -85,23 +88,39 @@ public class AuthService {
             break;
         }
 
-        // 3) Full name
-        System.out.print("Name: ");
-        String name = sc.nextLine().trim();
-        if (name.isEmpty()) {
-            name = username; // fallback
-        }
+        // 3) Auto-generate ID, Name, Email in signup order
+        int currentIdNumber = nextGeneratedNumericId;       // e.g. 101 for first signup
+        String id        = "P" + currentIdNumber;           // P101
+        String fullName  = "Participant_" + currentIdNumber; // Participant_101
+        String email     = "user" + currentIdNumber + "@university.edu"; // user101@...
+
+        System.out.println("\nYour system details:");
+        System.out.println("ID       : " + id);
+        System.out.println("Name     : " + fullName);
+        System.out.println("Email    : " + email);
+        System.out.println("(These will be used for team formation.)\n");
 
         String key = username.toLowerCase();
 
-        // save in memory (plain in RAM, encrypted only in file)
+        // save password in memory
         participantCredentials.put(key, password);
-        Participant p = new Participant(name, "Not selected",
-                "Not selected", 0, "Not selected");
-        participantProfiles.put(key, p);
 
-        // append to file with ENCRYPTED password
-        appendAccountToFile(username, password, name);
+        // create participant profile with default survey data
+        Participant p = new Participant(fullName, email,
+                "Not selected", 0, "Not selected");
+        p.setPersonalityType("Not selected");
+        p.setPersonalityScore(0);
+
+        participantProfiles.put(key, p);
+        participantIds.put(key, id);
+
+        // append this account to file (with all columns)
+        appendAccountToFile(username, password, id, fullName, email,
+                p.getPreferredGame(), p.getSkillLevel(), p.getRole(),
+                p.getPersonalityScore(), p.getPersonalityType());
+
+        // increase ID counter for next signup
+        nextGeneratedNumericId++;
 
         System.out.println("✅ Signup successful. You can now log in.\n");
         return p;
@@ -127,9 +146,12 @@ public class AuthService {
 
         Participant profile = participantProfiles.get(key);
         if (profile == null) {
-            // fallback: in case account existed in file but not in map (edge case)
-            profile = new Participant(username, username + "@example.com",
+            // fallback – should not normally happen if file is consistent
+            profile = new Participant(username,
+                    username + "@example.com",
                     "Not selected", 0, "Not selected");
+            profile.setPersonalityType("Not selected");
+            profile.setPersonalityScore(0);
             participantProfiles.put(key, profile);
         }
         return profile;
@@ -144,6 +166,7 @@ public class AuthService {
         }
 
         int loadedCount = 0;
+        int maxNumericIdFound = 100; // so first new becomes 101
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line = br.readLine(); // maybe header
@@ -151,20 +174,51 @@ public class AuthService {
                 // remove BOM if present
                 line = line.replace("\uFEFF", "");
             }
-            if (line != null && line.startsWith("username,")) {
+            if (line != null && line.toLowerCase().startsWith("username,")) {
                 // header line, read next
                 line = br.readLine();
             }
 
             while (line != null) {
-                // IMPORTANT: keep empty last column
+                // keep empty last columns
                 String[] parts = line.split(",", -1);
 
-                if (parts.length >= 4) {
+                // expecting:
+                // 0=username,1=password,2=ID,3=fullName,4=email,
+                // 5=preferredGame,6=skillLevel,7=role,8=personalityScore,9=personalityType
+                if (parts.length >= 5) {
                     String username          = parts[0].trim();
                     String encryptedPassword = parts[1].trim();
-                    String fullName          = parts[2].trim();
-                    String email             = parts[3].trim();
+                    String id                = parts[2].trim();
+                    String fullName          = parts[3].trim();
+                    String email             = parts[4].trim();
+
+                    String preferredGame     = "Not selected";
+                    int    skillLevel        = 0;
+                    String role              = "Not selected";
+                    int    personalityScore  = 0;
+                    String personalityType   = "Not selected";
+
+                    if (parts.length >= 10) {
+                        if (!parts[5].trim().isEmpty())
+                            preferredGame = parts[5].trim();
+
+                        if (!parts[6].trim().isEmpty()) {
+                            try { skillLevel = Integer.parseInt(parts[6].trim()); }
+                            catch (NumberFormatException ignored) {}
+                        }
+
+                        if (!parts[7].trim().isEmpty())
+                            role = parts[7].trim();
+
+                        if (!parts[8].trim().isEmpty()) {
+                            try { personalityScore = Integer.parseInt(parts[8].trim()); }
+                            catch (NumberFormatException ignored) {}
+                        }
+
+                        if (!parts[9].trim().isEmpty())
+                            personalityType = parts[9].trim();
+                    }
 
                     String key = username.toLowerCase();
 
@@ -178,26 +232,54 @@ public class AuthService {
                     Participant p = new Participant(
                             fullName,
                             email.isEmpty() ? (username + "@example.com") : email,
-                            "Not selected",
-                            0,
-                            "Not selected"
+                            preferredGame,
+                            skillLevel,
+                            role
                     );
+                    p.setPersonalityScore(personalityScore);
+                    p.setPersonalityType(personalityType);
+
                     participantProfiles.put(key, p);
+                    participantIds.put(key, id);
+
+                    // track max ID number, if in format P###
+                    if (id != null && id.startsWith("P")) {
+                        try {
+                            int numeric = Integer.parseInt(id.substring(1));
+                            if (numeric > maxNumericIdFound) {
+                                maxNumericIdFound = numeric;
+                            }
+                        } catch (NumberFormatException ignored) {}
+                    }
+
                     loadedCount++;
                 }
 
                 line = br.readLine();
             }
 
+            // next ID to assign
+            nextGeneratedNumericId = maxNumericIdFound + 1;
+
             System.out.println("Loaded " + loadedCount + " participant accounts from file.");
+            System.out.println("Next generated ID will be: P" + nextGeneratedNumericId);
+
         } catch (IOException e) {
             System.out.println("Error loading participant accounts: " + e.getMessage());
         }
     }
 
+    // used when signing up a new user (append one row)
     private void appendAccountToFile(String username,
                                      String plainPassword,
-                                     String fullName) {
+                                     String id,
+                                     String fullName,
+                                     String email,
+                                     String preferredGame,
+                                     int skillLevel,
+                                     String role,
+                                     int personalityScore,
+                                     String personalityType) {
         try {
             File file = new File(ACCOUNTS_FILE);
             File parent = file.getParentFile();
@@ -209,17 +291,71 @@ public class AuthService {
 
             try (PrintWriter pw = new PrintWriter(new FileWriter(file, true))) {
                 if (newFile) {
-                    pw.println("username,password,fullName,email");
+                    pw.println("username,password,ID,fullName,email,preferredGame,skillLevel,role,personalityScore,personalityType");
                 }
 
-                // 🔐 encrypt before writing
                 String encrypted = encryptPassword(plainPassword);
 
-                // you can add email later; for now keep it empty
-                pw.println(username + "," + encrypted + "," + fullName + ",");
+                pw.println(username + "," + encrypted + "," + id + "," +
+                        fullName + "," + email + "," +
+                        preferredGame + "," + skillLevel + "," +
+                        role + "," + personalityScore + "," + personalityType);
             }
         } catch (IOException e) {
             System.out.println("Error saving account to file: " + e.getMessage());
+        }
+    }
+
+    // 🔹 called after survey updates so everything (including survey) is saved permanently
+    public void saveAllAccountsToFile() {
+        try {
+            File file = new File(ACCOUNTS_FILE);
+            File parent = file.getParentFile();
+            if (parent != null && !parent.exists()) {
+                parent.mkdirs();
+            }
+
+            try (PrintWriter pw = new PrintWriter(new FileWriter(file))) {
+                pw.println("username,password,ID,fullName,email,preferredGame,skillLevel,role,personalityScore,personalityType");
+
+                for (Map.Entry<String, String> entry : participantCredentials.entrySet()) {
+                    String keyUsernameLower = entry.getKey();      // stored in lower case
+                    String plainPassword    = entry.getValue();
+                    String encrypted        = encryptPassword(plainPassword);
+
+                    Participant p = participantProfiles.get(keyUsernameLower);
+                    String id = participantIds.getOrDefault(keyUsernameLower, "P000");
+
+                    String fullName = (p != null && p.getName() != null && !p.getName().isEmpty())
+                            ? p.getName() : keyUsernameLower;
+
+                    String email = (p != null && p.getEmail() != null && !p.getEmail().isEmpty())
+                            ? p.getEmail() : (keyUsernameLower + "@example.com");
+
+                    String preferredGame = (p != null && p.getPreferredGame() != null)
+                            ? p.getPreferredGame() : "Not selected";
+
+                    int skillLevel = (p != null) ? p.getSkillLevel() : 0;
+
+                    String role = (p != null && p.getRole() != null)
+                            ? p.getRole() : "Not selected";
+
+                    int personalityScore = (p != null) ? p.getPersonalityScore() : 0;
+
+                    String personalityType = (p != null && p.getPersonalityType() != null)
+                            ? p.getPersonalityType() : "Not selected";
+
+                    pw.println(keyUsernameLower + "," + encrypted + "," + id + "," +
+                            fullName + "," + email + "," +
+                            preferredGame + "," + skillLevel + "," +
+                            role + "," + personalityScore + "," + personalityType);
+                }
+            }
+
+            System.out.println("All participant accounts saved to file (with IDs and survey data).");
+
+        } catch (IOException e) {
+            System.out.println("Error saving all accounts: " + e.getMessage());
         }
     }
 
@@ -228,11 +364,10 @@ public class AuthService {
     // Password must be exactly 4 chars, letters & digits only
     private boolean isValidPassword(String password) {
         if (password == null) return false;
-        // regex: 4 chars, each [A-Za-z0-9]
         return password.matches("[A-Za-z0-9]{4}");
     }
 
-    // Simple "encryption" using Base64 (for coursework only, not real security)
+    // Simple Base64 "encryption" for coursework
     private String encryptPassword(String raw) {
         return Base64.getEncoder()
                 .encodeToString(raw.getBytes(StandardCharsets.UTF_8));
@@ -243,7 +378,6 @@ public class AuthService {
             byte[] decoded = Base64.getDecoder().decode(encoded);
             return new String(decoded, StandardCharsets.UTF_8);
         } catch (IllegalArgumentException e) {
-            // if corrupted file, avoid crash
             return "";
         }
     }

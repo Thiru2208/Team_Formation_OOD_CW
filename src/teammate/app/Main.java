@@ -26,6 +26,7 @@ public class Main {
         CSVHandler csvHandler = new CSVHandler();
         TeamBuilder teamBuilder = new TeamBuilder();
         AuthService authService = new AuthService();
+        LoggerService logger = new LoggerService();
         ParticipantSurveyService surveyService = new ParticipantSurveyService();
 
         System.out.println("==== TeamMate: Intelligent Team Formation System ====\n");
@@ -61,7 +62,7 @@ public class Main {
                 case "3": {
                     Participant logged = authService.participantLogin(sc);
                     if (logged != null) {
-                        participantMenu(sc, surveyService, logged);
+                        participantMenu(sc, surveyService, authService, logged);
                     }
                     break;
                 }
@@ -277,6 +278,7 @@ public class Main {
     // ================= PARTICIPANT MENU ===================
     private static void participantMenu(Scanner sc,
                                         ParticipantSurveyService surveyService,
+                                        AuthService authService,
                                         Participant account) {
 
         boolean back = false;
@@ -290,34 +292,15 @@ public class Main {
 
             switch (ch) {
                 case "1": {
-                    System.out.println("\n--- Complete Survey ---");
-
-                    // 1) fill survey for THIS account (no new P101)
-                    surveyService.runSurveyForExistingParticipant(sc, account);
-
-                    // 2) make sure this account is in the global participants list
-                    boolean found = false;
-                    for (Participant p : participants) {
-                        // match by email if set, otherwise by name
-                        if (p.getEmail() != null && account.getEmail() != null &&
-                                p.getEmail().equalsIgnoreCase(account.getEmail())) {
-                            found = true;
-                            break;
-                        }
-                        if (p.getName().equalsIgnoreCase(account.getName())) {
-                            found = true;
-                            break;
-                        }
-                    }
-                    if (!found) {
+                    // ensure this account is inside global participants list
+                    if (!participants.contains(account)) {
                         participants.add(account);
-                        System.out.println("✅ You have been added to the participant list.");
                     }
 
-                    System.out.println("✅ Survey completed and your profile is saved.");
+                    // this will ask survey only first time, then reuse
+                    surveyService.runSurveyForExistingParticipant(sc, account, authService);
                     break;
                 }
-
 
                 case "2": {
                     Team myTeam = null;
