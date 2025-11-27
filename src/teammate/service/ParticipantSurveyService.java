@@ -35,23 +35,15 @@ public class ParticipantSurveyService {
     public List<Participant> collectNewParticipants(Scanner sc, int existingCount) {
         List<Participant> newParticipants = new ArrayList<>();
 
-        System.out.print("\nHow many NEW participants do you want to add? ");
-        String countStr = sc.nextLine().trim();
-        int count;
-        try {
-            count = Integer.parseInt(countStr);
-        } catch (NumberFormatException e) {
-            System.out.println("Not a number. Skipping adding new participants.");
-            return newParticipants;
-        }
+        int count = 101;
 
-        for (int i = 0; i < count; i++) {
-            int index = existingCount + i + 1; // e.g., after 100 → new = 101
+        for (int i = 100; i < count; i++) {
+            int index = i + 1;
 
-            System.out.println("\n--- New Participant " + index + " Survey ---");
+            System.out.println("\n--- New Participant Survey ---");
 
             // Auto-generate ID/Name/Email using same style
-            String id = String.format("P%03d", index);
+            String id = "P" + index;
             String name = "Participant_" + index;
             String email = "user" + index + "@university.edu";
 
@@ -100,7 +92,7 @@ public class ParticipantSurveyService {
 
         // Save new participants in a temporary CSV (not permanent main file)
         if (!newParticipants.isEmpty()) {
-            saveTemporaryParticipants(newParticipants);
+            saveTemporaryParticipants(newParticipants, existingCount);
         }
 
         return newParticipants;
@@ -112,7 +104,7 @@ public class ParticipantSurveyService {
      * Format:
      *   ID,Name,Email,PreferredGame,SkillLevel,PreferredRole
      */
-    private void saveTemporaryParticipants(List<Participant> participants) {
+    private void saveTemporaryParticipants(List<Participant> participants, int existingCount) {
         try {
             String dirPath = "src/teammate/TempParticipants";
             File dir = new File(dirPath);
@@ -127,19 +119,17 @@ public class ParticipantSurveyService {
             try (PrintWriter pw = new PrintWriter(new FileWriter(file))) {
                 pw.println("ID,Name,Email,PreferredGame,SkillLevel,PreferredRole");
 
-                int index = 1;
+                int index = existingCount + 1;   // 👉 start from 101 if existingCount = 100
                 for (Participant p : participants) {
-                    // Reconstruct ID/Name/Email based on index if needed
                     String id = String.format("P%03d", index);
-                    String name = p.getName();
-                    String email = p.getEmail();
 
                     pw.println(id + "," +
-                            name + "," +
-                            email + "," +
+                            p.getName() + "," +
+                            p.getEmail() + "," +
                             p.getPreferredGame() + "," +
                             p.getSkillLevel() + "," +
                             p.getRole());
+
                     index++;
                 }
             }
@@ -204,5 +194,62 @@ public class ParticipantSurveyService {
 
         return "Balanced";
     }
+
+    // Survey for an EXISTING logged-in participant (p2, etc.)
+    public void runSurveyForExistingParticipant(Scanner sc, Participant p) {
+
+        System.out.println("\n--- Survey for " + p.getName() + " ---");
+
+        // optional: if email empty, ask once
+        if (p.getEmail() == null || p.getEmail().trim().isEmpty()
+                || p.getEmail().equalsIgnoreCase("Not selected")) {
+            System.out.print("Enter your email (used to find your team later): ");
+            String email = sc.nextLine().trim();
+            if (!email.isEmpty()) {
+                p.setEmail(email);
+            }
+        }
+
+        // Preferred game
+        String game = chooseFromOptions(sc, "Select Preferred Game:", GAME_OPTIONS);
+
+        // Skill
+        int skillLevel = askIntInRange(sc,
+                "Enter Skill Level (1–10): ", 1, 10);
+
+        // Role
+        String role = chooseFromOptions(sc, "Select Preferred Role:", ROLE_OPTIONS);
+
+        // Questions Q1–Q5
+        int[] answers = new int[5];
+        for (int q = 0; q < QUESTIONS.length; q++) {
+            System.out.println(QUESTIONS[q]);
+            answers[q] = askIntInRange(sc,
+                    "Rate 1 (Strongly Disagree) to 5 (Strongly Agree): ", 1, 5);
+        }
+
+        int q1 = answers[0];
+        int q2 = answers[1];
+        int q3 = answers[2];
+        int q4 = answers[3];
+        int q5 = answers[4];
+
+        int totalScore = q1 + q2 + q3 + q4 + q5;
+        int personalityScore = totalScore * 4;
+        String personalityType = calculatePersonality(q1, q2, q3, q4, q5);
+
+        // update participant object
+        p.setPreferredGame(game);
+        p.setSkillLevel(skillLevel);
+        p.setRole(role);
+        p.setPersonalityScore(personalityScore);
+        p.setPersonalityType(personalityType);
+
+        System.out.println("Updated profile: " + p.getName()
+                + " | " + game + " | Skill " + skillLevel
+                + " | Role " + role
+                + " | Type " + personalityType);
+    }
+
 
 }

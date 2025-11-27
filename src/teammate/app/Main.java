@@ -48,7 +48,6 @@ public class Main {
                     break;
 
                 case "2": {
-                    // ⚠️ CHANGE AuthService.participantSignup TO RETURN Participant
                     Participant newP = authService.participantSignup(sc);
                     if (newP != null) {
                         participants.add(newP);
@@ -291,27 +290,53 @@ public class Main {
 
             switch (ch) {
                 case "1": {
-                    // add more new members (survey)
-                    List<Participant> extra =
-                            surveyService.collectNewParticipants(sc, participants.size());
-                    participants.addAll(extra);
-                    System.out.println("Participants after adding: " + participants.size());
-                    break;
+                    System.out.println("\n--- Complete Survey ---");
 
+                    // 1) fill survey for THIS account (no new P101)
+                    surveyService.runSurveyForExistingParticipant(sc, account);
+
+                    // 2) make sure this account is in the global participants list
+                    boolean found = false;
+                    for (Participant p : participants) {
+                        // match by email if set, otherwise by name
+                        if (p.getEmail() != null && account.getEmail() != null &&
+                                p.getEmail().equalsIgnoreCase(account.getEmail())) {
+                            found = true;
+                            break;
+                        }
+                        if (p.getName().equalsIgnoreCase(account.getName())) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        participants.add(account);
+                        System.out.println("✅ You have been added to the participant list.");
+                    }
+
+                    System.out.println("✅ Survey completed and your profile is saved.");
+                    break;
                 }
+
 
                 case "2": {
                     Team myTeam = null;
+
                     for (Team t : teams) {
                         for (Participant p : t.getMembers()) {
-                            if (p.getEmail() != null &&
-                                    p.getEmail().equalsIgnoreCase(account.getEmail())) {
+
+                            boolean sameEmail = (p.getEmail() != null && account.getEmail() != null &&
+                                    p.getEmail().equalsIgnoreCase(account.getEmail()));
+                            boolean sameName = p.getName().equalsIgnoreCase(account.getName());
+
+                            if (sameEmail || sameName) {
                                 myTeam = t;
                                 break;
                             }
                         }
                         if (myTeam != null) break;
                     }
+
                     if (myTeam == null) {
                         System.out.println("You are not assigned to any team yet.");
                     } else {
@@ -325,6 +350,7 @@ public class Main {
                     }
                     break;
                 }
+
 
                 case "3":
                     back = true;
