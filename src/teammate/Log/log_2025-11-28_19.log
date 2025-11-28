@@ -1,0 +1,44 @@
+[2025-11-28 19:44:22] Loaded 6 participant accounts from file.
+[2025-11-28 19:44:22] Application started
+[2025-11-28 19:44:28] Loaded 6 participant accounts from file.
+[2025-11-28 19:44:28] Application started
+[2025-11-28 19:44:41] Organizer login success for username=organizer
+[2025-11-28 19:44:41] Organizer logged in
+[2025-11-28 19:44:54] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 19:44:54] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 19:44:59] Starting TeamFormationThread. teamSize=4
+[2025-11-28 19:44:59] TeamFormationTask START. participants=100, teamSize=4
+[2025-11-28 19:44:59] TeamBuilder: building teams. participants=100, teamSize=4
+[2025-11-28 19:44:59] TeamBuilder split: Leaders=34, Thinkers=33, Balanced=42
+[2025-11-28 19:44:59] TeamBuilder: created 25 teams.
+[2025-11-28 19:44:59] TeamFormationTask END. teamsFormed=25
+[2025-11-28 19:44:59] Teams formed: 25 with team size 4
+[2025-11-28 19:45:20] Teams saved to CSV: src\teammate\TeamMembers\teams_20251128_194520.csv (teams=25)
+[2025-11-28 19:45:20] Teams exported to CSV: src\teammate\TeamMembers\teams_20251128_194520.csv
+[2025-11-28 19:45:38] Update cancelled for participant: Participant_100
+[2025-11-28 19:45:54] Participant login success: username=p3
+[2025-11-28 19:45:54] Participant logged in: Participant_104
+[2025-11-28 19:45:55] Starting SurveyProcessingThread for Participant_104
+[2025-11-28 19:45:55] SurveyProcessingTask START for participant=Participant_104
+[2025-11-28 19:45:55] Survey skipped (already completed) for participant: Participant_104
+[2025-11-28 19:45:55] SurveyProcessingTask END for participant=Participant_104
+[2025-11-28 19:45:55] SurveyProcessingThread finished for Participant_104
+[2025-11-28 19:48:13] Loaded 6 participant accounts from file.
+[2025-11-28 19:48:13] Application started
+[2025-11-28 19:48:29] Participant login success: username=p3
+[2025-11-28 19:48:29] Participant logged in: Participant_104
+[2025-11-28 19:48:31] Starting SurveyProcessingThread for Participant_104
+[2025-11-28 19:48:31] SurveyProcessingTask START for participant=Participant_104
+[2025-11-28 19:48:31] Survey skipped (already completed) for participant: Participant_104
+[2025-11-28 19:48:31] SurveyProcessingTask END for participant=Participant_104
+[2025-11-28 19:48:31] SurveyProcessingThread finished for Participant_104
+[2025-11-28 19:53:30] Loaded 6 participant accounts from file.
+[2025-11-28 19:53:30] Application started
+[2025-11-28 19:53:46] Participant signup success: username=p4, id=P107, email=user107@university.edu
+[2025-11-28 19:53:46] New participant signed up and added to system: Participant_107
+[2025-11-28 19:55:42] Organizer login success for username=organizer
+[2025-11-28 19:55:42] Organizer logged in
+[2025-11-28 19:55:51] Participant login success: username=p4
+[2025-11-28 19:55:51] Participant logged in: Participant_107
+[2025-11-28 19:55:56] Starting SurveyProcessingThread for Participant_107
+[2025-11-28 19:55:56] SurveyProcessingTask START for participant=Participant_107

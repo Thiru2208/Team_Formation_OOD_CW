@@ -1,0 +1,36 @@
+[2025-11-28 20:00:55] Loaded 7 participant accounts from file.
+[2025-11-28 20:00:55] Application started
+[2025-11-28 20:01:03] Participant login success: username=p4
+[2025-11-28 20:01:03] Participant logged in: Participant_107
+[2025-11-28 20:01:05] Starting SurveyProcessingThread for Participant_107
+[2025-11-28 20:01:05] SurveyProcessingTask START for participant=Participant_107
+[2025-11-28 20:03:10] Loaded 7 participant accounts from file.
+[2025-11-28 20:03:10] Application started
+[2025-11-28 20:03:20] Participant login success: username=p4
+[2025-11-28 20:03:20] Participant logged in: Participant_107
+[2025-11-28 20:03:21] Starting SurveyProcessingThread for Participant_107
+[2025-11-28 20:03:21] SurveyProcessingTask START for participant=Participant_107
+[2025-11-28 20:03:51] Loaded 7 participant accounts from file.
+[2025-11-28 20:03:51] Application started
+[2025-11-28 20:05:25] Participant login success: username=p4
+[2025-11-28 20:05:25] Participant logged in: Participant_107
+[2025-11-28 20:05:27] Starting SurveyProcessingThread for Participant_107
+[2025-11-28 20:05:27] SurveyProcessingTask START for participant=Participant_107
+[2025-11-28 20:06:23] Loaded 7 participant accounts from file.
+[2025-11-28 20:06:23] Application started
+[2025-11-28 20:06:31] Participant login success: username=p4
+[2025-11-28 20:06:31] Participant logged in: Participant_107
+[2025-11-28 20:06:33] Starting SurveyProcessingThread for Participant_107
+[2025-11-28 20:06:33] SurveyProcessingTask START for participant=Participant_107
+[2025-11-28 20:07:02] Loaded 7 participant accounts from file.
+[2025-11-28 20:07:02] Application started
+[2025-11-28 20:07:09] Participant login success: username=p4
+[2025-11-28 20:07:09] Participant logged in: Participant_107
+[2025-11-28 20:07:16] Starting SurveyProcessingThread for Participant_107
+[2025-11-28 20:07:16] SurveyProcessingTask START for participant=Participant_107
+[2025-11-28 20:07:25] All participant accounts saved to file (with IDs and survey data).
+[2025-11-28 20:07:25] Survey completed and saved for participant: Participant_107 | Game=DOTA 2 | Role=Supporter | Score=72 | Type=Leader
+[2025-11-28 20:07:25] SurveyProcessingTask END for participant=Participant_107
+[2025-11-28 20:07:25] SurveyProcessingThread finished for Participant_107
+[2025-11-28 20:09:08] Application exiting
+[2025-11-28 20:09:08] Executor service shut down. Application exiting.
