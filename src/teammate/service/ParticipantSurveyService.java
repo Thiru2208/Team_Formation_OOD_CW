@@ -2,22 +2,17 @@ package teammate.service;
 
 import teammate.model.Participant;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
 import java.util.*;
 import teammate.service.LoggerService;
 
 
 public class ParticipantSurveyService {
 
-    private static final String[] ROLE_OPTIONS = {
+    public static final String[] ROLE_OPTIONS = {
             "Strategist", "Attacker", "Defender", "Supporter", "Coordinator"
     };
 
-    private static final String[] GAME_OPTIONS = {
+    public static final String[] GAME_OPTIONS = {
             "Valorant", "DOTA 2", "FIFA", "Basketball", "Badminton", "Chess", "CS:GP"
     };
 
@@ -87,9 +82,9 @@ public class ParticipantSurveyService {
     // Survey for an EXISTING logged-in participant (p2, etc.)
     public void runSurveyForExistingParticipant(Scanner sc,
                                                 Participant p,
-                                                AuthService authService,
-                                                LoggerService logger) {
+                                                AuthService authService) {
 
+        LoggerService logger = LoggerService.getInstance();
 
         if (p.getPersonalityType() != null &&
                 !p.getPersonalityType().equalsIgnoreCase("Not selected")) {
@@ -133,7 +128,7 @@ public class ParticipantSurveyService {
         int q4 = answers[3];
         int q5 = answers[4];
 
-        int totalScore       = q1 + q2 + q3 + q4 + q5;
+        int totalScore = q1 + q2 + q3 + q4 + q5;
         int personalityScore = totalScore * 4;
         String personalityType = calculatePersonality(q1, q2, q3, q4, q5);
 
@@ -143,18 +138,24 @@ public class ParticipantSurveyService {
         p.setRole(role);
         p.setPersonalityScore(personalityScore);
         p.setPersonalityType(personalityType);
-
+        System.out.println();
         System.out.println("Updated profile: " + p.getName()
                 + " | " + game + " | Skill " + skillLevel
                 + " | Role " + role
                 + " | Type " + personalityType);
 
         // 🔹 NOW MAKE IT PERMANENT
-        authService.saveAllAccountsToFile();
-        logger.info("Survey completed and saved for participant: " + p.getName() +
-                " | Game=" + game +
-                " | Role=" + role +
-                " | Score=" + personalityScore +
-                " | Type=" + personalityType);
+        try {
+            authService.saveAllAccountsToFile();
+            logger.info("Survey completed and saved for participant: " + p.getName() +
+                    " | Game=" + game +
+                    " | Role=" + role +
+                    " | Score=" + personalityScore +
+                    " | Type=" + personalityType);
+            System.out.println("Survey completed and saved for participant: " + p.getName());
+        } catch (Exception e) {
+            LoggerService.getInstance().error("Failed to save survey data for " + p.getName(), e);
+            System.out.println("Survey failed to save for " + p.getName());
+        }
     }
 }
