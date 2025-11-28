@@ -18,7 +18,6 @@ public class AuthService {
     private final LoggerService logger = LoggerService.getInstance();
     private static final String ORGANIZER_FILE =
             "src/teammate/auth/organizer_account.csv";
-
     private Organizer organizerAccount;
 
     // username (lowercase) -> plain password
@@ -45,21 +44,113 @@ public class AuthService {
         String pass = sc.nextLine().trim();
 
         if (organizerAccount == null) {
-            System.out.println("❌ Organizer account not loaded!");
+            System.out.println("Organizer account not loaded!");
             return false;
         }
 
-        if (user.equalsIgnoreCase(organizerAccount.getUsername()) &&
-                pass.equals(organizerAccount.getPassword())) {
-            System.out.println("✅ Login success. Welcome " + organizerAccount.getName() + "!\n");
+        if (user.equalsIgnoreCase(organizerAccount.getUsername())
+                && pass.equals(organizerAccount.getPassword())) {
+            System.out.println("Login success. Welcome " + organizerAccount.getName() + "!");
             logger.info("Organizer login success for username=" + organizerAccount.getUsername());
             return true;
         }
-
         logger.info("Organizer login FAILED for username=" + user);
         System.out.println("Invalid organizer credentials.");
         return false;
     }
+
+    public void changeOrganizerPassword(Scanner sc) {
+        if (organizerAccount == null) {
+            System.out.println("Organizer account not loaded – cannot change password.");
+            return;
+        }
+
+        System.out.println("\n--- Change Organizer Password ---");
+
+        System.out.print("Enter current password: ");
+        String current = sc.nextLine().trim();
+
+        if (!current.equals(organizerAccount.getPassword())) {
+            System.out.println("Current password is incorrect.");
+            return;
+        }
+
+        String newPass;
+        while (true) {
+            System.out.print("Enter new 4/6-character password (letters & digits only): ");
+            newPass = sc.nextLine().trim();
+
+            if (!isValidPassword(newPass)) {
+                System.out.println("Invalid password. It must be EXACTLY 4/6 characters, only A–Z, a–z, 0–9.");
+                continue;
+            }
+
+            System.out.print("Confirm new password: ");
+            String confirm = sc.nextLine().trim();
+
+            if (!newPass.equals(confirm)) {
+                System.out.println("Passwords do not match. Try again.");
+                continue;
+            }
+            break;
+        }
+
+        organizerAccount.setPassword(newPass);
+        saveOrganizerAccount();
+
+        System.out.println("Organizer password updated successfully.");
+    }
+
+    public void changeParticipantPassword(Scanner sc, Participant participant) {
+
+        if (participant == null) {
+            System.out.println("No participant is logged in.");
+            return;
+        }
+
+        System.out.println("\n--- Change Participant Password ---");
+
+        System.out.print("Enter current password: ");
+        String current = sc.nextLine().trim();
+
+        // Stored password is inside participantCredentials map
+        String key = participant.getUsername().toLowerCase();
+        String realPassword = participantCredentials.get(key);
+
+        if (!current.equals(realPassword)) {
+            System.out.println("Incorrect current password.");
+            return;
+        }
+
+        String newPass;
+        while (true) {
+            System.out.print("Enter new 4/6-character password (letters & digits only): ");
+            newPass = sc.nextLine().trim();
+
+            if (!isValidPassword(newPass)) {
+                System.out.println("Invalid password. Use EXACTLY 4/6 characters A–Z a–z 0–9.");
+                continue;
+            }
+            System.out.print("Confirm new password: ");
+            String confirm = sc.nextLine().trim();
+
+            if (!newPass.equals(confirm)) {
+                System.out.println("Passwords do not match.");
+                continue;
+            }
+            break;
+        }
+
+        // Update in memory
+        participantCredentials.put(key, newPass);
+        participant.setPassword(newPass);
+
+        // Save permanently
+        saveAllAccountsToFile();
+
+        System.out.println("Your password has been updated successfully!");
+    }
+
 
     // ================= PARTICIPANT SIGNUP =================
     public Participant participantSignup(Scanner sc) {
@@ -86,11 +177,11 @@ public class AuthService {
         // 2) Password + confirm (4 chars, letters & digits only)
         String password;
         while (true) {
-            System.out.print("Choose a 4-character password (letters & digits only): ");
+            System.out.print("Choose a 4/6-character password (letters & digits only): ");
             password = sc.nextLine().trim();
 
             if (!isValidPassword(password)) {
-                System.out.println("❌ Invalid password. It must be EXACTLY 4 characters, only letters (A–Z, a–z) and digits (0–9).");
+                System.out.println("Invalid password. It must be EXACTLY 4/6 characters, only letters (A–Z, a–z) and digits (0–9).");
                 continue;
             }
 
@@ -126,6 +217,9 @@ public class AuthService {
                 "Not selected", 0, "Not selected");
         p.setPersonalityType("Not selected");
         p.setPersonalityScore(0);
+        // make sure profile knows its login credentials
+        p.setUsername(username);
+        p.setPassword(password);
 
         participantProfiles.put(key, p);
         participantIds.put(key, id);
@@ -139,7 +233,7 @@ public class AuthService {
         nextGeneratedNumericId++;
         logger.info("Participant signup success: username=" + username +
                 ", id=" + id + ", email=" + email);
-        System.out.println("✅ Signup successful. You can now log in. username=" + username +
+        System.out.println("Signup successful. You can now log in. username=" + username +
                 ", id=" + id + ", email=" + email);
         return p;
     }
@@ -157,13 +251,12 @@ public class AuthService {
 
         if (stored == null || !stored.equals(password)) {
             logger.info("Participant login FAILED for username=" + username);
-            System.out.println("❌ Invalid username or password.\n");
+            System.out.println("Invalid username or password.");
             return null;
         }
 
         logger.info("Participant login success: username=" + username);
-        System.out.println("✅ Login success. Welcome " + username + "!\n");
-
+        System.out.println("Login success. Welcome " + username + "!");
 
         Participant profile = participantProfiles.get(key);
         if (profile == null) {
@@ -175,6 +268,8 @@ public class AuthService {
             profile.setPersonalityScore(0);
             participantProfiles.put(key, profile);
         }
+        profile.setUsername(username);
+        profile.setPassword(stored);
         return profile;
     }
 
@@ -186,32 +281,30 @@ public class AuthService {
         }
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String header = br.readLine(); // skip header
-            String line = br.readLine();
-            if (line == null) return;
+            String header = br.readLine(); // skip header line
+            String line = br.readLine();   // we expect only one organizer row
 
-            String[] parts = line.split(",", -1);
-            if (parts.length < 4) {
-                System.out.println("Organizer file invalid format.");
+            if (line == null || line.trim().isEmpty()) {
+                System.out.println("Organizer file is empty.");
                 return;
             }
 
-            String username = parts[0].trim();
+            String[] parts = line.split(",", -1);
+            // Format: username,password,name   (3 columns)
+            if (parts.length < 3) {
+                System.out.println("Organizer file has invalid format.");
+                return;
+            }
+
+            String username      = parts[0].trim();
             String encryptedPass = parts[1].trim();
-            String name = parts[2].trim();
-            String email = parts[3].trim();
+            String name          = parts[2].trim();
 
             String plainPass = decryptPassword(encryptedPass);
 
-            organizerAccount = new Organizer(
-                    name,
-                    username,
-                    plainPass
-            );
-
-            System.out.println("Organizer loaded successfully.");
-        }
-        catch (Exception e) {
+            organizerAccount = new Organizer(name, username, plainPass);
+            System.out.println("Organizer account loaded.");
+        } catch (IOException e) {
             System.out.println("Error loading organizer account: " + e.getMessage());
         }
     }
@@ -220,6 +313,7 @@ public class AuthService {
     private void loadParticipantAccounts() {
         File file = new File(ACCOUNTS_FILE);
         if (!file.exists()) {
+            logger.info("No existing participant accounts file found.");
             System.out.println("No existing participant accounts file found.");
             return;
         }
@@ -298,6 +392,10 @@ public class AuthService {
                     p.setPersonalityScore(personalityScore);
                     p.setPersonalityType(personalityType);
 
+                    // 🔹 link credentials into the profile
+                    p.setUsername(username);
+                    p.setPassword(plainPassword);
+
                     participantProfiles.put(key, p);
                     participantIds.put(key, id);
 
@@ -319,7 +417,7 @@ public class AuthService {
 
             // next ID to assign
             nextGeneratedNumericId = maxNumericIdFound + 1;
-
+            logger.info("Loaded " + loadedCount + " participant accounts from file.");
             System.out.println("Loaded " + loadedCount + " participant accounts from file.");
             System.out.println("Next generated ID will be: P" + nextGeneratedNumericId);
 
@@ -414,11 +512,38 @@ public class AuthService {
             }
 
             logger.info("All participant accounts saved to file (with IDs and survey data).");
-            System.out.println("All participant accounts saved to file (with IDs and survey data).");
+            System.out.println("All participant accounts saved to file.");
 
         } catch (IOException e) {
             logger.error("Error saving all accounts to file: " + ACCOUNTS_FILE, e);
             System.out.println("Error saving all accounts: " + e.getMessage());
+        }
+    }
+
+    private void saveOrganizerAccount() {
+        if (organizerAccount == null) return;
+
+        try {
+            File file = new File(ORGANIZER_FILE);
+            File parent = file.getParentFile();
+            if (parent != null && !parent.exists()) {
+                parent.mkdirs();
+            }
+
+            try (PrintWriter pw = new PrintWriter(new FileWriter(file))) {
+                // header
+                pw.println("username,password,name");
+
+                String encrypted = encryptPassword(organizerAccount.getPassword());
+                pw.println(
+                        organizerAccount.getUsername() + "," +
+                                encrypted + "," +
+                                organizerAccount.getName()
+                );
+            }
+            System.out.println("Organizer account saved.");
+        } catch (IOException e) {
+            System.out.println("Error saving organizer account: " + e.getMessage());
         }
     }
 
@@ -427,7 +552,7 @@ public class AuthService {
     // Password must be exactly 4 chars, letters & digits only
     private boolean isValidPassword(String password) {
         if (password == null) return false;
-        return password.matches("[A-Za-z0-9]{4}");
+        return password.matches("[A-Za-z0-9]{4,6}");
     }
 
     // Simple Base64 "encryption" for coursework
