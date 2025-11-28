@@ -1,9 +1,8 @@
 package teammate.service;
 
 import teammate.model.Participant;
-import teammate.service.LoggerService;
 
-import java.util.List;
+import java.util.Scanner;
 
 /**
  * Background task: "processing survey data" using a separate thread.
@@ -11,33 +10,31 @@ import java.util.List;
  */
 public class SurveyProcessingTask implements Runnable {
 
-    private final List<Participant> participants;
-    private final LoggerService logger;
+    private final ParticipantSurveyService surveyService;
+    private final Scanner scanner;
+    private final Participant participant;
+    private final AuthService authService;
+    private final LoggerService logger = LoggerService.getInstance();
 
-    public SurveyProcessingTask(List<Participant> participants, LoggerService logger) {
-        this.participants = participants;
-        this.logger = logger;
+    public SurveyProcessingTask(ParticipantSurveyService surveyService,
+                                Scanner scanner,
+                                Participant participant,
+                                AuthService authService) {
+        this.surveyService = surveyService;
+        this.scanner = scanner;
+        this.participant = participant;
+        this.authService = authService;
     }
 
     @Override
     public void run() {
         try {
-            logger.info("SurveyProcessingTask started for " + participants.size() + " participant(s)");
-
-            for (Participant p : participants) {
-                // Example extra checks / processing
-                if (p.getPersonalityType() == null || p.getPersonalityType().trim().isEmpty()) {
-                    p.setPersonalityType("Balanced");
-                }
-                if (p.getPersonalityScore() < 0) {
-                    logger.error("Negative personality score detected for: " + p.getName());
-                    p.setPersonalityScore(0);
-                }
-            }
-
-            logger.info("SurveyProcessingTask finished successfully.");
-        } catch (Exception ex) {
-            logger.error("Error inside SurveyProcessingTask: " + ex.getMessage());
+            logger.info("SurveyProcessingTask START for participant=" + participant.getName());
+            surveyService.runSurveyForExistingParticipant(scanner, participant, authService);
+            logger.info("SurveyProcessingTask END for participant=" + participant.getName());
+        } catch (Exception e) {
+            logger.error("SurveyProcessingTask FAILED for participant=" + participant.getName(), e);
+            System.out.println("⚠ An error occurred while processing the survey. Please try again.");
         }
     }
 }
