@@ -1,0 +1,29 @@
+[2025-11-28 13:07:30] Application started
+[2025-11-28 13:08:07] Organizer login success for username=organizer
+[2025-11-28 13:08:07] Organizer logged in
+[2025-11-28 13:09:12] Organizer login success for username=organizer
+[2025-11-28 13:09:12] Organizer logged in
+[2025-11-28 13:09:27] Application started
+[2025-11-28 13:09:39] Organizer login success for username=organizer
+[2025-11-28 13:09:39] Organizer logged in
+[2025-11-28 13:11:13] Application started
+[2025-11-28 13:11:24] Organizer login FAILED for username=1
+[2025-11-28 13:11:24] Organizer login failed
+[2025-11-28 13:11:37] Organizer login success for username=organizer
+[2025-11-28 13:11:37] Organizer logged in
+[2025-11-28 13:12:07] Application started
+[2025-11-28 13:12:31] Organizer login success for username=organizer
+[2025-11-28 13:12:31] Organizer logged in
+[2025-11-28 13:13:41] Application started
+[2025-11-28 13:13:49] Organizer login success for username=organizer
+[2025-11-28 13:13:49] Organizer logged in
+[2025-11-28 13:22:23] Application started
+[2025-11-28 13:22:38] Participant login success: username=p1
+[2025-11-28 13:22:38] Participant logged in: Participant_102
+[2025-11-28 13:33:24] Application started
+[2025-11-28 13:33:43] Organizer login success for username=organizer
+[2025-11-28 13:33:43] Organizer logged in
+[2025-11-28 13:34:44] Participant login success: username=p1
+[2025-11-28 13:34:44] Participant logged in: Participant_102
+[2025-11-28 13:35:10] All participant accounts saved to file (with IDs and survey data).
+[2025-11-28 13:39:35] Application started

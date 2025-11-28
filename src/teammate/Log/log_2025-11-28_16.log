@@ -1,0 +1,37 @@
+[2025-11-28 16:05:17] Loaded 4 participant accounts from file.
+[2025-11-28 16:05:17] Application started
+[2025-11-28 16:13:37] Participant login FAILED for username=p3
+[2025-11-28 16:13:37] Participant login failed
+[2025-11-28 16:13:44] Loaded 4 participant accounts from file.
+[2025-11-28 16:13:44] Application started
+[2025-11-28 16:14:00] Organizer login success for username=organizer
+[2025-11-28 16:14:00] Organizer logged in
+[2025-11-28 16:15:01] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 16:15:01] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 16:15:24] Starting TeamFormationThread. teamSize=6
+[2025-11-28 16:15:24] TeamFormationTask START. participants=100, teamSize=6
+[2025-11-28 16:15:24] TeamBuilder: building teams. participants=100, teamSize=6
+[2025-11-28 16:15:24] TeamBuilder split: Leaders=34, Thinkers=33, Balanced=50
+[2025-11-28 16:15:24] TeamBuilder: created 17 teams.
+[2025-11-28 16:15:24] TeamFormationTask END. teamsFormed=17
+[2025-11-28 16:15:24] Teams formed: 17 with team size 6
+[2025-11-28 16:22:50] Loaded 4 participant accounts from file.
+[2025-11-28 16:22:50] Application started
+[2025-11-28 16:23:19] Loaded 4 participant accounts from file.
+[2025-11-28 16:23:19] Application started
+[2025-11-28 16:23:54] Participant signup success: username=kd, id=P105, email=user105@university.edu
+[2025-11-28 16:23:54] New participant signed up and added to system: Participant_105
+[2025-11-28 16:26:00] Participant login FAILED for username=partici
+[2025-11-28 16:26:00] Participant login failed
+[2025-11-28 16:26:16] Participant login success: username=kd
+[2025-11-28 16:26:16] Participant logged in: Participant_105
+[2025-11-28 16:26:30] Starting SurveyProcessingThread for Participant_105
+[2025-11-28 16:26:30] SurveyProcessingTask START for participant=Participant_105
+[2025-11-28 16:26:51] All participant accounts saved to file (with IDs and survey data).
+[2025-11-28 16:26:51] Survey completed and saved for participant: Participant_105 | Game=DOTA 2 | Role=Coordinator | Score=68 | Type=Balanced
+[2025-11-28 16:26:51] SurveyProcessingTask END for participant=Participant_105
+[2025-11-28 16:26:51] SurveyProcessingThread finished for Participant_105
+[2025-11-28 16:27:06] Organizer login success for username=organizer
+[2025-11-28 16:27:06] Organizer logged in
+[2025-11-28 16:27:34] Organizer attempted to load participants but file was empty/invalid: 
+[2025-11-28 16:27:39] Participant deleted: Participant_105

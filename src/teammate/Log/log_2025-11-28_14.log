@@ -1,0 +1,15 @@
+[2025-11-28 14:36:40] Loaded 3 participant accounts from file.
+[2025-11-28 14:36:40] Application started
+[2025-11-28 14:51:40] Organizer login success for username=organizer
+[2025-11-28 14:51:40] Organizer logged in
+[2025-11-28 14:52:57] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 14:52:57] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 14:53:46] Starting TeamFormationThread. teamSize=5
+[2025-11-28 14:53:46] TeamFormationTask START. participants=100, teamSize=5
+[2025-11-28 14:53:46] TeamBuilder: building teams. participants=100, teamSize=5
+[2025-11-28 14:53:46] TeamBuilder split: Leaders=34, Thinkers=33, Balanced=47
+[2025-11-28 14:53:46] TeamBuilder: created 20 teams.
+[2025-11-28 14:53:46] TeamFormationTask END. teamsFormed=20
+[2025-11-28 14:53:46] Teams formed: 20 with team size 5
+[2025-11-28 14:56:11] Teams saved to CSV: src\teammate\TeamMembers\teams_20251128_145611.csv (teams=20)
+[2025-11-28 14:56:11] Teams exported to CSV: src\teammate\TeamMembers\teams_20251128_145611.csv

@@ -1,0 +1,77 @@
+[2025-11-28 15:01:54] Loaded 3 participant accounts from file.
+[2025-11-28 15:01:55] Application started
+[2025-11-28 15:02:05] Organizer login success for username=organizer
+[2025-11-28 15:02:05] Organizer logged in
+[2025-11-28 15:02:33] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 15:02:33] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 15:04:11] Loaded 3 participant accounts from file.
+[2025-11-28 15:04:11] Application started
+[2025-11-28 15:04:19] Organizer login success for username=organizer
+[2025-11-28 15:04:19] Organizer logged in
+[2025-11-28 15:04:32] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 15:04:32] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 15:04:42] Starting TeamFormationThread. teamSize=4
+[2025-11-28 15:04:42] TeamFormationTask START. participants=100, teamSize=4
+[2025-11-28 15:04:42] TeamBuilder: building teams. participants=100, teamSize=4
+[2025-11-28 15:04:42] TeamBuilder split: Leaders=34, Thinkers=33, Balanced=42
+[2025-11-28 15:04:42] TeamBuilder: created 25 teams.
+[2025-11-28 15:04:42] TeamFormationTask END. teamsFormed=25
+[2025-11-28 15:04:42] Teams formed: 25 with team size 4
+[2025-11-28 15:05:06] Teams saved to CSV: src\teammate\TeamMembers\teams_20251128_150506.csv (teams=25)
+[2025-11-28 15:05:06] Teams exported to CSV: src\teammate\TeamMembers\teams_20251128_150506.csv
+[2025-11-28 15:06:26] Participant updated: Participant_100
+[2025-11-28 15:06:44] Participant deleted: Participant_100
+[2025-11-28 15:13:30] Participant signup success: username=p3, id=P104, email=user104@university.edu
+[2025-11-28 15:13:30] New participant signed up and added to system: Participant_104
+[2025-11-28 15:14:00] Participant login success: username=p3
+[2025-11-28 15:14:00] Participant logged in: Participant_104
+[2025-11-28 15:14:46] All participant accounts saved to file (with IDs and survey data).
+[2025-11-28 15:16:24] Starting SurveyProcessingThread for Participant_104
+[2025-11-28 15:16:24] SurveyProcessingTask START for participant=Participant_104
+[2025-11-28 15:16:35] All participant accounts saved to file (with IDs and survey data).
+[2025-11-28 15:16:35] Survey completed and saved for participant: Participant_104 | Game=Basketball | Role=Defender | Score=80 | Type=Leader
+[2025-11-28 15:16:35] SurveyProcessingTask END for participant=Participant_104
+[2025-11-28 15:16:35] SurveyProcessingThread finished for Participant_104
+[2025-11-28 15:17:45] Starting SurveyProcessingThread for Participant_104
+[2025-11-28 15:17:45] SurveyProcessingTask START for participant=Participant_104
+[2025-11-28 15:17:45] Survey skipped (already completed) for participant: Participant_104
+[2025-11-28 15:17:45] SurveyProcessingTask END for participant=Participant_104
+[2025-11-28 15:17:45] SurveyProcessingThread finished for Participant_104
+[2025-11-28 15:18:07] All participant accounts saved to file (with IDs and survey data).
+[2025-11-28 15:18:25] Organizer login success for username=organizer
+[2025-11-28 15:18:25] Organizer logged in
+[2025-11-28 15:18:38] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 15:18:38] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 15:19:04] Loaded 4 participant accounts from file.
+[2025-11-28 15:19:04] Application started
+[2025-11-28 15:19:36] Participant login success: username=p2
+[2025-11-28 15:19:36] Participant logged in: Participant_103
+[2025-11-28 15:19:39] Starting SurveyProcessingThread for Participant_103
+[2025-11-28 15:19:39] SurveyProcessingTask START for participant=Participant_103
+[2025-11-28 15:19:39] Survey skipped (already completed) for participant: Participant_103
+[2025-11-28 15:19:39] SurveyProcessingTask END for participant=Participant_103
+[2025-11-28 15:19:39] SurveyProcessingThread finished for Participant_103
+[2025-11-28 15:19:57] Organizer login success for username=organizer
+[2025-11-28 15:19:57] Organizer logged in
+[2025-11-28 15:20:02] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 15:20:02] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 15:20:13] Starting TeamFormationThread. teamSize=6
+[2025-11-28 15:20:13] TeamFormationTask START. participants=101, teamSize=6
+[2025-11-28 15:20:13] TeamBuilder: building teams. participants=101, teamSize=6
+[2025-11-28 15:20:13] TeamBuilder split: Leaders=34, Thinkers=34, Balanced=50
+[2025-11-28 15:20:13] TeamBuilder: created 17 teams.
+[2025-11-28 15:20:13] TeamFormationTask END. teamsFormed=17
+[2025-11-28 15:20:13] Teams formed: 17 with team size 6
+[2025-11-28 15:20:19] Teams saved to CSV: src\teammate\TeamMembers\teams_20251128_152019.csv (teams=17)
+[2025-11-28 15:20:19] Teams exported to CSV: src\teammate\TeamMembers\teams_20251128_152019.csv
+[2025-11-28 15:41:24] Loaded 4 participant accounts from file.
+[2025-11-28 15:41:24] Application started
+[2025-11-28 15:51:15] Loaded 4 participant accounts from file.
+[2025-11-28 15:51:15] Application started
+[2025-11-28 15:51:30] Organizer login success for username=organizer
+[2025-11-28 15:51:30] Organizer logged in
+[2025-11-28 15:52:03] Organizer attempted to load participants but file was empty/invalid: participants_sample.csv
+[2025-11-28 15:52:15] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 15:52:15] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 15:52:42] All participant accounts saved to file (with IDs and survey data).
+[2025-11-28 15:52:42] Participant permanently updated: Participant_100
