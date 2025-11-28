@@ -134,9 +134,12 @@ public class TeamBuilder {
                 ", Thinkers=" + thinkers.size() +
                 ", Balanced=" + balanced.size());
 
+        System.out.println("TeamBuilder split: Leaders=" + leaders.size() +
+                ", Thinkers=" + thinkers.size() +
+                ", Balanced=" + balanced.size());
+
         logger.info("TeamBuilder: created " + teams.size() + " teams.");
         return teams;
-
     }
 
     // helper: count people of a personality type inside one team

@@ -126,7 +126,7 @@ public class CSVHandler {
             System.out.println("No valid participants found.");
             logger.info("CSV load finished with 0 valid participants from " + filePath);
         } else {
-            System.out.println("Loaded " + participants.size() + " participants successfully.");
+            System.out.println("Loaded participants successfully.");
             logger.info("CSV load finished with " + participants.size() +
                     " participants from " + filePath);
         }

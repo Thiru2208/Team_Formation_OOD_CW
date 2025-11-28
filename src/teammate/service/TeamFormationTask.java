@@ -1,34 +1,40 @@
-/*package teammate.service;
+package teammate.service;
 
 import teammate.model.Participant;
 import teammate.model.Team;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Callable;
 
-public class TeamFormationTask implements Runnable {
+/**
+ * Background task to form teams in a separate thread.
+ * Useful when datasets are large.
+ */
+public class TeamFormationTask implements Callable<ArrayList<Team>> {
 
     private final ArrayList<Participant> participants;
     private final int teamSize;
-    private final TeamBuilder builder;
-    private ArrayList<Team> result;
+    private final TeamBuilder teamBuilder;
+    private final LoggerService logger;
 
-    public TeamFormationTask(ArrayList<Participant> participants, int teamSize, TeamBuilder builder) {
-        this.participants = participants;
+    public TeamFormationTask(List<Participant> participants,
+                             int teamSize,
+                             TeamBuilder teamBuilder,
+                             LoggerService logger) {
+        // copy into new list to avoid concurrent modification
+        this.participants = new ArrayList<>(participants);
         this.teamSize = teamSize;
-        this.builder = builder;
+        this.teamBuilder = teamBuilder;
+        this.logger = logger;
     }
 
     @Override
-    /public void run() {
-        System.out.println("▶ Team formation started in thread: " +
-                Thread.currentThread().getName());
-        result = builder.buildTeams(participants, teamSize);
-        System.out.println("✔ Team formation finished in thread: " +
-                Thread.currentThread().getName());
-    }
-
-    public ArrayList<Team> getResult() {
-        return result;
+    public ArrayList<Team> call() {
+        logger.info("TeamFormationTask started. Participants = "
+                + participants.size() + ", teamSize = " + teamSize);
+        ArrayList<Team> formed = teamBuilder.buildTeams(participants, teamSize, logger);
+        logger.info("TeamFormationTask finished. Teams formed = " + formed.size());
+        return formed;
     }
 }
-*/

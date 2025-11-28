@@ -1,3 +1,4 @@
 username,password,ID,fullName,email,preferredGame,skillLevel,role,personalityScore,personalityType
 p1,cDEyMw==,P102,Participant_102,user102@university.edu,Basketball,2,Supporter,84,Leader
+p2,cDEyMw==,P103,Participant_103,user103@university.edu,Basketball,5,Supporter,68,Thinker
 p5,cDEyMw==,P101,Participant_101,user101@university.edu,Basketball,2,Supporter,76,Leader

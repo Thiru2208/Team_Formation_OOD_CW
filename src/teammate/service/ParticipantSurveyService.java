@@ -156,6 +156,5 @@ public class ParticipantSurveyService {
                 " | Role=" + role +
                 " | Score=" + personalityScore +
                 " | Type=" + personalityType);
-
     }
 }

@@ -1,5 +1,6 @@
 package teammate.service;
 
+import teammate.model.Organizer;
 import teammate.model.Participant;
 import teammate.service.LoggerService;
 
@@ -15,6 +16,10 @@ public class AuthService {
     private static final String ACCOUNTS_FILE =
             "src/teammate/auth/participant_accounts.csv";
     private final LoggerService logger = LoggerService.getInstance();
+    private static final String ORGANIZER_FILE =
+            "src/teammate/auth/organizer_account.csv";
+
+    private Organizer organizerAccount;
 
     // username (lowercase) -> plain password
     private final Map<String, String> participantCredentials = new HashMap<>();
@@ -27,6 +32,7 @@ public class AuthService {
     private int nextGeneratedNumericId = 101;
 
     public AuthService() {
+        loadOrganizerAccount();
         loadParticipantAccounts();
     }
 
@@ -38,15 +44,21 @@ public class AuthService {
         System.out.print("Password: ");
         String pass = sc.nextLine().trim();
 
-        if (user.equals("organizer") && pass.equals("org123")) {
-            logger.info("Organizer login success for username=" + user);
-            System.out.println("✅ Organizer login successful.\n");
-            return true;
-        } else {
-            logger.info("Organizer login FAILED for username=" + user);
-            System.out.println("❌ Invalid organizer credentials.\n");
+        if (organizerAccount == null) {
+            System.out.println("❌ Organizer account not loaded!");
             return false;
         }
+
+        if (user.equalsIgnoreCase(organizerAccount.getUsername()) &&
+                pass.equals(organizerAccount.getPassword())) {
+            System.out.println("✅ Login success. Welcome " + organizerAccount.getName() + "!\n");
+            logger.info("Organizer login success for username=" + organizerAccount.getUsername());
+            return true;
+        }
+
+        logger.info("Organizer login FAILED for username=" + user);
+        System.out.println("Invalid organizer credentials.");
+        return false;
     }
 
     // ================= PARTICIPANT SIGNUP =================
@@ -166,6 +178,44 @@ public class AuthService {
         return profile;
     }
 
+    private void loadOrganizerAccount() {
+        File file = new File(ORGANIZER_FILE);
+        if (!file.exists()) {
+            System.out.println("Organizer account file missing: " + ORGANIZER_FILE);
+            return;
+        }
+
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String header = br.readLine(); // skip header
+            String line = br.readLine();
+            if (line == null) return;
+
+            String[] parts = line.split(",", -1);
+            if (parts.length < 4) {
+                System.out.println("Organizer file invalid format.");
+                return;
+            }
+
+            String username = parts[0].trim();
+            String encryptedPass = parts[1].trim();
+            String name = parts[2].trim();
+            String email = parts[3].trim();
+
+            String plainPass = decryptPassword(encryptedPass);
+
+            organizerAccount = new Organizer(
+                    name,
+                    username,
+                    plainPass
+            );
+
+            System.out.println("Organizer loaded successfully.");
+        }
+        catch (Exception e) {
+            System.out.println("Error loading organizer account: " + e.getMessage());
+        }
+    }
+
     // ================= FILE LOAD / SAVE =================
     private void loadParticipantAccounts() {
         File file = new File(ACCOUNTS_FILE);
@@ -277,7 +327,6 @@ public class AuthService {
             logger.error("Error loading participant accounts from file: " + ACCOUNTS_FILE, e);
             System.out.println("Error loading participant accounts: " + e.getMessage());
         }
-
     }
 
     // used when signing up a new user (append one row)

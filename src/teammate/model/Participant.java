@@ -1,28 +1,27 @@
 package teammate.model;
 
-public class Participant {
+public class Participant extends Human {
     private String id;
-    private String name;
     private String email;
     private String preferredGame;
     private int skillLevel;
     private String role;
     private String personalityType;
     private int personalityScore;
-    private String username;
-    private String password;
 
-    public Participant(String name, String email, String preferredGame, int skillLevel, String role) {
-        this.name = name;
+    public Participant(String name, String email,
+                       String preferredGame, int skillLevel, String role) {
+        // username/password are handled by AuthService; not needed here
+        super(name, null, null);
         this.email = email;
         this.preferredGame = preferredGame;
         this.skillLevel = skillLevel;
         this.role = role;
     }
+    // getters/setters
+    public String getId() {return id;}
+    public void setId(String id) {this.id = id;}
 
-    // getters/setters ...
-
-    public String getName() { return name; }
     public String getEmail() { return email; }
     public String getPreferredGame() { return preferredGame; }
     public int getSkillLevel() { return skillLevel; }
@@ -38,16 +37,9 @@ public class Participant {
         this.personalityScore = personalityScore;
     }
 
-    public void setName(String name) { this.name = name; }
     public void setEmail(String email) { this.email = email; }
     public void setPreferredGame(String preferredGame) { this.preferredGame = preferredGame; }
     public void setSkillLevel(int skillLevel) { this.skillLevel = skillLevel; }
     public void setRole(String role) { this.role = role; }
-
-    public String getUsername() { return username; }
-    public void setUsername(String username) { this.username = username; }
-
-    public String getPassword() { return password; }
-    public void setPassword(String password) { this.password = password; }
 
 }

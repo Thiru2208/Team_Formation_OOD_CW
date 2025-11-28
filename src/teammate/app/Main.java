@@ -5,20 +5,12 @@ import teammate.model.Team;
 import teammate.service.*;
 
 import java.util.*;
+import java.util.concurrent.*;
 
 public class Main {
 
     private static ArrayList<Participant> participants = new ArrayList<>();
     private static ArrayList<Team> teams = new ArrayList<>();
-
-    // (Optional) you can reuse these later for nicer update menus
-    private static final String[] ROLE_OPTIONS = {
-            "Strategist", "Attacker", "Defender", "Supporter", "Coordinator"
-    };
-
-    private static final String[] GAME_OPTIONS = {
-            "Valorant", "DOTA 2", "FIFA", "Basketball", "Badminton", "Chess", "CS:GP"
-    };
 
     public static void main(String[] args) {
 
@@ -28,8 +20,9 @@ public class Main {
         AuthService authService = new AuthService();
         LoggerService logger = new LoggerService();
         ParticipantSurveyService surveyService = new ParticipantSurveyService();
-
+        ExecutorService executor = Executors.newFixedThreadPool(4);
         logger.info("Application started");
+        System.out.println();
         System.out.println("==== TeamMate: Intelligent Team Formation System ====\n");
 
         boolean running = true;
@@ -39,6 +32,7 @@ public class Main {
             System.out.println("2. Participant sign up");
             System.out.println("3. Participant login");
             System.out.println("4. Exit");
+            System.out.println();
             System.out.print("Enter choice: ");
             String choice = sc.nextLine().trim();
 
@@ -46,7 +40,7 @@ public class Main {
                 case "1":
                     if (authService.organizerLogin(sc)) {
                         logger.info("Organizer logged in");
-                        organizerMenu(sc, csvHandler, teamBuilder, logger); // pass logger
+                        organizerMenu(sc, csvHandler, teamBuilder, logger, executor); // pass logger
                     } else {
                         logger.info("Organizer login failed");
                     }
@@ -69,7 +63,7 @@ public class Main {
                     Participant logged = authService.participantLogin(sc);
                     if (logged != null) {
                         logger.info("Participant logged in: " + logged.getName());
-                        participantMenu(sc, surveyService, logged, logger, authService);
+                        participantMenu(sc, surveyService, logged, logger, authService, executor);
                     } else {
                         logger.info("Participant login failed");
                     }
@@ -92,7 +86,7 @@ public class Main {
     private static void organizerMenu(Scanner sc,
                                       CSVHandler csvHandler,
                                       TeamBuilder teamBuilder,
-                                      LoggerService logger) {
+                                      LoggerService logger, ExecutorService executor) {
 
 
         boolean back = false;
@@ -105,36 +99,51 @@ public class Main {
             System.out.println("5. Update participant data");
             System.out.println("6. Delete participant");
             System.out.println("7. Logout");
+            System.out.println();
             System.out.print("Enter choice: ");
             String ch = sc.nextLine().trim();
 
             switch (ch) {
                 case "1": {
+                    System.out.println();
+                    System.out.println("Upload member details");
                     System.out.print("Enter CSV path: ");
                     String path = sc.nextLine().trim();
                     ArrayList<Participant> loaded = csvHandler.loadParticipants(path, logger);
                     if (!loaded.isEmpty()) {
                         participants.addAll(loaded);
                         logger.info("Organizer loaded " + loaded.size() + " participants from CSV: " + path);
-                        // 👉 Merge with existing (keep sign-ups also)
-                        System.out.println("✅ Loaded " + loaded.size()
-                                + " participants. Total now: " + participants.size());
+                        // Merge with existing (keep sign-ups also)
+                        System.out.println("Loaded " + loaded.size() + " participants. Current Total: " + participants.size());
+                        // ✅ process survey data in a background thread
+                        executor.submit(new SurveyProcessingTask(loaded, logger));
                     } else {
                         logger.info("Organizer attempted to load participants but file was empty/invalid: " + path);
-                        System.out.println("⚠ No valid participants loaded.");
+                        System.out.println("No valid participants loaded.");
                     }
                     break;
                 }
 
                 case "2":
                     if (participants.isEmpty()) {
-                        System.out.println("⚠ Please upload/add participants first.");
+                        System.out.println();
+                        System.out.println("Please upload/add participants first.");
                         break;
                     }
                     int teamSize = askTeamSize(sc, participants.size());
-                    teams = teamBuilder.buildTeams(participants, teamSize, logger);
-                    logger.info("Teams formed: " + teams.size() + " with team size " + teamSize);
-                    System.out.println("✅ Teams formed: " + teams.size());
+                    try {
+                        // ✅ run team formation in a separate thread
+                        TeamFormationTask task =
+                                new TeamFormationTask(participants, teamSize, teamBuilder, logger);
+                        Future<ArrayList<Team>> future = executor.submit(task);
+                        // wait until background thread finishes team formation
+                        teams = future.get();
+                        logger.info("Teams formed: " + teams.size() + " with team size " + teamSize);
+                        System.out.println("Teams formed: " + teams.size() + " with team size " + teamSize);
+                    } catch (Exception e) {
+                        System.out.println("Error forming teams. See logs for details.");
+                        logger.error("Exception while forming teams: " + e.getMessage());
+                    }
                     break;
 
                 case "3":
@@ -148,7 +157,7 @@ public class Main {
                     }
                     String outPath = csvHandler.saveTeamsAuto(teams, logger);
                     logger.info("Teams exported to CSV: " + outPath);
-                    System.out.println("📁 Exported to: " + outPath);
+                    System.out.println("Exported to: " + outPath + "successfully.");
                     break;
 
                 case "5":
@@ -171,6 +180,7 @@ public class Main {
 
     private static int askTeamSize(Scanner sc, int max) {
         while (true) {
+            System.out.println();
             System.out.print("Enter team size (min 3): ");
             String in = sc.nextLine().trim();
             try {
@@ -227,7 +237,10 @@ public class Main {
             System.out.println("No participants loaded.");
             return;
         }
+        System.out.println();
+        System.out.println("\n===== ALL PARTICIPANTS =====");
         printParticipantsWithNumbers();
+        System.out.println();
         System.out.print("Enter participant number to UPDATE: ");
         String updStr = sc.nextLine().trim();
         int updIndex;
@@ -275,7 +288,10 @@ public class Main {
             System.out.println("No participants loaded.");
             return;
         }
+        System.out.println();
+        System.out.println("\n===== ALL PARTICIPANTS =====");
         printParticipantsWithNumbers();
+        System.out.println();
         System.out.print("Enter participant number to DELETE: ");
         String delStr = sc.nextLine().trim();
         int delIndex;
@@ -299,7 +315,7 @@ public class Main {
                                         ParticipantSurveyService surveyService,
                                         Participant account,
                                         LoggerService logger,
-                                        AuthService authService) {
+                                        AuthService authService, ExecutorService executor) {
 
         boolean back = false;
         while (!back) {
@@ -312,11 +328,18 @@ public class Main {
 
             switch (ch) {
                 case "1": {
+                    // Ensure this account is inside global participants list
                     if (!participants.contains(account)) {
                         participants.add(account);
                     }
 
+                    // run survey (this also saves to CSV via AuthService)
                     surveyService.runSurveyForExistingParticipant(sc, account, authService, logger);
+
+                    // background "survey processing" on this single participant too
+                    executor.submit(new SurveyProcessingTask(
+                            Collections.singletonList(account), logger));
+
                     logger.info("Survey accessed by participant: " + account.getName());
                     break;
                 }
@@ -353,7 +376,6 @@ public class Main {
                     break;
                 }
 
-
                 case "3":
                     back = true;
                     break;
@@ -361,43 +383,6 @@ public class Main {
                 default:
                     System.out.println("Invalid choice.");
             }
-        }
-    }
-
-    // (Optional for future: you can reuse these if needed)
-    private static int askIntInRange(Scanner sc, String msg, int min, int max) {
-        while (true) {
-            System.out.print(msg);
-            String input = sc.nextLine().trim();
-            try {
-                int val = Integer.parseInt(input);
-                if (val < min || val > max) {
-                    System.out.println("Please enter a value between " + min + " and " + max + ".");
-                    continue;
-                }
-                return val;
-            } catch (NumberFormatException e) {
-                System.out.println("Please enter a valid number.");
-            }
-        }
-    }
-
-    private static String chooseFromOptions(Scanner sc, String title, String[] options) {
-        while (true) {
-            System.out.println(title);
-            for (int i = 0; i < options.length; i++) {
-                System.out.println((i + 1) + ". " + options[i]);
-            }
-            System.out.print("Enter choice (1-" + options.length + "): ");
-            String input = sc.nextLine().trim();
-
-            try {
-                int choice = Integer.parseInt(input);
-                if (choice >= 1 && choice <= options.length) {
-                    return options[choice - 1];
-                }
-            } catch (NumberFormatException ignored) {}
-            System.out.println("Invalid choice. Try again.");
         }
     }
 }

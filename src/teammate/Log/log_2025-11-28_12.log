@@ -1,0 +1,37 @@
+[2025-11-28 12:07:31] Application started
+[2025-11-28 12:07:46] Organizer login success for username=organizer
+[2025-11-28 12:07:46] Organizer logged in
+[2025-11-28 12:08:07] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 12:08:07] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 12:08:07] SurveyProcessingTask started for 100 participant(s)
+[2025-11-28 12:08:07] SurveyProcessingTask finished successfully.
+[2025-11-28 12:08:19] Application started
+[2025-11-28 12:08:33] Organizer login success for username=organizer
+[2025-11-28 12:08:33] Organizer logged in
+[2025-11-28 12:09:13] TeamFormationTask started. Participants = 100, teamSize = 4
+[2025-11-28 12:09:13] TeamBuilder: building teams. participants=100, teamSize=4
+[2025-11-28 12:09:13] TeamBuilder split: Leaders=34, Thinkers=33, Balanced=42
+[2025-11-28 12:09:13] TeamBuilder: created 25 teams.
+[2025-11-28 12:09:13] TeamFormationTask finished. Teams formed = 25
+[2025-11-28 12:09:13] Teams formed: 25 with team size 4
+[2025-11-28 12:09:34] Participant login success: username=p1
+[2025-11-28 12:09:34] Participant logged in: Participant_102
+[2025-11-28 12:09:36] Survey skipped (already completed) for participant: Participant_102
+[2025-11-28 12:09:36] Survey accessed by participant: Participant_102
+[2025-11-28 12:09:36] SurveyProcessingTask started for 1 participant(s)
+[2025-11-28 12:09:36] SurveyProcessingTask finished successfully.
+[2025-11-28 12:09:48] Participant login success: username=p1
+[2025-11-28 12:09:48] Participant logged in: Participant_102
+[2025-11-28 12:09:50] Survey skipped (already completed) for participant: Participant_102
+[2025-11-28 12:09:50] Survey accessed by participant: Participant_102
+[2025-11-28 12:09:50] SurveyProcessingTask started for 1 participant(s)
+[2025-11-28 12:09:50] SurveyProcessingTask finished successfully.
+[2025-11-28 12:10:26] Application started
+[2025-11-28 12:10:35] Application started
+[2025-11-28 12:10:39] Application started
+[2025-11-28 12:54:59] Application started
+[2025-11-28 12:55:18] Application started
+[2025-11-28 12:55:27] Organizer login FAILED for username=organizer
+[2025-11-28 12:55:27] Organizer login failed
+[2025-11-28 12:56:10] Organizer login success for username=organizer
+[2025-11-28 12:56:10] Organizer logged in

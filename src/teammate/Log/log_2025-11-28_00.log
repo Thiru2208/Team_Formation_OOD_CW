@@ -10,3 +10,7 @@
 [2025-11-28 00:56:04] Teams saved to CSV: src\teammate\TeamMembers\teams_20251128_005604.csv (teams=25)
 [2025-11-28 00:56:04] Teams exported to CSV: src\teammate\TeamMembers\teams_20251128_005604.csv
 [2025-11-28 00:56:58] Organizer attempted to load participants but file was empty/invalid: participants_sample.csv
+[2025-11-28 00:59:33] Participant signup success: username=p2, id=P103, email=user103@university.edu
+[2025-11-28 00:59:33] New participant signed up and added to system: Participant_103
+[2025-11-28 00:59:51] Participant login FAILED for username=p3
+[2025-11-28 00:59:51] Participant login failed

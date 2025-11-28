@@ -1,0 +1,44 @@
+[2025-11-28 01:00:04] Participant login success: username=p2
+[2025-11-28 01:00:04] Participant logged in: Participant_103
+[2025-11-28 01:00:38] All participant accounts saved to file (with IDs and survey data).
+[2025-11-28 01:00:38] Survey completed and saved for participant: Participant_103 | Game=Basketball | Role=Supporter | Score=68 | Type=Thinker
+[2025-11-28 01:00:38] Survey accessed by participant: Participant_103
+[2025-11-28 01:00:45] Survey skipped (already completed) for participant: Participant_103
+[2025-11-28 01:00:45] Survey accessed by participant: Participant_103
+[2025-11-28 01:01:11] Participant login success: username=p2
+[2025-11-28 01:01:11] Participant logged in: Participant_103
+[2025-11-28 01:01:29] Organizer login success for username=organizer
+[2025-11-28 01:01:29] Organizer logged in
+[2025-11-28 01:01:49] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 01:01:49] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 01:02:54] TeamBuilder: building teams. participants=201, teamSize=3
+[2025-11-28 01:02:54] TeamBuilder split: Leaders=59, Thinkers=67, Balanced=75
+[2025-11-28 01:02:54] TeamBuilder: created 67 teams.
+[2025-11-28 01:02:54] Teams formed: 67 with team size 3
+[2025-11-28 01:03:16] Participant login success: username=p2
+[2025-11-28 01:03:16] Participant logged in: Participant_103
+[2025-11-28 01:03:19] Survey skipped (already completed) for participant: Participant_103
+[2025-11-28 01:03:19] Survey accessed by participant: Participant_103
+[2025-11-28 01:03:37] Application started
+[2025-11-28 01:03:50] Participant login success: username=p2
+[2025-11-28 01:03:50] Participant logged in: Participant_103
+[2025-11-28 01:03:52] Survey skipped (already completed) for participant: Participant_103
+[2025-11-28 01:03:52] Survey accessed by participant: Participant_103
+[2025-11-28 01:04:18] Organizer login success for username=organizer
+[2025-11-28 01:04:18] Organizer logged in
+[2025-11-28 01:04:31] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 01:04:31] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 01:07:34] Participant deleted: Participant_103
+[2025-11-28 01:08:53] Application started
+[2025-11-28 01:09:03] Organizer login success for username=organizer
+[2025-11-28 01:09:03] Organizer logged in
+[2025-11-28 01:09:07] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 01:09:07] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-28 01:09:18] Participant login success: username=p2
+[2025-11-28 01:09:18] Participant logged in: Participant_103
+[2025-11-28 01:09:19] Survey skipped (already completed) for participant: Participant_103
+[2025-11-28 01:09:19] Survey accessed by participant: Participant_103
+[2025-11-28 01:09:32] Organizer login success for username=organizer
+[2025-11-28 01:09:32] Organizer logged in
+[2025-11-28 01:09:51] Participant deleted: Participant_100
+[2025-11-28 01:10:06] Application started
