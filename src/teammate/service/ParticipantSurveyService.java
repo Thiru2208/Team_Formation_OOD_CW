@@ -5,7 +5,6 @@ import teammate.model.Participant;
 import java.util.*;
 import teammate.service.LoggerService;
 
-
 public class ParticipantSurveyService {
 
     public static final String[] ROLE_OPTIONS = {
