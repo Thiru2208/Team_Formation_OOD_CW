@@ -25,6 +25,7 @@ public class TeamFormationTask implements Runnable {
     @Override
     public void run() {
         try {
+            System.out.println("[Thread] Team formation thread running: " + Thread.currentThread().getName());
             logger.info("TeamFormationTask START. participants=" +
                     participants.size() + ", teamSize=" + teamSize);
             result = teamBuilder.buildTeams(participants, teamSize, logger);

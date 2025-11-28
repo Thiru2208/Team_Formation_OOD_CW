@@ -102,24 +102,24 @@ public class ParticipantSurveyService {
             return;
         }
 
-        System.out.println("\n--- Survey for " + p.getName() + " ---");
-
         // Preferred game
         String game = chooseFromOptions(sc, "Select Preferred Game:", GAME_OPTIONS);
+        System.out.println();
 
         // Skill
         int skillLevel = askIntInRange(sc,
                 "Enter Skill Level (1–10): ", 1, 10);
-
+        System.out.println();
         // Role
         String role = chooseFromOptions(sc, "Select Preferred Role:", ROLE_OPTIONS);
-
+        System.out.println();
         // Questions Q1–Q5
         int[] answers = new int[5];
         for (int q = 0; q < QUESTIONS.length; q++) {
             System.out.println(QUESTIONS[q]);
             answers[q] = askIntInRange(sc,
                     "Rate 1 (Strongly Disagree) to 5 (Strongly Agree): ", 1, 5);
+            System.out.println();
         }
 
         int q1 = answers[0];
@@ -138,13 +138,12 @@ public class ParticipantSurveyService {
         p.setRole(role);
         p.setPersonalityScore(personalityScore);
         p.setPersonalityType(personalityType);
-        System.out.println();
         System.out.println("Updated profile: " + p.getName()
                 + " | " + game + " | Skill " + skillLevel
                 + " | Role " + role
                 + " | Type " + personalityType);
 
-        // 🔹 NOW MAKE IT PERMANENT
+        // NOW MAKE IT PERMANENT
         try {
             authService.saveAllAccountsToFile();
             logger.info("Survey completed and saved for participant: " + p.getName() +

@@ -205,7 +205,8 @@ public class AuthService {
         System.out.println("ID       : " + id);
         System.out.println("Name     : " + fullName);
         System.out.println("Email    : " + email);
-        System.out.println("(These will be used for team formation.)\n");
+        System.out.println();
+        System.out.println("(These will be used for team formation.)");
 
         String key = username.toLowerCase();
 

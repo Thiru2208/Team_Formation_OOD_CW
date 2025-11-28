@@ -78,7 +78,10 @@ public class Main {
                 case "4":
                     logger.info("Application exiting");
                     running = false;
+                    System.out.println();
                     System.out.println("Exiting system...");
+                    executor.shutdown();
+                    logger.info("Executor service shut down. Application exiting.");
                     break;
 
                 default:
@@ -92,7 +95,6 @@ public class Main {
                                       CSVHandler csvHandler,
                                       TeamBuilder teamBuilder, AuthService authService,
                                       LoggerService logger, ExecutorService executor) {
-
 
         boolean back = false;
         while (!back) {
@@ -485,8 +487,10 @@ public class Main {
                     }
 
                     if (myTeam == null) {
+                        System.out.println();
                         System.out.println("You are not assigned to any team yet.");
                     } else {
+                        System.out.println();
                         System.out.println("\nYour Team: " + myTeam.getTeamName());
                         for (Participant p : myTeam.getMembers()) {
                             System.out.println(" - " + p.getName()
