@@ -2,20 +2,17 @@ package teammate.service;
 
 import teammate.model.Participant;
 import teammate.model.Team;
-import teammate.service.LoggerService;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class CSVHandler {
+    private final LoggerService logger = LoggerService.getInstance();
 
     /**
      * Loads participants from a CSV file with full validation.
@@ -119,7 +116,9 @@ public class CSVHandler {
 
         } catch (IOException e) {
             System.out.println("Error reading CSV: " + e.getMessage());
+            logger.error("Error reading CSV file: " + filePath, e);
         }
+
 
         // ----------- SUMMARY -----------
         if (participants.isEmpty()) {
