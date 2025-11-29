@@ -1,0 +1,25 @@
+[2025-11-29 15:48:06] Loaded 7 participant accounts from file.
+[2025-11-29 15:48:06] Application started
+[2025-11-29 15:48:22] Loaded 7 participant accounts from file.
+[2025-11-29 15:48:22] Application started
+[2025-11-29 15:48:30] Participant login success: username=p3
+[2025-11-29 15:48:30] Participant logged in: Participant_104
+[2025-11-29 15:48:39] Starting SurveyProcessingThread for Participant_104
+[2025-11-29 15:48:39] SurveyProcessingTask START for participant=Participant_104
+[2025-11-29 15:48:39] Survey skipped (already completed) for participant: Participant_104
+[2025-11-29 15:48:39] SurveyProcessingTask END for participant=Participant_104
+[2025-11-29 15:48:39] SurveyProcessingThread finished for Participant_104
+[2025-11-29 15:49:19] Organizer login success for username=organizer
+[2025-11-29 15:49:19] Organizer logged in
+[2025-11-29 15:49:31] Loaded 7 participant accounts from file.
+[2025-11-29 15:49:31] Application started
+[2025-11-29 15:50:41] Participant login success: username=p3
+[2025-11-29 15:50:41] Participant logged in: Participant_104
+[2025-11-29 15:50:43] Starting SurveyProcessingThread for Participant_104
+[2025-11-29 15:50:43] SurveyProcessingTask START for participant=Participant_104
+[2025-11-29 15:50:43] Survey skipped (already completed) for participant: Participant_104
+[2025-11-29 15:50:43] SurveyProcessingTask END for participant=Participant_104
+[2025-11-29 15:50:43] SurveyProcessingThread finished for Participant_104
+[2025-11-29 15:51:32] Organizer login success for username=organizer
+[2025-11-29 15:51:32] Organizer logged in
+[2025-11-29 15:52:00] Update cancelled for participant: Participant_104

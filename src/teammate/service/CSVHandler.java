@@ -59,14 +59,8 @@ public class CSVHandler {
 
                 // ----------- CSV Columns -----------
                 // Expecting 8 columns:
-                // 0: ID
-                // 1: Name
-                // 2: Email
-                // 3: PreferredGame
-                // 4: SkillLevel
-                // 5: PreferredRole
-                // 6: PersonalityScore
-                // 7: PersonalityType
+                // 0: ID // 1: Name // 2: Email // 3: PreferredGame // 4: SkillLevel
+                // 5: PreferredRole // 6: PersonalityScore // 7: PersonalityType
 
                 String[] data = line.split(",");
 

@@ -3,7 +3,6 @@ package teammate.service;
 import teammate.model.Participant;
 
 import java.util.*;
-import teammate.service.LoggerService;
 
 public class ParticipantSurveyService {
 

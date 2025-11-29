@@ -32,15 +32,12 @@ public class SurveyProcessingTask implements Runnable {
             System.out.println();
             System.out.println("--- Adding " + participant.getName() + " ---");
             System.out.println("[Thread] Survey thread running: " + Thread.currentThread().getName());
-            System.out.println();
             logger.info("SurveyProcessingTask START for participant=" + participant.getName());
-
             surveyService.runSurveyForExistingParticipant(scanner, participant, authService);
-
             logger.info("SurveyProcessingTask END for participant=" + participant.getName());
         } catch (Exception e) {
             logger.error("SurveyProcessingTask FAILED for participant=" + participant.getName(), e);
-            System.out.println("⚠ An error occurred while processing the survey. Please try again.");
+            System.out.println("An error occurred while processing the survey. Please try again.");
         }
     }
 }

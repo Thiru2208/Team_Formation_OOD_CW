@@ -5,7 +5,9 @@ import teammate.model.Team;
 import teammate.service.*;
 
 import java.util.*;
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import static teammate.service.ParticipantSurveyService.GAME_OPTIONS;
 import static teammate.service.ParticipantSurveyService.ROLE_OPTIONS;
@@ -22,7 +24,7 @@ public class Main {
         CSVHandler csvHandler = new CSVHandler();
         TeamBuilder teamBuilder = new TeamBuilder();
         AuthService authService = new AuthService();
-        LoggerService logger = new LoggerService();
+        //LoggerService logger = new LoggerService();
         ParticipantSurveyService surveyService = new ParticipantSurveyService();
         ExecutorService executor = Executors.newFixedThreadPool(4);
         logger.info("Application started");
@@ -137,23 +139,40 @@ public class Main {
                         System.out.println("Please upload/add participants first.");
                         break;
                     }
+
                     System.out.println();
                     System.out.println("--- Team Formation ---");
                     int teamSize = askTeamSize(sc, participants.size());
-                    TeamFormationTask tfTask = new TeamFormationTask(participants, teamSize, teamBuilder);
-                    Thread tfThread = new Thread(tfTask, "TeamFormationThread");
+
+                    // create the task (same as before)
+                    TeamFormationTask tfTask =
+                            new TeamFormationTask(participants, teamSize, teamBuilder);
 
                     try {
-                        logger.info("Starting TeamFormationThread. teamSize=" + teamSize);
-                        tfThread.start();
-                        tfThread.join();  // wait till building finishes
+                        logger.info("Starting TeamFormationTask via ExecutorService. teamSize=" + teamSize);
+
+                        // submit task to executor – runs in background thread
+                        Future<Void> future = executor.submit(() -> {
+                            System.out.println("[Executor] Team formation thread running: "
+                                    + Thread.currentThread().getName());
+                            tfTask.run();          // same logic inside your Runnable
+                            return null;           // because we use Runnable-style task
+                        });
+
+                        // wait for completion (like join())
+                        future.get();
+
+                        // get result from task
                         teams = tfTask.getResult();
                         logger.info("Teams formed: " + teams.size() + " with team size " + teamSize);
                         System.out.println("Teams formed: " + teams.size() + " with team size " + teamSize);
-                    } catch (InterruptedException e) {
-                        Thread.currentThread().interrupt();
-                        System.out.println("Team formation was interrupted. Error forming teams. See logs for details.");
-                        logger.error("Team formation thread interrupted: " + e.getMessage());
+
+                    } catch (Exception e) {
+                        System.out.println("Team formation failed. See logs for details.");
+                        logger.error("Team formation via ExecutorService failed", e);
+                    } finally {
+                        // always shutdown executor
+                        executor.shutdown();
                     }
                     break;
 
@@ -367,7 +386,7 @@ public class Main {
 
         // ---- confirm permanent save ----
         while (true) {
-            System.out.print("Save these changes permanently? (Y/N): ");
+            System.out.print("Save these changes permanently to file? (Y/N): ");
             String ans = sc.nextLine().trim();
 
             if (ans.equalsIgnoreCase("Y")) {
@@ -382,13 +401,9 @@ public class Main {
                 break;
 
             } else if (ans.equalsIgnoreCase("N")) {
-                // revert to old values
-                target.setPreferredGame(oldGame);
-                target.setRole(oldRole);
-                target.setSkillLevel(oldSkill);
-
-                logger.info("Update cancelled for participant: " + target.getName());
-                System.out.println("Changes discarded. Original values kept.");
+                // KEEP new values in memory, just don't write to file
+                logger.info("Update kept in memory only (not saved to file) for participant: " + target.getName());
+                System.out.println("Changes kept for this session only (not saved to file).");
                 break;
 
             } else {
