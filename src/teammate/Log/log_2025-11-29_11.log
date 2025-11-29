@@ -1,0 +1,646 @@
+[2025-11-29 11:13:54] Starting TeamFormationThread. teamSize=6
+[2025-11-29 11:13:54] TeamFormationTask START. participants=100, teamSize=6
+[2025-11-29 11:13:54] TeamBuilder: building teams. participants=100, teamSize=6
+[2025-11-29 11:13:54] TeamBuilder: global average skill=5.56
+[2025-11-29 11:13:54] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:13:54] TeamBuilder: created 17 teams.
+[2025-11-29 11:13:54] Team summary: Team 1 | size=6 | avgSkill=5.666666666666667 | games=6 | roles=4 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:13:54] Team summary: Team 2 | size=6 | avgSkill=5.5 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:13:54] Team summary: Team 3 | size=6 | avgSkill=5.166666666666667 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:13:54] Team summary: Team 4 | size=6 | avgSkill=5.666666666666667 | games=6 | roles=5 | leaders=2 | thinkers=1 | balanced=3
+[2025-11-29 11:13:54] Team summary: Team 5 | size=5 | avgSkill=5.6 | games=5 | roles=4 | leaders=2 | thinkers=3 | balanced=0
+[2025-11-29 11:13:54] Team summary: Team 6 | size=6 | avgSkill=5.166666666666667 | games=5 | roles=4 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:13:54] Team summary: Team 7 | size=6 | avgSkill=5.0 | games=6 | roles=4 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:13:54] Team summary: Team 8 | size=6 | avgSkill=5.666666666666667 | games=5 | roles=5 | leaders=1 | thinkers=2 | balanced=3
+[2025-11-29 11:13:54] Team summary: Team 9 | size=6 | avgSkill=6.0 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:13:54] Team summary: Team 10 | size=6 | avgSkill=5.5 | games=4 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:13:54] Team summary: Team 11 | size=6 | avgSkill=5.666666666666667 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:13:54] Team summary: Team 12 | size=6 | avgSkill=5.5 | games=4 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:13:54] Team summary: Team 13 | size=6 | avgSkill=5.166666666666667 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:13:54] Team summary: Team 14 | size=6 | avgSkill=5.166666666666667 | games=6 | roles=5 | leaders=3 | thinkers=2 | balanced=1
+[2025-11-29 11:13:54] Team summary: Team 15 | size=6 | avgSkill=5.666666666666667 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:13:54] Team summary: Team 16 | size=5 | avgSkill=6.0 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=1
+[2025-11-29 11:13:54] Team summary: Team 17 | size=6 | avgSkill=6.5 | games=6 | roles=5 | leaders=2 | thinkers=1 | balanced=3
+[2025-11-29 11:13:54] TeamFormationTask END. teamsFormed=17
+[2025-11-29 11:13:54] Teams formed: 17 with team size 6
+[2025-11-29 11:14:06] Starting TeamFormationThread. teamSize=7
+[2025-11-29 11:14:06] TeamFormationTask START. participants=100, teamSize=7
+[2025-11-29 11:14:06] TeamBuilder: building teams. participants=100, teamSize=7
+[2025-11-29 11:14:06] TeamBuilder: global average skill=5.56
+[2025-11-29 11:14:06] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:14:06] TeamBuilder: created 15 teams.
+[2025-11-29 11:14:06] Team summary: Team 1 | size=7 | avgSkill=5.142857142857143 | games=6 | roles=4 | leaders=2 | thinkers=3 | balanced=2
+[2025-11-29 11:14:06] Team summary: Team 2 | size=7 | avgSkill=5.285714285714286 | games=6 | roles=5 | leaders=3 | thinkers=2 | balanced=2
+[2025-11-29 11:14:06] Team summary: Team 3 | size=6 | avgSkill=6.0 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:14:06] Team summary: Team 4 | size=7 | avgSkill=5.0 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=3
+[2025-11-29 11:14:06] Team summary: Team 5 | size=7 | avgSkill=5.428571428571429 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=2
+[2025-11-29 11:14:06] Team summary: Team 6 | size=7 | avgSkill=6.0 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=2
+[2025-11-29 11:14:06] Team summary: Team 7 | size=7 | avgSkill=6.0 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=3
+[2025-11-29 11:14:06] Team summary: Team 8 | size=7 | avgSkill=5.857142857142857 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=2
+[2025-11-29 11:14:06] Team summary: Team 9 | size=7 | avgSkill=5.0 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=3
+[2025-11-29 11:14:06] Team summary: Team 10 | size=5 | avgSkill=5.8 | games=5 | roles=4 | leaders=3 | thinkers=2 | balanced=0
+[2025-11-29 11:14:06] Team summary: Team 11 | size=7 | avgSkill=5.571428571428571 | games=6 | roles=5 | leaders=1 | thinkers=2 | balanced=4
+[2025-11-29 11:14:06] Team summary: Team 12 | size=7 | avgSkill=4.857142857142857 | games=6 | roles=5 | leaders=3 | thinkers=2 | balanced=2
+[2025-11-29 11:14:06] Team summary: Team 13 | size=7 | avgSkill=5.714285714285714 | games=6 | roles=5 | leaders=3 | thinkers=2 | balanced=2
+[2025-11-29 11:14:06] Team summary: Team 14 | size=5 | avgSkill=6.8 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=1
+[2025-11-29 11:14:06] Team summary: Team 15 | size=7 | avgSkill=5.428571428571429 | games=5 | roles=5 | leaders=3 | thinkers=1 | balanced=3
+[2025-11-29 11:14:06] TeamFormationTask END. teamsFormed=15
+[2025-11-29 11:14:06] Teams formed: 15 with team size 7
+[2025-11-29 11:14:13] Starting TeamFormationThread. teamSize=8
+[2025-11-29 11:14:13] TeamFormationTask START. participants=100, teamSize=8
+[2025-11-29 11:14:13] TeamBuilder: building teams. participants=100, teamSize=8
+[2025-11-29 11:14:13] TeamBuilder: global average skill=5.56
+[2025-11-29 11:14:13] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:14:13] TeamBuilder: created 13 teams.
+[2025-11-29 11:14:13] Team summary: Team 1 | size=8 | avgSkill=5.125 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=3
+[2025-11-29 11:14:13] Team summary: Team 2 | size=8 | avgSkill=5.25 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=3
+[2025-11-29 11:14:13] Team summary: Team 3 | size=7 | avgSkill=5.571428571428571 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=1
+[2025-11-29 11:14:13] Team summary: Team 4 | size=8 | avgSkill=6.0 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=4
+[2025-11-29 11:14:13] Team summary: Team 5 | size=8 | avgSkill=5.125 | games=6 | roles=5 | leaders=4 | thinkers=3 | balanced=1
+[2025-11-29 11:14:13] Team summary: Team 6 | size=8 | avgSkill=5.75 | games=5 | roles=5 | leaders=2 | thinkers=3 | balanced=3
+[2025-11-29 11:14:13] Team summary: Team 7 | size=7 | avgSkill=6.0 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=2
+[2025-11-29 11:14:13] Team summary: Team 8 | size=8 | avgSkill=5.625 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=4
+[2025-11-29 11:14:13] Team summary: Team 9 | size=8 | avgSkill=5.875 | games=6 | roles=5 | leaders=4 | thinkers=2 | balanced=2
+[2025-11-29 11:14:13] Team summary: Team 10 | size=8 | avgSkill=5.75 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=3
+[2025-11-29 11:14:13] Team summary: Team 11 | size=8 | avgSkill=5.625 | games=6 | roles=5 | leaders=3 | thinkers=2 | balanced=3
+[2025-11-29 11:14:13] Team summary: Team 12 | size=7 | avgSkill=5.285714285714286 | games=5 | roles=5 | leaders=3 | thinkers=2 | balanced=2
+[2025-11-29 11:14:13] Team summary: Team 13 | size=7 | avgSkill=5.285714285714286 | games=6 | roles=5 | leaders=3 | thinkers=2 | balanced=2
+[2025-11-29 11:14:13] TeamFormationTask END. teamsFormed=13
+[2025-11-29 11:14:13] Teams formed: 13 with team size 8
+[2025-11-29 11:15:12] Starting TeamFormationThread. teamSize=3
+[2025-11-29 11:15:12] TeamFormationTask START. participants=100, teamSize=3
+[2025-11-29 11:15:12] TeamBuilder: building teams. participants=100, teamSize=3
+[2025-11-29 11:15:12] TeamBuilder: global average skill=5.56
+[2025-11-29 11:15:12] Small team detected: Team 12 | size=2
+[2025-11-29 11:15:12] Small team detected: Team 22 | size=2
+[2025-11-29 11:15:12] TeamBuilder: fixing small teams (<3). Small teams=2
+[2025-11-29 11:15:12] Redistributing members from small team: Team 12
+[2025-11-29 11:15:12] Excluding team from candidate list: Team 12
+[2025-11-29 11:15:12] Moving participant Participant_55 from Team 12 to Team 22
+[2025-11-29 11:15:12] Excluding team from candidate list: Team 12
+[2025-11-29 11:15:12] Moving participant Participant_39 from Team 12 to Team 1
+[2025-11-29 11:15:12] Redistributing members from small team: Team 22
+[2025-11-29 11:15:12] Excluding team from candidate list: Team 22
+[2025-11-29 11:15:12] Moving participant Participant_81 from Team 22 to Team 12
+[2025-11-29 11:15:12] Excluding team from candidate list: Team 22
+[2025-11-29 11:15:12] Moving participant Participant_85 from Team 22 to Team 12
+[2025-11-29 11:15:12] Excluding team from candidate list: Team 22
+[2025-11-29 11:15:12] Moving participant Participant_55 from Team 22 to Team 12
+[2025-11-29 11:15:12] TeamBuilder: after fixing, totalTeams=33
+[2025-11-29 11:15:12] TeamBuilder: created 33 teams.
+[2025-11-29 11:15:12] Team summary: Team 1 | size=4 | avgSkill=4.75 | games=3 | roles=4 | leaders=2 | thinkers=2 | balanced=0
+[2025-11-29 11:15:12] Team summary: Team 2 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 3 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:15:12] Team summary: Team 4 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 5 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-29 11:15:12] Team summary: Team 6 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 7 | size=3 | avgSkill=4.666666666666667 | games=2 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 8 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 9 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=2 | balanced=0
+[2025-11-29 11:15:12] Team summary: Team 10 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=2 | balanced=0
+[2025-11-29 11:15:12] Team summary: Team 11 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 12 | size=3 | avgSkill=9.333333333333334 | games=3 | roles=2 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:15:12] Team summary: Team 13 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 14 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:15:12] Team summary: Team 15 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 16 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:15:12] Team summary: Team 17 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 18 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 19 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 20 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 21 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-29 11:15:12] Team summary: Team 23 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 24 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 25 | size=3 | avgSkill=4.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=2 | balanced=0
+[2025-11-29 11:15:12] Team summary: Team 26 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 27 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 28 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:15:12] Team summary: Team 29 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 30 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-29 11:15:12] Team summary: Team 31 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] Team summary: Team 32 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:15:12] Team summary: Team 33 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-29 11:15:12] Team summary: Team 34 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:15:12] TeamFormationTask END. teamsFormed=33
+[2025-11-29 11:15:12] Teams formed: 33 with team size 3
+[2025-11-29 11:15:41] Starting TeamFormationThread. teamSize=15
+[2025-11-29 11:15:41] TeamFormationTask START. participants=100, teamSize=15
+[2025-11-29 11:15:41] TeamBuilder: building teams. participants=100, teamSize=15
+[2025-11-29 11:15:41] TeamBuilder: global average skill=5.56
+[2025-11-29 11:15:41] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:15:41] TeamBuilder: created 7 teams.
+[2025-11-29 11:15:41] Team summary: Team 1 | size=11 | avgSkill=7.363636363636363 | games=6 | roles=5 | leaders=4 | thinkers=3 | balanced=4
+[2025-11-29 11:15:41] Team summary: Team 2 | size=15 | avgSkill=5.133333333333334 | games=6 | roles=5 | leaders=5 | thinkers=6 | balanced=4
+[2025-11-29 11:15:41] Team summary: Team 3 | size=15 | avgSkill=5.466666666666667 | games=6 | roles=5 | leaders=6 | thinkers=5 | balanced=4
+[2025-11-29 11:15:41] Team summary: Team 4 | size=15 | avgSkill=5.4 | games=6 | roles=5 | leaders=4 | thinkers=5 | balanced=6
+[2025-11-29 11:15:41] Team summary: Team 5 | size=15 | avgSkill=5.6 | games=6 | roles=5 | leaders=5 | thinkers=5 | balanced=5
+[2025-11-29 11:15:41] Team summary: Team 6 | size=15 | avgSkill=5.4 | games=6 | roles=5 | leaders=5 | thinkers=4 | balanced=6
+[2025-11-29 11:15:41] Team summary: Team 7 | size=14 | avgSkill=5.0 | games=6 | roles=5 | leaders=5 | thinkers=5 | balanced=4
+[2025-11-29 11:15:41] TeamFormationTask END. teamsFormed=7
+[2025-11-29 11:15:41] Teams formed: 7 with team size 15
+[2025-11-29 11:19:03] Starting TeamFormationThread. teamSize=45
+[2025-11-29 11:19:03] TeamFormationTask START. participants=100, teamSize=45
+[2025-11-29 11:19:03] TeamBuilder: building teams. participants=100, teamSize=45
+[2025-11-29 11:19:03] TeamBuilder: global average skill=5.56
+[2025-11-29 11:19:03] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:19:03] TeamBuilder: created 3 teams.
+[2025-11-29 11:19:03] Team summary: Team 1 | size=45 | avgSkill=5.7555555555555555 | games=6 | roles=5 | leaders=12 | thinkers=19 | balanced=14
+[2025-11-29 11:19:03] Team summary: Team 2 | size=39 | avgSkill=4.230769230769231 | games=6 | roles=5 | leaders=15 | thinkers=9 | balanced=15
+[2025-11-29 11:19:03] Team summary: Team 3 | size=16 | avgSkill=8.25 | games=6 | roles=5 | leaders=7 | thinkers=5 | balanced=4
+[2025-11-29 11:19:03] TeamFormationTask END. teamsFormed=3
+[2025-11-29 11:19:03] Teams formed: 3 with team size 45
+[2025-11-29 11:20:04] Starting TeamFormationThread. teamSize=34
+[2025-11-29 11:20:04] TeamFormationTask START. participants=100, teamSize=34
+[2025-11-29 11:20:04] TeamBuilder: building teams. participants=100, teamSize=34
+[2025-11-29 11:20:04] TeamBuilder: global average skill=5.56
+[2025-11-29 11:20:04] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:20:04] TeamBuilder: created 3 teams.
+[2025-11-29 11:20:04] Team summary: Team 1 | size=34 | avgSkill=5.411764705882353 | games=6 | roles=5 | leaders=11 | thinkers=14 | balanced=9
+[2025-11-29 11:20:04] Team summary: Team 2 | size=34 | avgSkill=6.794117647058823 | games=6 | roles=5 | leaders=11 | thinkers=11 | balanced=12
+[2025-11-29 11:20:04] Team summary: Team 3 | size=32 | avgSkill=4.40625 | games=6 | roles=5 | leaders=12 | thinkers=8 | balanced=12
+[2025-11-29 11:20:04] TeamFormationTask END. teamsFormed=3
+[2025-11-29 11:20:04] Teams formed: 3 with team size 34
+[2025-11-29 11:20:25] Starting TeamFormationThread. teamSize=30
+[2025-11-29 11:20:25] TeamFormationTask START. participants=100, teamSize=30
+[2025-11-29 11:20:25] TeamBuilder: building teams. participants=100, teamSize=30
+[2025-11-29 11:20:25] TeamBuilder: global average skill=5.56
+[2025-11-29 11:20:25] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:20:25] TeamBuilder: created 4 teams.
+[2025-11-29 11:20:25] Team summary: Team 1 | size=12 | avgSkill=8.0 | games=6 | roles=5 | leaders=5 | thinkers=3 | balanced=4
+[2025-11-29 11:20:25] Team summary: Team 2 | size=28 | avgSkill=4.214285714285714 | games=6 | roles=5 | leaders=9 | thinkers=8 | balanced=11
+[2025-11-29 11:20:25] Team summary: Team 3 | size=30 | avgSkill=5.133333333333334 | games=6 | roles=5 | leaders=9 | thinkers=10 | balanced=11
+[2025-11-29 11:20:25] Team summary: Team 4 | size=30 | avgSkill=6.266666666666667 | games=6 | roles=5 | leaders=11 | thinkers=12 | balanced=7
+[2025-11-29 11:20:25] TeamFormationTask END. teamsFormed=4
+[2025-11-29 11:20:25] Teams formed: 4 with team size 30
+[2025-11-29 11:20:52] Starting TeamFormationThread. teamSize=25
+[2025-11-29 11:20:52] TeamFormationTask START. participants=100, teamSize=25
+[2025-11-29 11:20:52] TeamBuilder: building teams. participants=100, teamSize=25
+[2025-11-29 11:20:52] TeamBuilder: global average skill=5.56
+[2025-11-29 11:20:52] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:20:52] TeamBuilder: created 4 teams.
+[2025-11-29 11:20:52] Team summary: Team 1 | size=25 | avgSkill=6.48 | games=6 | roles=5 | leaders=10 | thinkers=8 | balanced=7
+[2025-11-29 11:20:52] Team summary: Team 2 | size=25 | avgSkill=5.68 | games=6 | roles=5 | leaders=9 | thinkers=12 | balanced=4
+[2025-11-29 11:20:52] Team summary: Team 3 | size=25 | avgSkill=5.36 | games=6 | roles=5 | leaders=7 | thinkers=6 | balanced=12
+[2025-11-29 11:20:52] Team summary: Team 4 | size=25 | avgSkill=4.72 | games=6 | roles=5 | leaders=8 | thinkers=7 | balanced=10
+[2025-11-29 11:20:52] TeamFormationTask END. teamsFormed=4
+[2025-11-29 11:20:52] Teams formed: 4 with team size 25
+[2025-11-29 11:25:52] Starting TeamFormationThread. teamSize=19
+[2025-11-29 11:25:52] TeamFormationTask START. participants=100, teamSize=19
+[2025-11-29 11:25:52] TeamBuilder: building teams. participants=100, teamSize=19
+[2025-11-29 11:25:52] TeamBuilder: global average skill=5.56
+[2025-11-29 11:25:52] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:25:52] TeamBuilder: created 6 teams.
+[2025-11-29 11:25:52] Team summary: Team 1 | size=17 | avgSkill=5.176470588235294 | games=6 | roles=5 | leaders=8 | thinkers=4 | balanced=5
+[2025-11-29 11:25:52] Team summary: Team 2 | size=15 | avgSkill=5.4 | games=6 | roles=5 | leaders=3 | thinkers=5 | balanced=7
+[2025-11-29 11:25:52] Team summary: Team 3 | size=19 | avgSkill=5.0 | games=6 | roles=5 | leaders=6 | thinkers=8 | balanced=5
+[2025-11-29 11:25:52] Team summary: Team 4 | size=19 | avgSkill=5.631578947368421 | games=6 | roles=5 | leaders=6 | thinkers=8 | balanced=5
+[2025-11-29 11:25:52] Team summary: Team 5 | size=19 | avgSkill=5.421052631578948 | games=6 | roles=5 | leaders=6 | thinkers=5 | balanced=8
+[2025-11-29 11:25:52] Team summary: Team 6 | size=11 | avgSkill=7.454545454545454 | games=6 | roles=5 | leaders=5 | thinkers=3 | balanced=3
+[2025-11-29 11:25:52] TeamFormationTask END. teamsFormed=6
+[2025-11-29 11:25:52] Teams formed: 6 with team size 19
+[2025-11-29 11:25:58] Starting TeamFormationThread. teamSize=18
+[2025-11-29 11:25:58] TeamFormationTask START. participants=100, teamSize=18
+[2025-11-29 11:25:58] TeamBuilder: building teams. participants=100, teamSize=18
+[2025-11-29 11:25:58] TeamBuilder: global average skill=5.56
+[2025-11-29 11:25:58] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:25:58] TeamBuilder: created 6 teams.
+[2025-11-29 11:25:58] Team summary: Team 1 | size=18 | avgSkill=5.333333333333333 | games=6 | roles=5 | leaders=8 | thinkers=5 | balanced=5
+[2025-11-29 11:25:58] Team summary: Team 2 | size=18 | avgSkill=5.222222222222222 | games=6 | roles=5 | leaders=5 | thinkers=6 | balanced=7
+[2025-11-29 11:25:58] Team summary: Team 3 | size=12 | avgSkill=7.083333333333333 | games=6 | roles=5 | leaders=4 | thinkers=4 | balanced=4
+[2025-11-29 11:25:58] Team summary: Team 4 | size=18 | avgSkill=4.944444444444445 | games=6 | roles=5 | leaders=5 | thinkers=7 | balanced=6
+[2025-11-29 11:25:58] Team summary: Team 5 | size=18 | avgSkill=5.777777777777778 | games=6 | roles=5 | leaders=7 | thinkers=7 | balanced=4
+[2025-11-29 11:25:58] Team summary: Team 6 | size=16 | avgSkill=5.5 | games=6 | roles=5 | leaders=5 | thinkers=4 | balanced=7
+[2025-11-29 11:25:58] TeamFormationTask END. teamsFormed=6
+[2025-11-29 11:25:58] Teams formed: 6 with team size 18
+[2025-11-29 11:26:03] Starting TeamFormationThread. teamSize=17
+[2025-11-29 11:26:03] TeamFormationTask START. participants=100, teamSize=17
+[2025-11-29 11:26:03] TeamBuilder: building teams. participants=100, teamSize=17
+[2025-11-29 11:26:03] TeamBuilder: global average skill=5.56
+[2025-11-29 11:26:03] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:26:03] TeamBuilder: created 6 teams.
+[2025-11-29 11:26:03] Team summary: Team 1 | size=17 | avgSkill=5.882352941176471 | games=6 | roles=5 | leaders=5 | thinkers=5 | balanced=7
+[2025-11-29 11:26:03] Team summary: Team 2 | size=17 | avgSkill=5.352941176470588 | games=6 | roles=5 | leaders=5 | thinkers=7 | balanced=5
+[2025-11-29 11:26:03] Team summary: Team 3 | size=17 | avgSkill=5.176470588235294 | games=6 | roles=5 | leaders=10 | thinkers=3 | balanced=4
+[2025-11-29 11:26:03] Team summary: Team 4 | size=17 | avgSkill=5.588235294117647 | games=6 | roles=5 | leaders=5 | thinkers=8 | balanced=4
+[2025-11-29 11:26:03] Team summary: Team 5 | size=15 | avgSkill=5.6 | games=6 | roles=5 | leaders=5 | thinkers=4 | balanced=6
+[2025-11-29 11:26:03] Team summary: Team 6 | size=17 | avgSkill=5.764705882352941 | games=6 | roles=5 | leaders=4 | thinkers=6 | balanced=7
+[2025-11-29 11:26:03] TeamFormationTask END. teamsFormed=6
+[2025-11-29 11:26:03] Teams formed: 6 with team size 17
+[2025-11-29 11:26:12] Starting TeamFormationThread. teamSize=16
+[2025-11-29 11:26:12] TeamFormationTask START. participants=100, teamSize=16
+[2025-11-29 11:26:12] TeamBuilder: building teams. participants=100, teamSize=16
+[2025-11-29 11:26:12] TeamBuilder: global average skill=5.56
+[2025-11-29 11:26:12] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:26:12] TeamBuilder: created 7 teams.
+[2025-11-29 11:26:12] Team summary: Team 1 | size=16 | avgSkill=5.3125 | games=6 | roles=5 | leaders=5 | thinkers=6 | balanced=5
+[2025-11-29 11:26:12] Team summary: Team 2 | size=12 | avgSkill=5.583333333333333 | games=6 | roles=5 | leaders=4 | thinkers=5 | balanced=3
+[2025-11-29 11:26:12] Team summary: Team 3 | size=16 | avgSkill=5.25 | games=6 | roles=5 | leaders=8 | thinkers=4 | balanced=4
+[2025-11-29 11:26:12] Team summary: Team 4 | size=16 | avgSkill=5.1875 | games=6 | roles=5 | leaders=6 | thinkers=4 | balanced=6
+[2025-11-29 11:26:12] Team summary: Team 5 | size=11 | avgSkill=6.909090909090909 | games=6 | roles=5 | leaders=2 | thinkers=4 | balanced=5
+[2025-11-29 11:26:12] Team summary: Team 6 | size=16 | avgSkill=5.5 | games=6 | roles=5 | leaders=5 | thinkers=7 | balanced=4
+[2025-11-29 11:26:12] Team summary: Team 7 | size=13 | avgSkill=5.615384615384615 | games=6 | roles=5 | leaders=4 | thinkers=3 | balanced=6
+[2025-11-29 11:26:12] TeamFormationTask END. teamsFormed=7
+[2025-11-29 11:26:12] Teams formed: 7 with team size 16
+[2025-11-29 11:26:15] Starting TeamFormationThread. teamSize=15
+[2025-11-29 11:26:15] TeamFormationTask START. participants=100, teamSize=15
+[2025-11-29 11:26:15] TeamBuilder: building teams. participants=100, teamSize=15
+[2025-11-29 11:26:15] TeamBuilder: global average skill=5.56
+[2025-11-29 11:26:15] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:26:15] TeamBuilder: created 7 teams.
+[2025-11-29 11:26:15] Team summary: Team 1 | size=14 | avgSkill=5.357142857142857 | games=6 | roles=5 | leaders=3 | thinkers=4 | balanced=7
+[2025-11-29 11:26:15] Team summary: Team 2 | size=15 | avgSkill=5.133333333333334 | games=6 | roles=5 | leaders=7 | thinkers=3 | balanced=5
+[2025-11-29 11:26:15] Team summary: Team 3 | size=12 | avgSkill=6.5 | games=6 | roles=5 | leaders=4 | thinkers=4 | balanced=4
+[2025-11-29 11:26:15] Team summary: Team 4 | size=14 | avgSkill=5.285714285714286 | games=6 | roles=5 | leaders=5 | thinkers=6 | balanced=3
+[2025-11-29 11:26:15] Team summary: Team 5 | size=15 | avgSkill=5.6 | games=6 | roles=5 | leaders=6 | thinkers=4 | balanced=5
+[2025-11-29 11:26:15] Team summary: Team 6 | size=15 | avgSkill=5.6 | games=6 | roles=5 | leaders=4 | thinkers=6 | balanced=5
+[2025-11-29 11:26:15] Team summary: Team 7 | size=15 | avgSkill=5.6 | games=6 | roles=5 | leaders=5 | thinkers=6 | balanced=4
+[2025-11-29 11:26:15] TeamFormationTask END. teamsFormed=7
+[2025-11-29 11:26:15] Teams formed: 7 with team size 15
+[2025-11-29 11:26:17] Starting TeamFormationThread. teamSize=14
+[2025-11-29 11:26:17] TeamFormationTask START. participants=100, teamSize=14
+[2025-11-29 11:26:17] TeamBuilder: building teams. participants=100, teamSize=14
+[2025-11-29 11:26:17] TeamBuilder: global average skill=5.56
+[2025-11-29 11:26:17] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:26:17] TeamBuilder: created 8 teams.
+[2025-11-29 11:26:17] Team summary: Team 1 | size=12 | avgSkill=5.583333333333333 | games=6 | roles=5 | leaders=5 | thinkers=3 | balanced=4
+[2025-11-29 11:26:17] Team summary: Team 2 | size=11 | avgSkill=6.0 | games=6 | roles=5 | leaders=2 | thinkers=4 | balanced=5
+[2025-11-29 11:26:17] Team summary: Team 3 | size=14 | avgSkill=5.142857142857143 | games=6 | roles=5 | leaders=7 | thinkers=5 | balanced=2
+[2025-11-29 11:26:17] Team summary: Team 4 | size=14 | avgSkill=5.142857142857143 | games=6 | roles=5 | leaders=4 | thinkers=6 | balanced=4
+[2025-11-29 11:26:17] Team summary: Team 5 | size=14 | avgSkill=5.357142857142857 | games=5 | roles=5 | leaders=5 | thinkers=4 | balanced=5
+[2025-11-29 11:26:17] Team summary: Team 6 | size=12 | avgSkill=5.333333333333333 | games=6 | roles=5 | leaders=4 | thinkers=4 | balanced=4
+[2025-11-29 11:26:17] Team summary: Team 7 | size=11 | avgSkill=6.636363636363637 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=5
+[2025-11-29 11:26:17] Team summary: Team 8 | size=12 | avgSkill=5.583333333333333 | games=6 | roles=5 | leaders=4 | thinkers=4 | balanced=4
+[2025-11-29 11:26:17] TeamFormationTask END. teamsFormed=8
+[2025-11-29 11:26:17] Teams formed: 8 with team size 14
+[2025-11-29 11:26:51] Starting TeamFormationThread. teamSize=13
+[2025-11-29 11:26:51] TeamFormationTask START. participants=100, teamSize=13
+[2025-11-29 11:26:51] TeamBuilder: building teams. participants=100, teamSize=13
+[2025-11-29 11:26:51] TeamBuilder: global average skill=5.56
+[2025-11-29 11:26:51] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:26:51] TeamBuilder: created 8 teams.
+[2025-11-29 11:26:51] Team summary: Team 1 | size=13 | avgSkill=5.3076923076923075 | games=6 | roles=5 | leaders=5 | thinkers=4 | balanced=4
+[2025-11-29 11:26:51] Team summary: Team 2 | size=13 | avgSkill=5.384615384615385 | games=6 | roles=5 | leaders=4 | thinkers=4 | balanced=5
+[2025-11-29 11:26:51] Team summary: Team 3 | size=11 | avgSkill=6.545454545454546 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=5
+[2025-11-29 11:26:51] Team summary: Team 4 | size=13 | avgSkill=4.846153846153846 | games=6 | roles=5 | leaders=6 | thinkers=3 | balanced=4
+[2025-11-29 11:26:51] Team summary: Team 5 | size=13 | avgSkill=5.384615384615385 | games=6 | roles=5 | leaders=4 | thinkers=5 | balanced=4
+[2025-11-29 11:26:51] Team summary: Team 6 | size=13 | avgSkill=5.0 | games=6 | roles=5 | leaders=4 | thinkers=6 | balanced=3
+[2025-11-29 11:26:51] Team summary: Team 7 | size=13 | avgSkill=5.461538461538462 | games=6 | roles=5 | leaders=4 | thinkers=4 | balanced=5
+[2025-11-29 11:26:51] Team summary: Team 8 | size=11 | avgSkill=6.909090909090909 | games=6 | roles=5 | leaders=4 | thinkers=4 | balanced=3
+[2025-11-29 11:26:51] TeamFormationTask END. teamsFormed=8
+[2025-11-29 11:26:51] Teams formed: 8 with team size 13
+[2025-11-29 11:27:00] Starting TeamFormationThread. teamSize=12
+[2025-11-29 11:27:00] TeamFormationTask START. participants=100, teamSize=12
+[2025-11-29 11:27:00] TeamBuilder: building teams. participants=100, teamSize=12
+[2025-11-29 11:27:00] TeamBuilder: global average skill=5.56
+[2025-11-29 11:27:00] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:27:00] TeamBuilder: created 9 teams.
+[2025-11-29 11:27:00] Team summary: Team 1 | size=12 | avgSkill=4.833333333333333 | games=6 | roles=5 | leaders=4 | thinkers=4 | balanced=4
+[2025-11-29 11:27:00] Team summary: Team 2 | size=10 | avgSkill=6.6 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=4
+[2025-11-29 11:27:00] Team summary: Team 3 | size=11 | avgSkill=5.636363636363637 | games=6 | roles=5 | leaders=4 | thinkers=4 | balanced=3
+[2025-11-29 11:27:00] Team summary: Team 4 | size=12 | avgSkill=5.166666666666667 | games=6 | roles=5 | leaders=5 | thinkers=4 | balanced=3
+[2025-11-29 11:27:00] Team summary: Team 5 | size=11 | avgSkill=5.181818181818182 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=5
+[2025-11-29 11:27:00] Team summary: Team 6 | size=12 | avgSkill=5.75 | games=6 | roles=5 | leaders=3 | thinkers=4 | balanced=5
+[2025-11-29 11:27:00] Team summary: Team 7 | size=9 | avgSkill=6.666666666666667 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=4
+[2025-11-29 11:27:00] Team summary: Team 8 | size=11 | avgSkill=5.2727272727272725 | games=6 | roles=5 | leaders=5 | thinkers=4 | balanced=2
+[2025-11-29 11:27:00] Team summary: Team 9 | size=12 | avgSkill=5.333333333333333 | games=6 | roles=5 | leaders=5 | thinkers=4 | balanced=3
+[2025-11-29 11:27:00] TeamFormationTask END. teamsFormed=9
+[2025-11-29 11:27:00] Teams formed: 9 with team size 12
+[2025-11-29 11:27:07] Starting TeamFormationThread. teamSize=11
+[2025-11-29 11:27:07] TeamFormationTask START. participants=100, teamSize=11
+[2025-11-29 11:27:07] TeamBuilder: building teams. participants=100, teamSize=11
+[2025-11-29 11:27:07] TeamBuilder: global average skill=5.56
+[2025-11-29 11:27:07] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:27:07] TeamBuilder: created 10 teams.
+[2025-11-29 11:27:07] Team summary: Team 1 | size=11 | avgSkill=5.2727272727272725 | games=6 | roles=5 | leaders=4 | thinkers=3 | balanced=4
+[2025-11-29 11:27:07] Team summary: Team 2 | size=10 | avgSkill=5.3 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=4
+[2025-11-29 11:27:07] Team summary: Team 3 | size=7 | avgSkill=7.0 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=2
+[2025-11-29 11:27:07] Team summary: Team 4 | size=11 | avgSkill=5.7272727272727275 | games=6 | roles=5 | leaders=6 | thinkers=2 | balanced=3
+[2025-11-29 11:27:07] Team summary: Team 5 | size=10 | avgSkill=5.4 | games=6 | roles=5 | leaders=4 | thinkers=3 | balanced=3
+[2025-11-29 11:27:07] Team summary: Team 6 | size=10 | avgSkill=5.4 | games=6 | roles=5 | leaders=3 | thinkers=4 | balanced=3
+[2025-11-29 11:27:07] Team summary: Team 7 | size=10 | avgSkill=5.7 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=4
+[2025-11-29 11:27:07] Team summary: Team 8 | size=9 | avgSkill=6.0 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=4
+[2025-11-29 11:27:07] Team summary: Team 9 | size=11 | avgSkill=5.181818181818182 | games=6 | roles=5 | leaders=4 | thinkers=5 | balanced=2
+[2025-11-29 11:27:07] Team summary: Team 10 | size=11 | avgSkill=5.181818181818182 | games=6 | roles=5 | leaders=3 | thinkers=4 | balanced=4
+[2025-11-29 11:27:07] TeamFormationTask END. teamsFormed=10
+[2025-11-29 11:27:07] Teams formed: 10 with team size 11
+[2025-11-29 11:27:10] Starting TeamFormationThread. teamSize=10
+[2025-11-29 11:27:10] TeamFormationTask START. participants=100, teamSize=10
+[2025-11-29 11:27:10] TeamBuilder: building teams. participants=100, teamSize=10
+[2025-11-29 11:27:10] TeamBuilder: global average skill=5.56
+[2025-11-29 11:27:10] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:27:10] TeamBuilder: created 10 teams.
+[2025-11-29 11:27:10] Team summary: Team 1 | size=10 | avgSkill=5.7 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=5
+[2025-11-29 11:27:10] Team summary: Team 2 | size=10 | avgSkill=5.2 | games=6 | roles=5 | leaders=3 | thinkers=4 | balanced=3
+[2025-11-29 11:27:10] Team summary: Team 3 | size=10 | avgSkill=5.7 | games=6 | roles=5 | leaders=4 | thinkers=3 | balanced=3
+[2025-11-29 11:27:10] Team summary: Team 4 | size=10 | avgSkill=5.2 | games=6 | roles=5 | leaders=4 | thinkers=4 | balanced=2
+[2025-11-29 11:27:10] Team summary: Team 5 | size=10 | avgSkill=5.8 | games=6 | roles=5 | leaders=4 | thinkers=3 | balanced=3
+[2025-11-29 11:27:10] Team summary: Team 6 | size=10 | avgSkill=5.7 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=4
+[2025-11-29 11:27:10] Team summary: Team 7 | size=10 | avgSkill=6.0 | games=6 | roles=5 | leaders=4 | thinkers=3 | balanced=3
+[2025-11-29 11:27:10] Team summary: Team 8 | size=10 | avgSkill=5.0 | games=6 | roles=5 | leaders=4 | thinkers=4 | balanced=2
+[2025-11-29 11:27:10] Team summary: Team 9 | size=10 | avgSkill=5.6 | games=5 | roles=5 | leaders=3 | thinkers=3 | balanced=4
+[2025-11-29 11:27:10] Team summary: Team 10 | size=10 | avgSkill=5.7 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=4
+[2025-11-29 11:27:10] TeamFormationTask END. teamsFormed=10
+[2025-11-29 11:27:10] Teams formed: 10 with team size 10
+[2025-11-29 11:27:14] Starting TeamFormationThread. teamSize=9
+[2025-11-29 11:27:14] TeamFormationTask START. participants=100, teamSize=9
+[2025-11-29 11:27:14] TeamBuilder: building teams. participants=100, teamSize=9
+[2025-11-29 11:27:14] TeamBuilder: global average skill=5.56
+[2025-11-29 11:27:14] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:27:14] TeamBuilder: created 12 teams.
+[2025-11-29 11:27:14] Team summary: Team 1 | size=9 | avgSkill=5.333333333333333 | games=6 | roles=5 | leaders=4 | thinkers=3 | balanced=2
+[2025-11-29 11:27:14] Team summary: Team 2 | size=8 | avgSkill=5.0 | games=6 | roles=5 | leaders=4 | thinkers=3 | balanced=1
+[2025-11-29 11:27:14] Team summary: Team 3 | size=8 | avgSkill=5.375 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=3
+[2025-11-29 11:27:14] Team summary: Team 4 | size=9 | avgSkill=5.555555555555555 | games=6 | roles=5 | leaders=3 | thinkers=2 | balanced=4
+[2025-11-29 11:27:14] Team summary: Team 5 | size=9 | avgSkill=5.666666666666667 | games=6 | roles=5 | leaders=3 | thinkers=2 | balanced=4
+[2025-11-29 11:27:14] Team summary: Team 6 | size=8 | avgSkill=5.125 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=2
+[2025-11-29 11:27:14] Team summary: Team 7 | size=9 | avgSkill=5.777777777777778 | games=6 | roles=5 | leaders=3 | thinkers=2 | balanced=4
+[2025-11-29 11:27:14] Team summary: Team 8 | size=8 | avgSkill=5.75 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=2
+[2025-11-29 11:27:14] Team summary: Team 9 | size=8 | avgSkill=6.125 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=3
+[2025-11-29 11:27:14] Team summary: Team 10 | size=6 | avgSkill=6.833333333333333 | games=5 | roles=5 | leaders=2 | thinkers=3 | balanced=1
+[2025-11-29 11:27:14] Team summary: Team 11 | size=9 | avgSkill=5.111111111111111 | games=5 | roles=5 | leaders=3 | thinkers=3 | balanced=3
+[2025-11-29 11:27:14] Team summary: Team 12 | size=9 | avgSkill=5.444444444444445 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=4
+[2025-11-29 11:27:14] TeamFormationTask END. teamsFormed=12
+[2025-11-29 11:27:14] Teams formed: 12 with team size 9
+[2025-11-29 11:28:50] Loaded 7 participant accounts from file.
+[2025-11-29 11:28:50] Application started
+[2025-11-29 11:28:57] Organizer login success for username=organizer
+[2025-11-29 11:28:58] Organizer logged in
+[2025-11-29 11:29:12] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-29 11:29:12] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-29 11:30:48] Starting TeamFormationThread. teamSize=7
+[2025-11-29 11:30:48] TeamFormationTask START. participants=100, teamSize=7
+[2025-11-29 11:30:48] TeamBuilder: building teams. participants=100, teamSize=7
+[2025-11-29 11:30:48] TeamBuilder: global average skill=5.56
+[2025-11-29 11:30:48] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:30:48] TeamBuilder: created 15 teams.
+[2025-11-29 11:30:48] Team summary: Team 1 | size=7 | avgSkill=5.428571428571429 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=3
+[2025-11-29 11:30:48] Team summary: Team 2 | size=7 | avgSkill=5.571428571428571 | games=6 | roles=4 | leaders=2 | thinkers=2 | balanced=3
+[2025-11-29 11:30:48] Team summary: Team 3 | size=6 | avgSkill=6.0 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:48] Team summary: Team 4 | size=7 | avgSkill=4.857142857142857 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=3
+[2025-11-29 11:30:48] Team summary: Team 5 | size=7 | avgSkill=5.857142857142857 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=2
+[2025-11-29 11:30:48] Team summary: Team 6 | size=6 | avgSkill=6.5 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:48] Team summary: Team 7 | size=7 | avgSkill=5.571428571428571 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=3
+[2025-11-29 11:30:48] Team summary: Team 8 | size=6 | avgSkill=5.833333333333333 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:48] Team summary: Team 9 | size=7 | avgSkill=4.857142857142857 | games=5 | roles=5 | leaders=3 | thinkers=3 | balanced=1
+[2025-11-29 11:30:48] Team summary: Team 10 | size=7 | avgSkill=6.0 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=3
+[2025-11-29 11:30:48] Team summary: Team 11 | size=7 | avgSkill=5.0 | games=5 | roles=5 | leaders=3 | thinkers=2 | balanced=2
+[2025-11-29 11:30:48] Team summary: Team 12 | size=6 | avgSkill=6.0 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:48] Team summary: Team 13 | size=6 | avgSkill=5.666666666666667 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:48] Team summary: Team 14 | size=7 | avgSkill=5.142857142857143 | games=6 | roles=5 | leaders=4 | thinkers=2 | balanced=1
+[2025-11-29 11:30:48] Team summary: Team 15 | size=7 | avgSkill=5.428571428571429 | games=5 | roles=5 | leaders=2 | thinkers=3 | balanced=2
+[2025-11-29 11:30:48] TeamFormationTask END. teamsFormed=15
+[2025-11-29 11:30:48] Teams formed: 15 with team size 7
+[2025-11-29 11:30:54] Starting TeamFormationThread. teamSize=6
+[2025-11-29 11:30:54] TeamFormationTask START. participants=100, teamSize=6
+[2025-11-29 11:30:54] TeamBuilder: building teams. participants=100, teamSize=6
+[2025-11-29 11:30:54] TeamBuilder: global average skill=5.56
+[2025-11-29 11:30:54] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:30:54] TeamBuilder: created 17 teams.
+[2025-11-29 11:30:54] Team summary: Team 1 | size=5 | avgSkill=5.6 | games=5 | roles=4 | leaders=3 | thinkers=2 | balanced=0
+[2025-11-29 11:30:54] Team summary: Team 2 | size=6 | avgSkill=5.833333333333333 | games=6 | roles=5 | leaders=1 | thinkers=2 | balanced=3
+[2025-11-29 11:30:54] Team summary: Team 3 | size=6 | avgSkill=5.666666666666667 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:54] Team summary: Team 4 | size=6 | avgSkill=5.166666666666667 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:54] Team summary: Team 5 | size=6 | avgSkill=5.166666666666667 | games=4 | roles=4 | leaders=3 | thinkers=2 | balanced=1
+[2025-11-29 11:30:54] Team summary: Team 6 | size=6 | avgSkill=5.833333333333333 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:54] Team summary: Team 7 | size=6 | avgSkill=5.333333333333333 | games=5 | roles=5 | leaders=2 | thinkers=3 | balanced=1
+[2025-11-29 11:30:54] Team summary: Team 8 | size=5 | avgSkill=5.8 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=1
+[2025-11-29 11:30:54] Team summary: Team 9 | size=6 | avgSkill=5.5 | games=6 | roles=4 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:54] Team summary: Team 10 | size=6 | avgSkill=5.333333333333333 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:54] Team summary: Team 11 | size=6 | avgSkill=5.5 | games=5 | roles=5 | leaders=1 | thinkers=2 | balanced=3
+[2025-11-29 11:30:54] Team summary: Team 12 | size=6 | avgSkill=5.833333333333333 | games=6 | roles=5 | leaders=3 | thinkers=1 | balanced=2
+[2025-11-29 11:30:54] Team summary: Team 13 | size=6 | avgSkill=5.166666666666667 | games=5 | roles=5 | leaders=1 | thinkers=2 | balanced=3
+[2025-11-29 11:30:54] Team summary: Team 14 | size=6 | avgSkill=5.666666666666667 | games=5 | roles=4 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:54] Team summary: Team 15 | size=6 | avgSkill=5.5 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:54] Team summary: Team 16 | size=6 | avgSkill=5.666666666666667 | games=5 | roles=5 | leaders=2 | thinkers=1 | balanced=3
+[2025-11-29 11:30:54] Team summary: Team 17 | size=6 | avgSkill=6.0 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 11:30:54] TeamFormationTask END. teamsFormed=17
+[2025-11-29 11:30:54] Teams formed: 17 with team size 6
+[2025-11-29 11:30:58] Starting TeamFormationThread. teamSize=5
+[2025-11-29 11:30:58] TeamFormationTask START. participants=100, teamSize=5
+[2025-11-29 11:30:58] TeamBuilder: building teams. participants=100, teamSize=5
+[2025-11-29 11:30:58] TeamBuilder: global average skill=5.56
+[2025-11-29 11:30:58] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:30:58] TeamBuilder: created 20 teams.
+[2025-11-29 11:30:58] Team summary: Team 1 | size=5 | avgSkill=5.8 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=1
+[2025-11-29 11:30:58] Team summary: Team 2 | size=5 | avgSkill=5.8 | games=5 | roles=4 | leaders=1 | thinkers=2 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 3 | size=5 | avgSkill=5.6 | games=4 | roles=5 | leaders=2 | thinkers=1 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 4 | size=5 | avgSkill=5.4 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=1
+[2025-11-29 11:30:58] Team summary: Team 5 | size=5 | avgSkill=5.6 | games=4 | roles=4 | leaders=2 | thinkers=2 | balanced=1
+[2025-11-29 11:30:58] Team summary: Team 6 | size=5 | avgSkill=5.0 | games=5 | roles=4 | leaders=1 | thinkers=2 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 7 | size=5 | avgSkill=5.2 | games=4 | roles=5 | leaders=2 | thinkers=1 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 8 | size=5 | avgSkill=6.0 | games=4 | roles=5 | leaders=2 | thinkers=2 | balanced=1
+[2025-11-29 11:30:58] Team summary: Team 9 | size=5 | avgSkill=5.0 | games=5 | roles=4 | leaders=2 | thinkers=1 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 10 | size=5 | avgSkill=5.4 | games=4 | roles=5 | leaders=2 | thinkers=1 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 11 | size=5 | avgSkill=5.8 | games=5 | roles=5 | leaders=1 | thinkers=2 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 12 | size=5 | avgSkill=5.2 | games=5 | roles=5 | leaders=2 | thinkers=1 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 13 | size=5 | avgSkill=5.8 | games=5 | roles=5 | leaders=2 | thinkers=2 | balanced=1
+[2025-11-29 11:30:58] Team summary: Team 14 | size=5 | avgSkill=5.4 | games=4 | roles=5 | leaders=2 | thinkers=1 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 15 | size=5 | avgSkill=6.2 | games=5 | roles=4 | leaders=1 | thinkers=2 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 16 | size=5 | avgSkill=5.0 | games=5 | roles=3 | leaders=2 | thinkers=2 | balanced=1
+[2025-11-29 11:30:58] Team summary: Team 17 | size=5 | avgSkill=5.8 | games=5 | roles=4 | leaders=1 | thinkers=2 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 18 | size=5 | avgSkill=5.4 | games=5 | roles=5 | leaders=1 | thinkers=2 | balanced=2
+[2025-11-29 11:30:58] Team summary: Team 19 | size=5 | avgSkill=6.0 | games=4 | roles=5 | leaders=2 | thinkers=2 | balanced=1
+[2025-11-29 11:30:58] Team summary: Team 20 | size=5 | avgSkill=5.8 | games=4 | roles=5 | leaders=2 | thinkers=1 | balanced=2
+[2025-11-29 11:30:58] TeamFormationTask END. teamsFormed=20
+[2025-11-29 11:30:58] Teams formed: 20 with team size 5
+[2025-11-29 11:31:01] Starting TeamFormationThread. teamSize=4
+[2025-11-29 11:31:01] TeamFormationTask START. participants=100, teamSize=4
+[2025-11-29 11:31:01] TeamBuilder: building teams. participants=100, teamSize=4
+[2025-11-29 11:31:01] TeamBuilder: global average skill=5.56
+[2025-11-29 11:31:01] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 11:31:01] TeamBuilder: created 25 teams.
+[2025-11-29 11:31:01] Team summary: Team 1 | size=4 | avgSkill=4.75 | games=4 | roles=4 | leaders=1 | thinkers=2 | balanced=1
+[2025-11-29 11:31:01] Team summary: Team 2 | size=4 | avgSkill=6.0 | games=4 | roles=4 | leaders=2 | thinkers=1 | balanced=1
+[2025-11-29 11:31:01] Team summary: Team 3 | size=4 | avgSkill=5.0 | games=4 | roles=4 | leaders=1 | thinkers=3 | balanced=0
+[2025-11-29 11:31:01] Team summary: Team 4 | size=4 | avgSkill=6.0 | games=4 | roles=4 | leaders=1 | thinkers=1 | balanced=2
+[2025-11-29 11:31:01] Team summary: Team 5 | size=4 | avgSkill=5.5 | games=4 | roles=3 | leaders=1 | thinkers=1 | balanced=2
+[2025-11-29 11:31:01] Team summary: Team 6 | size=4 | avgSkill=5.5 | games=4 | roles=4 | leaders=1 | thinkers=2 | balanced=1
+[2025-11-29 11:31:01] Team summary: Team 7 | size=4 | avgSkill=4.5 | games=4 | roles=3 | leaders=1 | thinkers=2 | balanced=1
+[2025-11-29 11:31:01] Team summary: Team 8 | size=4 | avgSkill=6.0 | games=4 | roles=4 | leaders=1 | thinkers=1 | balanced=2
+[2025-11-29 11:31:01] Team summary: Team 9 | size=4 | avgSkill=5.5 | games=4 | roles=4 | leaders=2 | thinkers=1 | balanced=1
+[2025-11-29 11:31:01] Team summary: Team 10 | size=4 | avgSkill=5.25 | games=4 | roles=4 | leaders=1 | thinkers=1 | balanced=2
+[2025-11-29 11:31:01] Team summary: Team 11 | size=4 | avgSkill=5.0 | games=4 | roles=4 | leaders=2 | thinkers=2 | balanced=0
+[2025-11-29 11:31:01] Team summary: Team 12 | size=4 | avgSkill=6.0 | games=4 | roles=4 | leaders=2 | thinkers=1 | balanced=1
+[2025-11-29 11:31:01] Team summary: Team 13 | size=4 | avgSkill=6.0 | games=4 | roles=3 | leaders=1 | thinkers=1 | balanced=2
+[2025-11-29 11:31:01] Team summary: Team 14 | size=4 | avgSkill=6.0 | games=4 | roles=4 | leaders=1 | thinkers=0 | balanced=3
+[2025-11-29 11:31:01] Team summary: Team 15 | size=4 | avgSkill=5.75 | games=4 | roles=4 | leaders=1 | thinkers=1 | balanced=2
+[2025-11-29 11:31:01] Team summary: Team 16 | size=4 | avgSkill=6.75 | games=3 | roles=4 | leaders=1 | thinkers=1 | balanced=2
+[2025-11-29 11:31:01] Team summary: Team 17 | size=4 | avgSkill=5.75 | games=4 | roles=3 | leaders=1 | thinkers=2 | balanced=1
+[2025-11-29 11:31:01] Team summary: Team 18 | size=4 | avgSkill=5.75 | games=4 | roles=4 | leaders=1 | thinkers=1 | balanced=2
+[2025-11-29 11:31:01] Team summary: Team 19 | size=4 | avgSkill=5.25 | games=4 | roles=4 | leaders=2 | thinkers=2 | balanced=0
+[2025-11-29 11:31:01] Team summary: Team 20 | size=4 | avgSkill=5.75 | games=4 | roles=4 | leaders=2 | thinkers=1 | balanced=1
+[2025-11-29 11:31:01] Team summary: Team 21 | size=4 | avgSkill=5.5 | games=4 | roles=4 | leaders=2 | thinkers=1 | balanced=1
+[2025-11-29 11:31:01] Team summary: Team 22 | size=4 | avgSkill=5.5 | games=4 | roles=3 | leaders=1 | thinkers=1 | balanced=2
+[2025-11-29 11:31:01] Team summary: Team 23 | size=4 | avgSkill=5.5 | games=4 | roles=4 | leaders=2 | thinkers=1 | balanced=1
+[2025-11-29 11:31:01] Team summary: Team 24 | size=4 | avgSkill=5.0 | games=3 | roles=4 | leaders=1 | thinkers=2 | balanced=1
+[2025-11-29 11:31:01] Team summary: Team 25 | size=4 | avgSkill=5.5 | games=4 | roles=4 | leaders=2 | thinkers=1 | balanced=1
+[2025-11-29 11:31:01] TeamFormationTask END. teamsFormed=25
+[2025-11-29 11:31:01] Teams formed: 25 with team size 4
+[2025-11-29 11:31:04] Starting TeamFormationThread. teamSize=3
+[2025-11-29 11:31:04] TeamFormationTask START. participants=100, teamSize=3
+[2025-11-29 11:31:04] TeamBuilder: building teams. participants=100, teamSize=3
+[2025-11-29 11:31:04] TeamBuilder: global average skill=5.56
+[2025-11-29 11:31:04] Small team detected: Team 9 | size=2
+[2025-11-29 11:31:04] Small team detected: Team 34 | size=2
+[2025-11-29 11:31:04] TeamBuilder: fixing small teams (<3). Small teams=2
+[2025-11-29 11:31:04] Redistributing members from small team: Team 9
+[2025-11-29 11:31:04] Excluding team from candidate list: Team 9
+[2025-11-29 11:31:04] Moving participant Participant_15 from Team 9 to Team 34
+[2025-11-29 11:31:04] Excluding team from candidate list: Team 9
+[2025-11-29 11:31:04] Moving participant Participant_88 from Team 9 to Team 1
+[2025-11-29 11:31:04] Redistributing members from small team: Team 34
+[2025-11-29 11:31:04] Excluding team from candidate list: Team 34
+[2025-11-29 11:31:04] Moving participant Participant_91 from Team 34 to Team 9
+[2025-11-29 11:31:04] Excluding team from candidate list: Team 34
+[2025-11-29 11:31:04] Moving participant Participant_32 from Team 34 to Team 9
+[2025-11-29 11:31:04] Excluding team from candidate list: Team 34
+[2025-11-29 11:31:04] Moving participant Participant_15 from Team 34 to Team 9
+[2025-11-29 11:31:04] TeamBuilder: after fixing, totalTeams=33
+[2025-11-29 11:31:04] TeamBuilder: created 33 teams.
+[2025-11-29 11:31:04] Team summary: Team 1 | size=4 | avgSkill=5.25 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 2 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:31:04] Team summary: Team 3 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:31:04] Team summary: Team 4 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 5 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:31:04] Team summary: Team 6 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 7 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 8 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:31:04] Team summary: Team 9 | size=3 | avgSkill=6.666666666666667 | games=2 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 10 | size=3 | avgSkill=4.333333333333333 | games=2 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 11 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 12 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 13 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 14 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 15 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 16 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 17 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:31:04] Team summary: Team 18 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 19 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 20 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 21 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 22 | size=3 | avgSkill=7.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 23 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 24 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 25 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 26 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 27 | size=3 | avgSkill=4.666666666666667 | games=2 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 28 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 29 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 30 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:31:04] Team summary: Team 31 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-29 11:31:04] Team summary: Team 32 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:04] Team summary: Team 33 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=2 | balanced=0
+[2025-11-29 11:31:04] TeamFormationTask END. teamsFormed=33
+[2025-11-29 11:31:04] Teams formed: 33 with team size 3
+[2025-11-29 11:31:10] Starting TeamFormationThread. teamSize=3
+[2025-11-29 11:31:10] TeamFormationTask START. participants=100, teamSize=3
+[2025-11-29 11:31:10] TeamBuilder: building teams. participants=100, teamSize=3
+[2025-11-29 11:31:10] TeamBuilder: global average skill=5.56
+[2025-11-29 11:31:10] Small team detected: Team 19 | size=2
+[2025-11-29 11:31:10] Small team detected: Team 21 | size=2
+[2025-11-29 11:31:10] TeamBuilder: fixing small teams (<3). Small teams=2
+[2025-11-29 11:31:10] Redistributing members from small team: Team 19
+[2025-11-29 11:31:10] Excluding team from candidate list: Team 19
+[2025-11-29 11:31:10] Moving participant Participant_81 from Team 19 to Team 21
+[2025-11-29 11:31:10] Excluding team from candidate list: Team 19
+[2025-11-29 11:31:10] Moving participant Participant_52 from Team 19 to Team 1
+[2025-11-29 11:31:10] Redistributing members from small team: Team 21
+[2025-11-29 11:31:10] Excluding team from candidate list: Team 21
+[2025-11-29 11:31:10] Moving participant Participant_82 from Team 21 to Team 19
+[2025-11-29 11:31:10] Excluding team from candidate list: Team 21
+[2025-11-29 11:31:10] Moving participant Participant_18 from Team 21 to Team 19
+[2025-11-29 11:31:10] Excluding team from candidate list: Team 21
+[2025-11-29 11:31:10] Moving participant Participant_81 from Team 21 to Team 19
+[2025-11-29 11:31:10] TeamBuilder: after fixing, totalTeams=33
+[2025-11-29 11:31:10] TeamBuilder: created 33 teams.
+[2025-11-29 11:31:10] Team summary: Team 1 | size=4 | avgSkill=5.0 | games=4 | roles=4 | leaders=2 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 2 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 3 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 4 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:31:10] Team summary: Team 5 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 6 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:31:10] Team summary: Team 7 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 8 | size=3 | avgSkill=4.666666666666667 | games=2 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 9 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 10 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 11 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 12 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 13 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 14 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 15 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:31:10] Team summary: Team 16 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 17 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 18 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 19 | size=3 | avgSkill=7.666666666666667 | games=2 | roles=3 | leaders=1 | thinkers=2 | balanced=0
+[2025-11-29 11:31:10] Team summary: Team 20 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 22 | size=3 | avgSkill=6.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 23 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 24 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:31:10] Team summary: Team 25 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 26 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:31:10] Team summary: Team 27 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 28 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 29 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 30 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:31:10] Team summary: Team 31 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-29 11:31:10] Team summary: Team 32 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 33 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] Team summary: Team 34 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:31:10] TeamFormationTask END. teamsFormed=33
+[2025-11-29 11:31:10] Teams formed: 33 with team size 3
+[2025-11-29 11:58:22] Starting TeamFormationThread. teamSize=3
+[2025-11-29 11:58:22] TeamFormationTask START. participants=100, teamSize=3
+[2025-11-29 11:58:22] TeamBuilder: building teams. participants=100, teamSize=3
+[2025-11-29 11:58:22] TeamBuilder: global average skill=5.56
+[2025-11-29 11:58:22] Small team detected: Team 15 | size=2
+[2025-11-29 11:58:22] Small team detected: Team 20 | size=2
+[2025-11-29 11:58:22] TeamBuilder: fixing small teams (<3). Small teams=2
+[2025-11-29 11:58:22] Redistributing members from small team: Team 15
+[2025-11-29 11:58:22] Excluding team from candidate list: Team 15
+[2025-11-29 11:58:22] Moving participant Participant_96 from Team 15 to Team 20
+[2025-11-29 11:58:22] Excluding team from candidate list: Team 15
+[2025-11-29 11:58:22] Moving participant Participant_88 from Team 15 to Team 1
+[2025-11-29 11:58:22] Redistributing members from small team: Team 20
+[2025-11-29 11:58:22] Excluding team from candidate list: Team 20
+[2025-11-29 11:58:22] Moving participant Participant_28 from Team 20 to Team 15
+[2025-11-29 11:58:22] Excluding team from candidate list: Team 20
+[2025-11-29 11:58:22] Moving participant Participant_21 from Team 20 to Team 15
+[2025-11-29 11:58:22] Excluding team from candidate list: Team 20
+[2025-11-29 11:58:22] Moving participant Participant_96 from Team 20 to Team 15
+[2025-11-29 11:58:22] TeamBuilder: after fixing, totalTeams=33
+[2025-11-29 11:58:22] TeamBuilder: created 33 teams.
+[2025-11-29 11:58:22] Team summary: Team 1 | size=4 | avgSkill=4.5 | games=3 | roles=3 | leaders=2 | thinkers=2 | balanced=0
+[2025-11-29 11:58:22] Team summary: Team 2 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 3 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:58:22] Team summary: Team 4 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 5 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 6 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:58:22] Team summary: Team 7 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 8 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 9 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:58:22] Team summary: Team 10 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 11 | size=3 | avgSkill=4.333333333333333 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:58:22] Team summary: Team 12 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 13 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 14 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 15 | size=3 | avgSkill=6.666666666666667 | games=3 | roles=2 | leaders=1 | thinkers=2 | balanced=0
+[2025-11-29 11:58:22] Team summary: Team 16 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-29 11:58:22] Team summary: Team 17 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 18 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:58:22] Team summary: Team 19 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 21 | size=3 | avgSkill=5.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 22 | size=3 | avgSkill=5.666666666666667 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 23 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 24 | size=3 | avgSkill=6.0 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 25 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=0 | thinkers=1 | balanced=2
+[2025-11-29 11:58:22] Team summary: Team 26 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-29 11:58:22] Team summary: Team 27 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:58:22] Team summary: Team 28 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 29 | size=3 | avgSkill=4.666666666666667 | games=2 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 30 | size=3 | avgSkill=5.0 | games=2 | roles=3 | leaders=1 | thinkers=2 | balanced=0
+[2025-11-29 11:58:22] Team summary: Team 31 | size=3 | avgSkill=5.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 32 | size=3 | avgSkill=6.333333333333333 | games=3 | roles=3 | leaders=1 | thinkers=1 | balanced=1
+[2025-11-29 11:58:22] Team summary: Team 33 | size=3 | avgSkill=4.666666666666667 | games=3 | roles=3 | leaders=2 | thinkers=1 | balanced=0
+[2025-11-29 11:58:22] Team summary: Team 34 | size=3 | avgSkill=7.0 | games=3 | roles=3 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-29 11:58:22] TeamFormationTask END. teamsFormed=33
+[2025-11-29 11:58:22] Teams formed: 33 with team size 3

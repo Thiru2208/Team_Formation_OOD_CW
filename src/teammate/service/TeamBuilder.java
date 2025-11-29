@@ -17,65 +17,7 @@ public class TeamBuilder {
     private static final int MAX_LEADERS_PER_TEAM    = 2;  // soft max
     private static final int MAX_THINKERS_PER_TEAM   = 3;  // soft max
 
-    // ================== MODE 1: STRICT EQUAL TEAMS ==================
-    /**
-     * Mode 1:
-     * - Only forms teams if participants.size() is exactly divisible by teamSize.
-     * - If there is a remainder, returns empty list (no teams created).
-     * - Simple random distribution, no advanced constraints.
-     */
-    public ArrayList<Team> buildTeamsStrictEqual(ArrayList<Participant> participants,
-                                                 int teamSize,
-                                                 LoggerService logger) {
-
-        ArrayList<Team> teams = new ArrayList<>();
-
-        if (participants == null || participants.isEmpty()) {
-            logger.info("StrictMode: no participants available.");
-            System.out.println("No participants available to form teams.");
-            return teams;
-        }
-
-        int n = participants.size();
-        if (teamSize <= 0) {
-            logger.error("StrictMode: invalid team size: " + teamSize);
-            System.out.println("Invalid team size.");
-            return teams;
-        }
-
-        // 👉 Very important: must divide exactly
-        if (n % teamSize != 0) {
-            logger.info("StrictMode: cannot form equal teams. " +
-                    "participants=" + n + ", teamSize=" + teamSize +
-                    ", remainder=" + (n % teamSize));
-            System.out.println("Cannot form equal teams. " +
-                    "Total participants (" + n + ") is not divisible by team size (" + teamSize + ").");
-            return teams;   // ❌ no teams formed
-        }
-
-        int teamCount = n / teamSize;
-        logger.info("StrictMode: forming " + teamCount +
-                " teams with exact size " + teamSize + ".");
-
-        // shuffle for fairness
-        ArrayList<Participant> shuffled = new ArrayList<>(participants);
-        Collections.shuffle(shuffled);
-
-        // create teams and assign sequentially
-        int index = 0;
-        for (int i = 1; i <= teamCount; i++) {
-            Team t = new Team("Strict Team " + i);
-            for (int j = 0; j < teamSize; j++) {
-                t.addMember(shuffled.get(index++));
-            }
-            teams.add(t);
-        }
-
-        logger.info("StrictMode: created " + teams.size() + " strict equal teams.");
-        return teams;
-    }
-
-    // ================== MODE 2: SMART / BALANCED TEAMS ==================
+    // ================== MODE: SMART / BALANCED TEAMS ==================
 
     public ArrayList<Team> buildTeams(ArrayList<Participant> participants,
                                       int teamSize,
@@ -162,6 +104,15 @@ public class TeamBuilder {
             double avgSkill = averageSkill(t);
 
             logger.info("Team summary: " + t.getTeamName()
+                    + " | size=" + size
+                    + " | avgSkill=" + avgSkill
+                    + " | games=" + games.size()
+                    + " | roles=" + roles.size()
+                    + " | leaders=" + leaders
+                    + " | thinkers=" + thinkers
+                    + " | balanced=" + balanced);
+
+            System.out.println("Team summary: " + t.getTeamName()
                     + " | size=" + size
                     + " | avgSkill=" + avgSkill
                     + " | games=" + games.size()

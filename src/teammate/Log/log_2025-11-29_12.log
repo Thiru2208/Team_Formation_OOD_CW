@@ -1,0 +1,48 @@
+[2025-11-29 12:06:56] Loaded 7 participant accounts from file.
+[2025-11-29 12:06:56] Application started
+[2025-11-29 12:07:22] Organizer login success for username=organizer
+[2025-11-29 12:07:22] Organizer logged in
+[2025-11-29 12:07:34] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-29 12:07:34] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-29 12:07:47] Starting TeamFormationThread. teamSize=15
+[2025-11-29 12:07:47] TeamFormationTask START. participants=100, teamSize=15
+[2025-11-29 12:07:47] TeamBuilder: building teams. participants=100, teamSize=15
+[2025-11-29 12:07:47] TeamBuilder: global average skill=5.56
+[2025-11-29 12:07:47] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 12:07:47] TeamBuilder: created 7 teams.
+[2025-11-29 12:07:47] Team summary: Team 1 | size=15 | avgSkill=5.533333333333333 | games=6 | roles=5 | leaders=5 | thinkers=4 | balanced=6
+[2025-11-29 12:07:47] Team summary: Team 2 | size=15 | avgSkill=5.733333333333333 | games=6 | roles=5 | leaders=6 | thinkers=4 | balanced=5
+[2025-11-29 12:07:47] Team summary: Team 3 | size=15 | avgSkill=5.333333333333333 | games=6 | roles=5 | leaders=7 | thinkers=5 | balanced=3
+[2025-11-29 12:07:47] Team summary: Team 4 | size=11 | avgSkill=7.0 | games=6 | roles=5 | leaders=5 | thinkers=3 | balanced=3
+[2025-11-29 12:07:47] Team summary: Team 5 | size=15 | avgSkill=4.866666666666666 | games=6 | roles=5 | leaders=4 | thinkers=5 | balanced=6
+[2025-11-29 12:07:47] Team summary: Team 6 | size=14 | avgSkill=5.285714285714286 | games=6 | roles=5 | leaders=3 | thinkers=6 | balanced=5
+[2025-11-29 12:07:47] Team summary: Team 7 | size=15 | avgSkill=5.533333333333333 | games=6 | roles=5 | leaders=4 | thinkers=6 | balanced=5
+[2025-11-29 12:07:47] TeamFormationTask END. teamsFormed=7
+[2025-11-29 12:07:47] Teams formed: 7 with team size 15
+[2025-11-29 12:08:57] Loaded 7 participant accounts from file.
+[2025-11-29 12:08:57] Application started
+[2025-11-29 12:09:14] Organizer login success for username=organizer
+[2025-11-29 12:09:14] Organizer logged in
+[2025-11-29 12:12:06] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-29 12:12:06] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-29 12:13:43] Starting TeamFormationThread. teamSize=8
+[2025-11-29 12:13:43] TeamFormationTask START. participants=100, teamSize=8
+[2025-11-29 12:13:43] TeamBuilder: building teams. participants=100, teamSize=8
+[2025-11-29 12:13:43] TeamBuilder: global average skill=5.56
+[2025-11-29 12:13:43] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 12:13:43] TeamBuilder: created 13 teams.
+[2025-11-29 12:13:43] Team summary: Team 1 | size=8 | avgSkill=5.875 | games=5 | roles=5 | leaders=2 | thinkers=3 | balanced=3
+[2025-11-29 12:13:43] Team summary: Team 2 | size=7 | avgSkill=5.571428571428571 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=1
+[2025-11-29 12:13:43] Team summary: Team 3 | size=6 | avgSkill=6.5 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=2
+[2025-11-29 12:13:43] Team summary: Team 4 | size=8 | avgSkill=5.75 | games=6 | roles=5 | leaders=4 | thinkers=2 | balanced=2
+[2025-11-29 12:13:44] Team summary: Team 5 | size=8 | avgSkill=5.375 | games=6 | roles=5 | leaders=3 | thinkers=3 | balanced=2
+[2025-11-29 12:13:44] Team summary: Team 6 | size=8 | avgSkill=5.375 | games=6 | roles=5 | leaders=2 | thinkers=2 | balanced=4
+[2025-11-29 12:13:44] Team summary: Team 7 | size=8 | avgSkill=5.25 | games=6 | roles=5 | leaders=3 | thinkers=2 | balanced=3
+[2025-11-29 12:13:44] Team summary: Team 8 | size=8 | avgSkill=5.625 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=3
+[2025-11-29 12:13:44] Team summary: Team 9 | size=8 | avgSkill=5.5 | games=5 | roles=5 | leaders=2 | thinkers=3 | balanced=3
+[2025-11-29 12:13:44] Team summary: Team 10 | size=8 | avgSkill=5.25 | games=5 | roles=5 | leaders=4 | thinkers=2 | balanced=2
+[2025-11-29 12:13:44] Team summary: Team 11 | size=8 | avgSkill=5.5 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=3
+[2025-11-29 12:13:44] Team summary: Team 12 | size=8 | avgSkill=5.125 | games=6 | roles=5 | leaders=2 | thinkers=3 | balanced=3
+[2025-11-29 12:13:44] Team summary: Team 13 | size=7 | avgSkill=5.857142857142857 | games=5 | roles=5 | leaders=3 | thinkers=2 | balanced=2
+[2025-11-29 12:13:44] TeamFormationTask END. teamsFormed=13
+[2025-11-29 12:13:44] Teams formed: 13 with team size 8

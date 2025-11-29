@@ -139,58 +139,21 @@ public class Main {
                     }
                     System.out.println();
                     System.out.println("--- Team Formation ---");
-
                     int teamSize = askTeamSize(sc, participants.size());
-
-                    // 🔹 Ask which forming method to use
-                    System.out.println();
-                    System.out.println("Select team formation mode:");
-                    System.out.println("1. Strict equal teams (no leftover, min 3 members per team)");
-                    System.out.println("2. Smart balanced teams (allows some flexibility)");
-                    System.out.print("Enter choice (1 or 2): ");
-                    String modeChoice = sc.nextLine().trim();
-                    boolean strictMode = modeChoice.equals("1");
-
-                    // 🔹 If strict mode, check divisibility + min size before starting thread
-                    if (strictMode) {
-                        if (teamSize < 3) {
-                            System.out.println("❌ Strict mode requires team size of at least 3.");
-                            break;
-                        }
-                        if (participants.size() % teamSize != 0) {
-                            System.out.println("❌ Strict mode: total participants (" + participants.size() +
-                                    ") is not divisible by team size (" + teamSize + ").");
-                            System.out.println("    → Please change team size or use Smart balanced mode.");
-                            break;
-                        }
-                    }
-
-                    TeamFormationTask tfTask =
-                            new TeamFormationTask(participants, teamSize, teamBuilder, strictMode);
+                    TeamFormationTask tfTask = new TeamFormationTask(participants, teamSize, teamBuilder);
                     Thread tfThread = new Thread(tfTask, "TeamFormationThread");
 
                     try {
-                        logger.info("Starting TeamFormationThread. teamSize=" + teamSize +
-                                ", strictMode=" + strictMode);
+                        logger.info("Starting TeamFormationThread. teamSize=" + teamSize);
                         tfThread.start();
                         tfThread.join();  // wait till building finishes
-
                         teams = tfTask.getResult();
-
-                        logger.info("Teams formed: " + teams.size() + " with team size " + teamSize +
-                                ", strictMode=" + strictMode);
+                        logger.info("Teams formed: " + teams.size() + " with team size " + teamSize);
                         System.out.println("Teams formed: " + teams.size() + " with team size " + teamSize);
-
-                        if (strictMode) {
-                            System.out.println("(Mode: Strict equal teams)");
-                        } else {
-                            System.out.println("(Mode: Smart balanced teams)");
-                        }
-
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                         System.out.println("Team formation was interrupted. Error forming teams. See logs for details.");
-                        logger.error("Team formation thread interrupted", e);
+                        logger.error("Team formation thread interrupted: " + e.getMessage());
                     }
                     break;
 
@@ -238,8 +201,8 @@ public class Main {
             String in = sc.nextLine().trim();
             try {
                 int val = Integer.parseInt(in);
-                if (val < 3 || val > max) {
-                    System.out.println("Team size must be between 3 and " + max);
+                if (val < 3 || val > 15) { // max
+                    System.out.println("Team size must be between 3 and " + 15);
                     continue;
                 }
                 return val;
