@@ -214,7 +214,7 @@ public class Main {
         }
     }
 
-    private static int askTeamSize(Scanner sc, int max) {
+    static int askTeamSize(Scanner sc, int max) {
         while (true) {
             System.out.print("Enter team size (min 3): ");
             String in = sc.nextLine().trim();

@@ -1,0 +1,24 @@
+[2025-11-29 19:15:13] No existing participant accounts file found.
+[2025-11-29 19:15:13] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-11-29 19:15:13] No existing participant accounts file found.
+[2025-11-29 19:15:13] Survey skipped (already completed) for participant: Existing User
+[2025-11-29 19:19:02] TeamBuilder: building teams. participants=5, teamSize=3
+[2025-11-29 19:19:02] TeamBuilder: global average skill=5.0
+[2025-11-29 19:19:02] Small team detected: Team 2 | size=2
+[2025-11-29 19:19:02] TeamBuilder: fixing small teams (<3). Small teams=1
+[2025-11-29 19:19:02] Redistributing members from small team: Team 2
+[2025-11-29 19:19:02] Excluding team from candidate list: Team 2
+[2025-11-29 19:19:02] Moving participant P1 from Team 2 to Team 1
+[2025-11-29 19:19:02] Excluding team from candidate list: Team 2
+[2025-11-29 19:19:02] Moving participant P4 from Team 2 to Team 1
+[2025-11-29 19:19:02] TeamBuilder: after fixing, totalTeams=1
+[2025-11-29 19:19:02] TeamBuilder: created 1 teams.
+[2025-11-29 19:19:02] Team summary: Team 1 | size=5 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=0 | balanced=5
+[2025-11-29 19:19:02] TeamBuilder: no participants available to build teams.
+[2025-11-29 19:19:02] TeamBuilder: building teams. participants=10, teamSize=4
+[2025-11-29 19:19:02] TeamBuilder: global average skill=5.5
+[2025-11-29 19:19:02] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-29 19:19:02] TeamBuilder: created 3 teams.
+[2025-11-29 19:19:02] Team summary: Team 1 | size=3 | avgSkill=5.333333333333333 | games=2 | roles=2 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-29 19:19:02] Team summary: Team 2 | size=3 | avgSkill=5.666666666666667 | games=2 | roles=2 | leaders=0 | thinkers=0 | balanced=3
+[2025-11-29 19:19:02] Team summary: Team 3 | size=4 | avgSkill=5.5 | games=2 | roles=2 | leaders=1 | thinkers=0 | balanced=3

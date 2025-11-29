@@ -1,0 +1,19 @@
+[2025-11-29 18:44:42] CSV load finished with 2 participants from C:\Users\thiru\AppData\Local\Temp\participants_test4551253018454332125.csv
+[2025-11-29 18:44:43] Teams saved to CSV: src\teammate\TeamMembers\teams_20251129_184443.csv (teams=1)
+[2025-11-29 18:51:05] No existing participant accounts file found.
+[2025-11-29 18:51:05] Organizer login FAILED for username=admin
+[2025-11-29 18:51:05] No existing participant accounts file found.
+[2025-11-29 18:51:05] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-11-29 18:51:05] No existing participant accounts file found.
+[2025-11-29 18:51:05] Organizer login success for username=admin
+[2025-11-29 18:51:05] No existing participant accounts file found.
+[2025-11-29 18:51:05] No existing participant accounts file found.
+[2025-11-29 18:51:05] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-11-29 18:51:05] All participant accounts saved to file (with IDs and survey data).
+[2025-11-29 18:51:05] No existing participant accounts file found.
+[2025-11-29 18:51:05] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-11-29 18:51:05] Participant login success: username=john
+[2025-11-29 18:51:05] No existing participant accounts file found.
+[2025-11-29 18:51:05] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-11-29 18:51:05] Participant login FAILED for username=john
+[2025-11-29 18:51:05] No existing participant accounts file found.
