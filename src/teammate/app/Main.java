@@ -17,6 +17,10 @@ public class Main {
     private static ArrayList<Participant> participants = new ArrayList<>();
     private static ArrayList<Team> teams = new ArrayList<>();
     private static final LoggerService logger = LoggerService.getInstance();
+    private static final String ACCOUNTS_FILE =
+            "src/teammate/auth/participant_accounts.csv";
+    private static final String ORGANIZER_FILE =
+            "src/teammate/auth/organizer_account.csv";
 
     public static void main(String[] args) {
 
@@ -54,7 +58,7 @@ public class Main {
                     break;
 
                 case "2": {
-                    Participant newP = authService.participantSignup(sc);
+                    Participant newP = authService.participantSignup(sc, ACCOUNTS_FILE);
                     if (newP != null) {
                         participants.add(newP);
                         logger.info("New participant signed up and added to system: " + newP.getName());
@@ -170,9 +174,6 @@ public class Main {
                     } catch (Exception e) {
                         System.out.println("Team formation failed. See logs for details.");
                         logger.error("Team formation via ExecutorService failed", e);
-                    } finally {
-                        // always shutdown executor
-                        executor.shutdown();
                     }
                     break;
 
@@ -201,7 +202,7 @@ public class Main {
                     break;
 
                 case "7":
-                    authService.changeOrganizerPassword(sc);
+                    authService.changeOrganizerPassword(sc, ORGANIZER_FILE);
                     break;
 
                 case "8":
@@ -391,7 +392,7 @@ public class Main {
 
             if (ans.equalsIgnoreCase("Y")) {
                 try {
-                    authService.saveAllAccountsToFile();
+                    authService.saveAllAccountsToFile("src/teammate/auth/participant_accounts.csv");
                     logger.info("Participant permanently updated: " + target.getName());
                     System.out.println("Successfully updated & saved: " + target.getName());
                 } catch (Exception e) {
@@ -517,7 +518,7 @@ public class Main {
                 }
 
                 case "3":
-                    authService.changeParticipantPassword(sc, account);
+                    authService.changeParticipantPassword(sc, account, ACCOUNTS_FILE);
                     break;
 
                 case "4":

@@ -80,7 +80,7 @@ public class ParticipantSurveyService {
     // Survey for an EXISTING logged-in participant (p2, etc.)
     public void runSurveyForExistingParticipant(Scanner sc,
                                                 Participant p,
-                                                AuthService authService) {
+                                                AuthService authService, String ACCOUNTS_FILE) {
 
         LoggerService logger = LoggerService.getInstance();
 
@@ -143,7 +143,7 @@ public class ParticipantSurveyService {
 
         // NOW MAKE IT PERMANENT
         try {
-            authService.saveAllAccountsToFile();
+            authService.saveAllAccountsToFile(ACCOUNTS_FILE);
             logger.info("Survey completed and saved for participant: " + p.getName() +
                     " | Game=" + game +
                     " | Role=" + role +
@@ -155,4 +155,5 @@ public class ParticipantSurveyService {
             System.out.println("Survey failed to save for " + p.getName());
         }
     }
+
 }

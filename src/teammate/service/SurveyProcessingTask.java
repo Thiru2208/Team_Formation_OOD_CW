@@ -15,6 +15,8 @@ public class SurveyProcessingTask implements Runnable {
     private final Participant participant;
     private final AuthService authService;
     private final LoggerService logger = LoggerService.getInstance();
+    private static final String ACCOUNTS_FILE =
+            "src/teammate/auth/participant_accounts.csv";
 
     public SurveyProcessingTask(ParticipantSurveyService surveyService,
                                 Scanner scanner,
@@ -33,7 +35,7 @@ public class SurveyProcessingTask implements Runnable {
             System.out.println("--- Adding " + participant.getName() + " ---");
             System.out.println("[Thread] Survey thread running: " + Thread.currentThread().getName());
             logger.info("SurveyProcessingTask START for participant=" + participant.getName());
-            surveyService.runSurveyForExistingParticipant(scanner, participant, authService);
+            surveyService.runSurveyForExistingParticipant(scanner, participant, authService, ACCOUNTS_FILE);
             logger.info("SurveyProcessingTask END for participant=" + participant.getName());
         } catch (Exception e) {
             logger.error("SurveyProcessingTask FAILED for participant=" + participant.getName(), e);

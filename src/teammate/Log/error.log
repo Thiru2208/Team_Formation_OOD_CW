@@ -5,3 +5,93 @@
 [2025-11-29 10:32:18] ERROR: CSV load failed – file not found: logger.info("Team summary: " + t.getTeamName()
 [2025-11-29 18:44:43] ERROR: CSV load failed – not a CSV: C:\Users\thiru\AppData\Local\Temp\participants_test12974267843930008054.txt
 [2025-11-29 18:44:43] ERROR: CSV load failed – file not found: this_file_does_not_exist.csv
+[2025-11-30 14:37:38] ERROR: CSV load failed – file not found: participants_sample.csv
+[2025-11-30 14:38:07] ERROR: Team formation via ExecutorService failed
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@5f184fc6[Not completed, task = teammate.app.Main$$Lambda/0x00000246b6006988@6acbcfc0] rejected from java.util.concurrent.ThreadPoolExecutor@6d03e736[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2027)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:792)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148)
+	at teammate.app.Main.organizerMenu(Main.java:155)
+	at teammate.app.Main.main(Main.java:50)
+[2025-11-30 14:38:32] ERROR: Team formation via ExecutorService failed
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@b4c966a[Not completed, task = teammate.app.Main$$Lambda/0x00000246b6006988@10f87f48] rejected from java.util.concurrent.ThreadPoolExecutor@6d03e736[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2027)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:792)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148)
+	at teammate.app.Main.organizerMenu(Main.java:155)
+	at teammate.app.Main.main(Main.java:50)
+[2025-11-30 14:40:08] ERROR: Team formation via ExecutorService failed
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@27d6c5e0[Not completed, task = teammate.app.Main$$Lambda/0x0000027801006988@7ef20235] rejected from java.util.concurrent.ThreadPoolExecutor@7ba4f24f[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2027)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:792)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148)
+	at teammate.app.Main.organizerMenu(Main.java:155)
+	at teammate.app.Main.main(Main.java:50)
+[2025-11-30 14:40:32] ERROR: Team formation via ExecutorService failed
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@3feba861[Not completed, task = teammate.app.Main$$Lambda/0x0000027801006988@5f184fc6] rejected from java.util.concurrent.ThreadPoolExecutor@7ba4f24f[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2027)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:792)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148)
+	at teammate.app.Main.organizerMenu(Main.java:155)
+	at teammate.app.Main.main(Main.java:50)
+[2025-11-30 14:42:19] ERROR: Team formation via ExecutorService failed
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@2d98a335[Not completed, task = teammate.app.Main$$Lambda/0x0000018bdf006988@5fd0d5ae] rejected from java.util.concurrent.ThreadPoolExecutor@214c265e[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2027)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:792)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148)
+	at teammate.app.Main.organizerMenu(Main.java:155)
+	at teammate.app.Main.main(Main.java:50)
+[2025-11-30 14:42:51] ERROR: Team formation via ExecutorService failed
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@7b23ec81[Not completed, task = teammate.app.Main$$Lambda/0x0000018bdf006988@15aeb7ab] rejected from java.util.concurrent.ThreadPoolExecutor@214c265e[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2027)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:792)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148)
+	at teammate.app.Main.organizerMenu(Main.java:155)
+	at teammate.app.Main.main(Main.java:50)
+[2025-11-30 14:44:15] ERROR: Team formation via ExecutorService failed
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@5b480cf9[Not completed, task = teammate.app.Main$$Lambda/0x0000024f2d006988@3feba861] rejected from java.util.concurrent.ThreadPoolExecutor@378bf509[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2027)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:792)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148)
+	at teammate.app.Main.organizerMenu(Main.java:155)
+	at teammate.app.Main.main(Main.java:50)
+[2025-11-30 14:48:19] ERROR: Team formation via ExecutorService failed
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@4e50df2e[Not completed, task = teammate.app.Main$$Lambda/0x0000024f2d006988@2f4d3709] rejected from java.util.concurrent.ThreadPoolExecutor@378bf509[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2027)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:792)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148)
+	at teammate.app.Main.organizerMenu(Main.java:155)
+	at teammate.app.Main.main(Main.java:50)
+[2025-11-30 14:48:52] ERROR: Team formation via ExecutorService failed
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@9807454[Not completed, task = teammate.app.Main$$Lambda/0x0000024f2d006988@4fca772d] rejected from java.util.concurrent.ThreadPoolExecutor@378bf509[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2027)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:792)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148)
+	at teammate.app.Main.organizerMenu(Main.java:155)
+	at teammate.app.Main.main(Main.java:50)
+[2025-11-30 15:43:41] ERROR: CSV load failed – not a CSV: C:\Users\thiru\AppData\Local\Temp\participants_test17528576800696664925.txt
+[2025-11-30 15:43:41] ERROR: CSV load failed – file not found: this_file_does_not_exist.csv
+[2025-11-30 17:25:57] ERROR: Organizer entered invalid participant index for update: 
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:541)
+	at java.base/java.lang.Integer.parseInt(Integer.java:661)
+	at teammate.app.Main.updateParticipantByNumber(Main.java:284)
+	at teammate.app.Main.organizerMenu(Main.java:193)
+	at teammate.app.Main.main(Main.java:50)
+[2025-11-30 20:57:32] ERROR: CSV load failed – not a CSV: C:\Users\thiru\AppData\Local\Temp\participants_test1506197426081536226.txt
+[2025-11-30 20:57:32] ERROR: CSV load failed – file not found: this_file_does_not_exist.csv
+[2025-11-30 21:55:52] ERROR: CSV load failed – not a CSV: C:\Users\thiru\AppData\Local\Temp\participants_test6785279159058000733.txt
+[2025-11-30 21:55:52] ERROR: CSV load failed – file not found: this_file_does_not_exist.csv
+[2025-11-30 22:00:26] ERROR: CSV load failed – empty file: C:\Users\thiru\AppData\Local\Temp\participants_empty18087959468438601160.csv
+[2025-11-30 22:00:26] ERROR: CSV load failed – not a CSV: C:\Users\thiru\AppData\Local\Temp\participants_test7372304889891598752.txt
+[2025-11-30 22:00:26] ERROR: CSV load failed – file not found: this_file_does_not_exist.csv

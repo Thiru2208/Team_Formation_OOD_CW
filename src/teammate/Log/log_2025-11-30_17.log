@@ -1,0 +1,30 @@
+[2025-11-30 17:16:52] Loaded 6 participant accounts from file.
+[2025-11-30 17:16:52] Application started
+[2025-11-30 17:18:54] Organizer login success for username=organizer
+[2025-11-30 17:18:54] Organizer logged in
+[2025-11-30 17:19:13] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-30 17:19:13] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-11-30 17:20:46] Update kept in memory only (not saved to file) for participant: Participant_100
+[2025-11-30 17:24:28] Participant signup success: username=p7, id=P108, email=user108@university.edu
+[2025-11-30 17:24:28] New participant signed up and added to system: Participant_108
+[2025-11-30 17:24:42] Participant login success: username=p7
+[2025-11-30 17:24:42] Participant logged in: Participant_108
+[2025-11-30 17:24:53] Starting SurveyProcessingThread for Participant_108
+[2025-11-30 17:24:53] SurveyProcessingTask START for participant=Participant_108
+[2025-11-30 17:25:18] All participant accounts saved to file (with IDs and survey data).
+[2025-11-30 17:25:18] Survey completed and saved for participant: Participant_108 | Game=CS:GP | Role=Supporter | Score=68 | Type=Balanced
+[2025-11-30 17:25:18] SurveyProcessingTask END for participant=Participant_108
+[2025-11-30 17:25:18] SurveyProcessingThread finished for Participant_108
+[2025-11-30 17:25:37] Organizer login success for username=organizer
+[2025-11-30 17:25:37] Organizer logged in
+[2025-11-30 17:26:09] Participant deleted: Participant_108
+[2025-11-30 17:27:03] Participant login FAILED for username=p1
+[2025-11-30 17:27:03] Participant login failed
+[2025-11-30 17:27:34] Participant login FAILED for username=p1
+[2025-11-30 17:27:34] Participant login failed
+[2025-11-30 17:27:59] Participant login FAILED for username=p1
+[2025-11-30 17:27:59] Participant login failed
+[2025-11-30 17:28:36] Participant login success: username=p3
+[2025-11-30 17:28:36] Participant logged in: Participant_104
+[2025-11-30 17:38:35] Application exiting
+[2025-11-30 17:38:35] Executor service shut down. Application exiting.

@@ -8,6 +8,7 @@ import java.util.Scanner;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ParticipantSurveyServiceTest {
+    String ACCOUNTS_FILE = "test/teammate/auth/test_participant_accounts.csv";
 
     // ---------- simple personality logic tests ----------
 
@@ -48,7 +49,7 @@ class ParticipantSurveyServiceTest {
         boolean saved = false;
 
         @Override
-        public void saveAllAccountsToFile() {
+        public void saveAllAccountsToFile(String file) {
             saved = true;   // do NOT write anything in tests
         }
     }
@@ -87,7 +88,7 @@ class ParticipantSurveyServiceTest {
         Scanner sc = new Scanner(input);
         FakeAuthService fakeAuth = new FakeAuthService();
 
-        service.runSurveyForExistingParticipant(sc, p, fakeAuth);
+        service.runSurveyForExistingParticipant(sc, p, fakeAuth, ACCOUNTS_FILE);
 
         // check participant updated correctly
         assertEquals("Valorant", p.getPreferredGame());
@@ -126,7 +127,7 @@ class ParticipantSurveyServiceTest {
         FakeAuthService fakeAuth = new FakeAuthService();
         Scanner sc = new Scanner(""); // no input needed, should skip immediately
 
-        service.runSurveyForExistingParticipant(sc, p, fakeAuth);
+        service.runSurveyForExistingParticipant(sc, p, fakeAuth, ACCOUNTS_FILE);
 
         // nothing should change
         assertEquals("Valorant", p.getPreferredGame());
@@ -138,4 +139,196 @@ class ParticipantSurveyServiceTest {
         // and no save call
         assertFalse(fakeAuth.saved);
     }
+
+    @Test
+    void testCalculatePersonalityTieDefaultsToBalanced() {
+        ParticipantSurveyService service = new ParticipantSurveyService();
+
+        // leaderScore = q1 + q5 = 4 + 2 = 6
+        // thinkerScore = q2 + q4 = 3 + 3 = 6
+        // balancedScore = q3 * 2 = 3 * 2 = 6
+        // all equal → should hit default "Balanced"
+        String type = service.calculatePersonality(4, 3, 3, 3, 2);
+
+        assertEquals("Balanced", type);
+    }
+
+    @Test
+    void testRunSurvey_handlesInvalidGameChoiceThenValid() {
+        ParticipantSurveyService service = new ParticipantSurveyService();
+
+        Participant p = new Participant(
+                "Test User",
+                "test@uni.edu",
+                "Not selected",
+                0,
+                "Not selected"
+        );
+        p.setPersonalityType("Not selected");
+        p.setPersonalityScore(0);
+
+        // 99 → invalid game, then 1 → Valorant
+        String input =
+                "99\n" +  // invalid game
+                        "1\n"  +  // valid game (Valorant)
+                        "7\n"  +  // skill
+                        "2\n"  +  // role
+                        "5\n" +   // Q1
+                        "4\n" +   // Q2
+                        "3\n" +   // Q3
+                        "4\n" +   // Q4
+                        "5\n";    // Q5
+
+        Scanner sc = new Scanner(input);
+        FakeAuthService fakeAuth = new FakeAuthService();
+
+        service.runSurveyForExistingParticipant(sc, p, fakeAuth, ACCOUNTS_FILE);
+
+        assertEquals("Valorant", p.getPreferredGame());
+        assertEquals(7, p.getSkillLevel());
+        assertEquals("Attacker", p.getRole());
+        assertTrue(fakeAuth.saved, "saveAllAccountsToFile should be called after survey");
+    }
+
+    @Test
+    void testRunSurvey_handlesNonNumericSkillThenValid() {
+        ParticipantSurveyService service = new ParticipantSurveyService();
+
+        Participant p = new Participant(
+                "Test User",
+                "test@uni.edu",
+                "Not selected",
+                0,
+                "Not selected"
+        );
+        p.setPersonalityType("Not selected");
+        p.setPersonalityScore(0);
+
+        // 1 → game
+        // "abc" → invalid skill
+        // 8 → valid skill
+        String input =
+                "1\n" +     // game (Valorant)
+                        "abc\n" +   // invalid skill
+                        "8\n" +     // valid skill
+                        "3\n" +     // role (Defender)
+                        "4\n" +     // Q1
+                        "4\n" +     // Q2
+                        "4\n" +     // Q3
+                        "4\n" +     // Q4
+                        "4\n";      // Q5
+
+        Scanner sc = new Scanner(input);
+        FakeAuthService fakeAuth = new FakeAuthService();
+
+        service.runSurveyForExistingParticipant(sc, p, fakeAuth, ACCOUNTS_FILE);
+
+        assertEquals(8, p.getSkillLevel(), "Skill should be set from the valid numeric input");
+        assertEquals("Valorant", p.getPreferredGame());
+        assertEquals("Defender", p.getRole());
+        assertTrue(fakeAuth.saved);
+    }
+
+    @Test
+    void testRunSurvey_handlesOutOfRangeSkillThenValid() {
+        ParticipantSurveyService service = new ParticipantSurveyService();
+
+        Participant p = new Participant(
+                "Test User",
+                "test@uni.edu",
+                "Not selected",
+                0,
+                "Not selected"
+        );
+        p.setPersonalityType("Not selected");
+        p.setPersonalityScore(0);
+
+        // 1 → game
+        // 0, 11 → invalid (out of 1–10)
+        // 5 → valid
+        String input =
+                "1\n" +   // game (Valorant)
+                        "0\n" +   // invalid (<1)
+                        "11\n" +  // invalid (>10)
+                        "5\n" +   // valid
+                        "4\n" +   // role (Strategist)
+                        "3\n" +   // Q1
+                        "3\n" +   // Q2
+                        "3\n" +   // Q3
+                        "3\n" +   // Q4
+                        "3\n";    // Q5
+
+        Scanner sc = new Scanner(input);
+        FakeAuthService fakeAuth = new FakeAuthService();
+
+        service.runSurveyForExistingParticipant(sc, p, fakeAuth, ACCOUNTS_FILE);
+
+        assertEquals(5, p.getSkillLevel());
+        assertEquals("Valorant", p.getPreferredGame());
+        assertEquals("Strategist", p.getRole());
+        assertTrue(fakeAuth.saved);
+    }
+
+    @Test
+    void testRunSurvey_saveFailureDoesNotCrashAndParticipantUpdated() {
+        ParticipantSurveyService service = new ParticipantSurveyService();
+
+        Participant p = new Participant(
+                "Test User",
+                "test@uni.edu",
+                "Not selected",
+                0,
+                "Not selected"
+        );
+        p.setPersonalityType("Not selected");
+        p.setPersonalityScore(0);
+
+        // simple valid inputs
+        String input =
+                "1\n" +  // game (Valorant)
+                        "6\n" +  // skill
+                        "1\n" +  // role (Strategist)
+                        "4\n" +  // Q1
+                        "4\n" +  // Q2
+                        "4\n" +  // Q3
+                        "4\n" +  // Q4
+                        "4\n";   // Q5
+
+        Scanner sc = new Scanner(input);
+
+        // AuthService stub that throws
+        class FailingAuthService extends AuthService {
+            @Override
+            public void saveAllAccountsToFile(String file) {
+                throw new RuntimeException("Simulated IO failure");
+            }
+        }
+
+        AuthService failingAuth = new FailingAuthService();
+
+        // should NOT throw out of the method (it catches internally)
+        service.runSurveyForExistingParticipant(sc, p, failingAuth, ACCOUNTS_FILE);
+
+        // Still updated in memory even if file save failed
+        assertEquals("Valorant", p.getPreferredGame());
+        assertEquals(6, p.getSkillLevel());
+        assertEquals("Strategist", p.getRole());
+        assertEquals(
+                service.calculatePersonality(4, 4, 4, 4, 4),
+                p.getPersonalityType()
+        );
+    }
+
+    @Test
+    void roleAndGameOptionsContainExpectedValues() {
+        assertTrue(
+                java.util.Arrays.asList(ParticipantSurveyService.ROLE_OPTIONS)
+                        .contains("Strategist")
+        );
+        assertTrue(
+                java.util.Arrays.asList(ParticipantSurveyService.GAME_OPTIONS)
+                        .contains("Valorant")
+        );
+    }
+
 }

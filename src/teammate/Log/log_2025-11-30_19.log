@@ -1,0 +1,167 @@
+[2025-11-30 19:07:09] TeamBuilder: building teams. participants=6, teamSize=4
+[2025-11-30 19:07:09] TeamBuilder: global average skill=5.0
+[2025-11-30 19:07:09] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-30 19:07:09] TeamBuilder: created 2 teams.
+[2025-11-30 19:07:09] Team summary: Team 1 | size=3 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=0 | balanced=3
+[2025-11-30 19:07:09] Team summary: Team 2 | size=3 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=0 | balanced=3
+[2025-11-30 19:07:10] TeamBuilder: building teams. participants=6, teamSize=3
+[2025-11-30 19:07:10] TeamBuilder: global average skill=5.5
+[2025-11-30 19:07:10] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-30 19:07:10] TeamBuilder: created 2 teams.
+[2025-11-30 19:07:10] Team summary: Team 1 | size=3 | avgSkill=5.0 | games=1 | roles=2 | leaders=0 | thinkers=0 | balanced=3
+[2025-11-30 19:07:10] Team summary: Team 2 | size=3 | avgSkill=6.0 | games=1 | roles=3 | leaders=0 | thinkers=0 | balanced=3
+[2025-11-30 19:07:10] TeamBuilder: building teams. participants=5, teamSize=4
+[2025-11-30 19:07:10] TeamBuilder: global average skill=5.6
+[2025-11-30 19:07:10] Small team detected: Team 1 | size=2
+[2025-11-30 19:07:10] TeamBuilder: fixing small teams (<3). Small teams=1
+[2025-11-30 19:07:10] Redistributing members from small team: Team 1
+[2025-11-30 19:07:10] Excluding team from candidate list: Team 1
+[2025-11-30 19:07:10] Moving participant C from Team 1 to Team 2
+[2025-11-30 19:07:10] Excluding team from candidate list: Team 1
+[2025-11-30 19:07:10] Moving participant D from Team 1 to Team 2
+[2025-11-30 19:07:10] TeamBuilder: after fixing, totalTeams=1
+[2025-11-30 19:07:10] TeamBuilder: created 1 teams.
+[2025-11-30 19:07:10] Team summary: Team 2 | size=5 | avgSkill=5.6 | games=1 | roles=4 | leaders=0 | thinkers=0 | balanced=5
+[2025-11-30 19:07:10] TeamBuilder: building teams. participants=5, teamSize=3
+[2025-11-30 19:07:10] TeamBuilder: global average skill=5.0
+[2025-11-30 19:07:10] Small team detected: Team 1 | size=2
+[2025-11-30 19:07:10] TeamBuilder: fixing small teams (<3). Small teams=1
+[2025-11-30 19:07:10] Redistributing members from small team: Team 1
+[2025-11-30 19:07:10] Excluding team from candidate list: Team 1
+[2025-11-30 19:07:10] Moving participant P4 from Team 1 to Team 2
+[2025-11-30 19:07:10] Excluding team from candidate list: Team 1
+[2025-11-30 19:07:10] Moving participant P3 from Team 1 to Team 2
+[2025-11-30 19:07:10] TeamBuilder: after fixing, totalTeams=1
+[2025-11-30 19:07:10] TeamBuilder: created 1 teams.
+[2025-11-30 19:07:10] Team summary: Team 2 | size=5 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=0 | balanced=5
+[2025-11-30 19:07:10] TeamBuilder: no participants available to build teams.
+[2025-11-30 19:07:10] TeamBuilder: building teams. participants=8, teamSize=4
+[2025-11-30 19:07:10] TeamBuilder: global average skill=5.0
+[2025-11-30 19:07:10] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-30 19:07:10] TeamBuilder: created 2 teams.
+[2025-11-30 19:07:10] Team summary: Team 1 | size=4 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=4 | balanced=0
+[2025-11-30 19:07:10] Team summary: Team 2 | size=4 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=4 | balanced=0
+[2025-11-30 19:07:10] TeamBuilder: building teams. participants=6, teamSize=4
+[2025-11-30 19:07:10] TeamBuilder: global average skill=6.0
+[2025-11-30 19:07:10] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-30 19:07:10] TeamBuilder: created 2 teams.
+[2025-11-30 19:07:10] Team summary: Team 1 | size=3 | avgSkill=6.0 | games=1 | roles=1 | leaders=3 | thinkers=0 | balanced=0
+[2025-11-30 19:07:10] Team summary: Team 2 | size=3 | avgSkill=6.0 | games=1 | roles=1 | leaders=3 | thinkers=0 | balanced=0
+[2025-11-30 19:07:10] TeamBuilder: building teams. participants=10, teamSize=4
+[2025-11-30 19:07:10] TeamBuilder: global average skill=5.5
+[2025-11-30 19:07:10] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-30 19:07:10] TeamBuilder: created 3 teams.
+[2025-11-30 19:07:10] Team summary: Team 1 | size=3 | avgSkill=5.333333333333333 | games=2 | roles=2 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-30 19:07:10] Team summary: Team 2 | size=4 | avgSkill=5.5 | games=2 | roles=2 | leaders=1 | thinkers=0 | balanced=3
+[2025-11-30 19:07:10] Team summary: Team 3 | size=3 | avgSkill=5.666666666666667 | games=2 | roles=2 | leaders=0 | thinkers=0 | balanced=3
+[2025-11-30 19:07:10] Excluding team from candidate list: B
+[2025-11-30 19:13:52] Loaded 4 participant accounts from file.
+[2025-11-30 19:13:52] Organizer login FAILED for username=admin
+[2025-11-30 19:13:52] Loaded 4 participant accounts from file.
+[2025-11-30 19:13:52] Participant signup success: username=john, id=P105, email=user105@university.edu
+[2025-11-30 19:13:52] Loaded 5 participant accounts from file.
+[2025-11-30 19:13:52] Organizer login FAILED for username=admin
+[2025-11-30 19:13:52] Loaded 5 participant accounts from file.
+[2025-11-30 19:13:52] Loaded 5 participant accounts from file.
+[2025-11-30 19:13:52] Loaded 5 participant accounts from file.
+[2025-11-30 19:13:53] Loaded 5 participant accounts from file.
+[2025-11-30 19:13:53] Loaded 5 participant accounts from file.
+[2025-11-30 19:21:43] TeamBuilder: building teams. participants=6, teamSize=4
+[2025-11-30 19:21:43] TeamBuilder: global average skill=5.0
+[2025-11-30 19:21:43] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-30 19:21:43] TeamBuilder: created 2 teams.
+[2025-11-30 19:21:43] Team summary: Team 1 | size=3 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=0 | balanced=3
+[2025-11-30 19:21:43] Team summary: Team 2 | size=3 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=0 | balanced=3
+[2025-11-30 19:21:43] TeamBuilder: building teams. participants=6, teamSize=3
+[2025-11-30 19:21:43] TeamBuilder: global average skill=5.5
+[2025-11-30 19:21:43] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-30 19:21:43] TeamBuilder: created 2 teams.
+[2025-11-30 19:21:43] Team summary: Team 1 | size=3 | avgSkill=5.0 | games=1 | roles=2 | leaders=0 | thinkers=0 | balanced=3
+[2025-11-30 19:21:43] Team summary: Team 2 | size=3 | avgSkill=6.0 | games=1 | roles=3 | leaders=0 | thinkers=0 | balanced=3
+[2025-11-30 19:21:43] TeamBuilder: building teams. participants=5, teamSize=4
+[2025-11-30 19:21:43] TeamBuilder: global average skill=5.6
+[2025-11-30 19:21:43] Small team detected: Team 1 | size=2
+[2025-11-30 19:21:43] TeamBuilder: fixing small teams (<3). Small teams=1
+[2025-11-30 19:21:43] Redistributing members from small team: Team 1
+[2025-11-30 19:21:43] Excluding team from candidate list: Team 1
+[2025-11-30 19:21:43] Moving participant C from Team 1 to Team 2
+[2025-11-30 19:21:43] Excluding team from candidate list: Team 1
+[2025-11-30 19:21:43] Moving participant D from Team 1 to Team 2
+[2025-11-30 19:21:43] TeamBuilder: after fixing, totalTeams=1
+[2025-11-30 19:21:43] TeamBuilder: created 1 teams.
+[2025-11-30 19:21:43] Team summary: Team 2 | size=5 | avgSkill=5.6 | games=1 | roles=4 | leaders=0 | thinkers=0 | balanced=5
+[2025-11-30 19:21:43] TeamBuilder: building teams. participants=5, teamSize=3
+[2025-11-30 19:21:43] TeamBuilder: global average skill=5.0
+[2025-11-30 19:21:43] Small team detected: Team 1 | size=2
+[2025-11-30 19:21:43] TeamBuilder: fixing small teams (<3). Small teams=1
+[2025-11-30 19:21:43] Redistributing members from small team: Team 1
+[2025-11-30 19:21:43] Excluding team from candidate list: Team 1
+[2025-11-30 19:21:43] Moving participant P5 from Team 1 to Team 2
+[2025-11-30 19:21:43] Excluding team from candidate list: Team 1
+[2025-11-30 19:21:43] Moving participant P4 from Team 1 to Team 2
+[2025-11-30 19:21:43] TeamBuilder: after fixing, totalTeams=1
+[2025-11-30 19:21:43] TeamBuilder: created 1 teams.
+[2025-11-30 19:21:43] Team summary: Team 2 | size=5 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=0 | balanced=5
+[2025-11-30 19:21:43] TeamBuilder: no participants available to build teams.
+[2025-11-30 19:21:43] TeamBuilder: building teams. participants=8, teamSize=4
+[2025-11-30 19:21:43] TeamBuilder: global average skill=5.0
+[2025-11-30 19:21:43] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-30 19:21:43] TeamBuilder: created 2 teams.
+[2025-11-30 19:21:43] Team summary: Team 1 | size=4 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=4 | balanced=0
+[2025-11-30 19:21:43] Team summary: Team 2 | size=4 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=4 | balanced=0
+[2025-11-30 19:21:43] TeamBuilder: building teams. participants=6, teamSize=4
+[2025-11-30 19:21:43] TeamBuilder: global average skill=6.0
+[2025-11-30 19:21:43] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-30 19:21:43] TeamBuilder: created 2 teams.
+[2025-11-30 19:21:43] Team summary: Team 1 | size=3 | avgSkill=6.0 | games=1 | roles=1 | leaders=3 | thinkers=0 | balanced=0
+[2025-11-30 19:21:43] Team summary: Team 2 | size=3 | avgSkill=6.0 | games=1 | roles=1 | leaders=3 | thinkers=0 | balanced=0
+[2025-11-30 19:21:43] TeamBuilder: building teams. participants=10, teamSize=4
+[2025-11-30 19:21:43] TeamBuilder: global average skill=5.5
+[2025-11-30 19:21:43] TeamBuilder: no small teams to fix (minSize=3).
+[2025-11-30 19:21:43] TeamBuilder: created 3 teams.
+[2025-11-30 19:21:43] Team summary: Team 1 | size=4 | avgSkill=5.5 | games=2 | roles=2 | leaders=1 | thinkers=0 | balanced=3
+[2025-11-30 19:21:43] Team summary: Team 2 | size=3 | avgSkill=5.333333333333333 | games=2 | roles=2 | leaders=1 | thinkers=0 | balanced=2
+[2025-11-30 19:21:43] Team summary: Team 3 | size=3 | avgSkill=5.666666666666667 | games=2 | roles=2 | leaders=0 | thinkers=0 | balanced=3
+[2025-11-30 19:21:43] Excluding team from candidate list: B
+[2025-11-30 19:49:06] Loaded 4 participant accounts from file.
+[2025-11-30 19:49:06] Organizer login FAILED for username=admin
+[2025-11-30 19:49:06] Loaded 4 participant accounts from file.
+[2025-11-30 19:49:06] Participant signup success: username=john, id=P105, email=user105@university.edu
+[2025-11-30 19:49:06] Loaded 5 participant accounts from file.
+[2025-11-30 19:49:06] Organizer login FAILED for username=admin
+[2025-11-30 19:49:06] Loaded 5 participant accounts from file.
+[2025-11-30 19:49:06] Loaded 5 participant accounts from file.
+[2025-11-30 19:49:06] Loaded 5 participant accounts from file.
+[2025-11-30 19:49:06] Loaded 5 participant accounts from file.
+[2025-11-30 19:49:06] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:08] Loaded 4 participant accounts from file.
+[2025-11-30 19:51:08] Organizer login FAILED for username=admin
+[2025-11-30 19:51:08] Loaded 4 participant accounts from file.
+[2025-11-30 19:51:08] Participant signup success: username=john, id=P105, email=user105@university.edu
+[2025-11-30 19:51:08] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:08] Organizer login FAILED for username=admin
+[2025-11-30 19:51:08] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:08] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:08] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:08] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:08] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:45] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:45] Organizer login FAILED for username=admin
+[2025-11-30 19:51:45] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:45] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:45] Organizer login FAILED for username=admin
+[2025-11-30 19:51:45] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:45] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:45] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:45] Loaded 5 participant accounts from file.
+[2025-11-30 19:51:45] Loaded 5 participant accounts from file.
+[2025-11-30 19:53:12] Loaded 4 participant accounts from file.
+[2025-11-30 19:53:12] Participant signup success: username=john, id=P105, email=user105@university.edu
+[2025-11-30 19:53:12] All participant accounts saved to file (with IDs and survey data).
+[2025-11-30 19:53:20] Loaded 4 participant accounts from file.
+[2025-11-30 19:53:20] Organizer login FAILED for username=admin
+[2025-11-30 19:53:34] Loaded 4 participant accounts from file.
+[2025-11-30 19:53:34] Participant signup success: username=john, id=P105, email=user105@university.edu
+[2025-11-30 19:53:34] Participant login FAILED for username=john
+[2025-11-30 19:53:43] Loaded 5 participant accounts from file.
+[2025-11-30 19:53:50] Loaded 5 participant accounts from file.

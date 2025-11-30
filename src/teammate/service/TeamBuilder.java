@@ -136,7 +136,6 @@ public class TeamBuilder {
     // ==============================================================
     //                SCORING HEURISTIC FOR PLACEMENT
     // ==============================================================
-
     private int evaluatePlacementScore(Team t, Participant p, double globalAvgSkill) {
         try {
             int score = 0;

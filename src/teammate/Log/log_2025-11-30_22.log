@@ -1,0 +1,11 @@
+[2025-11-30 22:00:26] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_missing_score11324034460971727927.csv
+[2025-11-30 22:00:26] Teams saved to CSV: src\teammate\TeamMembers\teams_20251130_220026.csv (teams=2)
+[2025-11-30 22:00:26] CSV load warning: invalid skill 'abc' on line 2 in file C:\Users\thiru\AppData\Local\Temp\participants_invalid_skill10768793987129943002.csv
+[2025-11-30 22:00:26] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_invalid_skill10768793987129943002.csv
+[2025-11-30 22:00:26] CSV load finished with 2 participants from C:\Users\thiru\AppData\Local\Temp\participants_test14102096545995687808.csv
+[2025-11-30 22:00:26] CSV load finished with 0 valid participants from C:\Users\thiru\AppData\Local\Temp\participants_header_only10794111107687842382.csv
+[2025-11-30 22:00:26] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_blanklines12170715441225218779.csv
+[2025-11-30 22:00:26] CSV load warning: line 2 missing columns in C:\Users\thiru\AppData\Local\Temp\participants_missing15985304384807309125.csv
+[2025-11-30 22:00:26] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_missing15985304384807309125.csv
+[2025-11-30 22:00:26] Teams saved to CSV: src\teammate\TeamMembers\teams_20251130_220026.csv (teams=1)
+[2025-11-30 22:00:26] Teams saved to CSV: src\teammate\TeamMembers\teams_20251130_220026.csv (teams=1)

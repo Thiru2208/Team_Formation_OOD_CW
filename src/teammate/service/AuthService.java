@@ -13,26 +13,27 @@ import java.util.Scanner;
 
 public class AuthService {
 
-    private static final String ACCOUNTS_FILE =
-            "src/teammate/auth/participant_accounts.csv";
-    private final LoggerService logger = LoggerService.getInstance();
-    private static final String ORGANIZER_FILE =
-            "src/teammate/auth/organizer_account.csv";
-    private Organizer organizerAccount;
+    private static final LoggerService logger = LoggerService.getInstance();
+    private static Organizer organizerAccount;
 
     // username (lowercase) -> plain password
-    private final Map<String, String> participantCredentials = new HashMap<>();
+    private static final Map<String, String> participantCredentials = new HashMap<>();
     // username (lowercase) -> Participant profile
-    private final Map<String, Participant> participantProfiles = new HashMap<>();
+    private static final Map<String, Participant> participantProfiles = new HashMap<>();
     // username (lowercase) -> generated ID (P101, P102, ...)
-    private final Map<String, String> participantIds = new HashMap<>();
+    private static final Map<String, String> participantIds = new HashMap<>();
 
     // next numeric ID to generate (101 => P101)
-    private int nextGeneratedNumericId = 101;
+    private static int nextGeneratedNumericId = 101;
+
+    private static final String ACCOUNTS_FILE =
+            "src/teammate/auth/participant_accounts.csv";
+    private static final String ORGANIZER_FILE =
+            "src/teammate/auth/organizer_account.csv";
 
     public AuthService() {
-        loadOrganizerAccount();
-        loadParticipantAccounts();
+        loadOrganizerAccount(ORGANIZER_FILE);
+        loadParticipantAccounts(ACCOUNTS_FILE);
     }
 
     // ================= ORGANIZER LOGIN =================
@@ -59,7 +60,7 @@ public class AuthService {
         return false;
     }
 
-    public void changeOrganizerPassword(Scanner sc) {
+    public void changeOrganizerPassword(Scanner sc, String ORGANIZER_FILE) {
         if (organizerAccount == null) {
             System.out.println("Organizer account not loaded – cannot change password.");
             return;
@@ -96,12 +97,12 @@ public class AuthService {
         }
 
         organizerAccount.setPassword(newPass);
-        saveOrganizerAccount();
+        saveOrganizerAccount(ORGANIZER_FILE);
 
         System.out.println("Organizer password updated successfully.");
     }
 
-    public void changeParticipantPassword(Scanner sc, Participant participant) {
+    public void changeParticipantPassword(Scanner sc, Participant participant, String ACCOUNTS_FILE) {
 
         if (participant == null) {
             System.out.println("No participant is logged in.");
@@ -146,14 +147,14 @@ public class AuthService {
         participant.setPassword(newPass);
 
         // Save permanently
-        saveAllAccountsToFile();
+        saveAllAccountsToFile(ACCOUNTS_FILE);
 
         System.out.println("Your password has been updated successfully!");
     }
 
 
     // ================= PARTICIPANT SIGNUP =================
-    public Participant participantSignup(Scanner sc) {
+    public Participant participantSignup(Scanner sc, String ACCOUNTS_FILE) {
         System.out.println("\n--- Participant Sign Up ---");
 
         // 1) Username (unique + not empty)
@@ -228,7 +229,7 @@ public class AuthService {
         // append this account to file (with all columns)
         appendAccountToFile(username, password, id, fullName, email,
                 p.getPreferredGame(), p.getSkillLevel(), p.getRole(),
-                p.getPersonalityScore(), p.getPersonalityType());
+                p.getPersonalityScore(), p.getPersonalityType(), ACCOUNTS_FILE);
 
         // increase ID counter for next signup
         nextGeneratedNumericId++;
@@ -274,7 +275,7 @@ public class AuthService {
         return profile;
     }
 
-    private void loadOrganizerAccount() {
+    public static void loadOrganizerAccount(String ORGANIZER_FILE) {
         File file = new File(ORGANIZER_FILE);
         if (!file.exists()) {
             System.out.println("Organizer account file missing: " + ORGANIZER_FILE);
@@ -311,7 +312,7 @@ public class AuthService {
     }
 
     // ================= FILE LOAD / SAVE =================
-    private void loadParticipantAccounts() {
+    public static void loadParticipantAccounts(String ACCOUNTS_FILE) {
         File file = new File(ACCOUNTS_FILE);
         if (!file.exists()) {
             logger.info("No existing participant accounts file found.");
@@ -438,7 +439,7 @@ public class AuthService {
                                      int skillLevel,
                                      String role,
                                      int personalityScore,
-                                     String personalityType) {
+                                     String personalityType, String ACCOUNTS_FILE) {
         try {
             File file = new File(ACCOUNTS_FILE);
             File parent = file.getParentFile();
@@ -467,7 +468,7 @@ public class AuthService {
     }
 
     // 🔹 called after survey updates so everything (including survey) is saved permanently
-    public void saveAllAccountsToFile() {
+    public void saveAllAccountsToFile(String ACCOUNTS_FILE) {
         try {
             File file = new File(ACCOUNTS_FILE);
             File parent = file.getParentFile();
@@ -521,7 +522,7 @@ public class AuthService {
         }
     }
 
-    private void saveOrganizerAccount() {
+    private void saveOrganizerAccount(String ORGANIZER_FILE) {
         if (organizerAccount == null) return;
 
         try {
@@ -562,7 +563,7 @@ public class AuthService {
                 .encodeToString(raw.getBytes(StandardCharsets.UTF_8));
     }
 
-    private String decryptPassword(String encoded) {
+    private static String decryptPassword(String encoded) {
         try {
             byte[] decoded = Base64.getDecoder().decode(encoded);
             return new String(decoded, StandardCharsets.UTF_8);
