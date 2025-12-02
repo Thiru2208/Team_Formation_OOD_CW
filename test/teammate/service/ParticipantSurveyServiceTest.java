@@ -251,7 +251,7 @@ class ParticipantSurveyServiceTest {
                         "0\n" +   // invalid (<1)
                         "11\n" +  // invalid (>10)
                         "5\n" +   // valid
-                        "4\n" +   // role (Strategist)
+                        "1\n" +   // role (Strategist)
                         "3\n" +   // Q1
                         "3\n" +   // Q2
                         "3\n" +   // Q3

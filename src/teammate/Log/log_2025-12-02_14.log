@@ -40,3 +40,214 @@
 [2025-12-02 14:27:58] Organizer logged in
 [2025-12-02 14:28:21] All participant accounts saved to file (with IDs and survey data).
 [2025-12-02 14:28:21] Participant permanently updated: Participant_104
+[2025-12-02 14:37:34] Loaded 4 participant accounts from file.
+[2025-12-02 14:37:34] Participant permanently updated: Test
+[2025-12-02 14:37:34] Participant deleted: A
+[2025-12-02 14:38:08] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:08] Organizer login FAILED for username=admin
+[2025-12-02 14:38:08] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:08] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-12-02 14:38:08] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:08] Organizer login success for username=admin
+[2025-12-02 14:38:08] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:08] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:08] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-12-02 14:38:08] All participant accounts saved to file (with IDs and survey data).
+[2025-12-02 14:38:08] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:08] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-12-02 14:38:08] Participant login success: username=john
+[2025-12-02 14:38:08] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:08] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-12-02 14:38:08] Participant login FAILED for username=john
+[2025-12-02 14:38:08] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:19] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_missing_score1472473602787021951.csv
+[2025-12-02 14:38:19] Teams saved to CSV: src\teammate\TeamMembers\teams_20251202_143819.csv (teams=2)
+[2025-12-02 14:38:19] CSV load warning: invalid skill 'abc' on line 2 in file C:\Users\thiru\AppData\Local\Temp\participants_invalid_skill8412694657520562409.csv
+[2025-12-02 14:38:19] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_invalid_skill8412694657520562409.csv
+[2025-12-02 14:38:19] CSV load finished with 2 participants from C:\Users\thiru\AppData\Local\Temp\participants_test3186841003971224453.csv
+[2025-12-02 14:38:19] CSV load finished with 0 valid participants from C:\Users\thiru\AppData\Local\Temp\participants_header_only2076892571697213210.csv
+[2025-12-02 14:38:19] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_blanklines7958266942646476301.csv
+[2025-12-02 14:38:19] CSV load warning: line 2 missing columns in C:\Users\thiru\AppData\Local\Temp\participants_missing16146223847676736329.csv
+[2025-12-02 14:38:19] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_missing16146223847676736329.csv
+[2025-12-02 14:38:19] Teams saved to CSV: src\teammate\TeamMembers\teams_20251202_143819.csv (teams=1)
+[2025-12-02 14:38:19] Teams saved to CSV: src\teammate\TeamMembers\teams_20251202_143819.csv (teams=1)
+[2025-12-02 14:38:25] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:25] Survey completed and saved for participant: Test User | Game=Valorant | Role=Supporter | Score=60 | Type=Balanced
+[2025-12-02 14:38:25] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:25] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:38:25] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:25] Survey skipped (already completed) for participant: Existing User
+[2025-12-02 14:38:25] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:25] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:25] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:38:25] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:25] Survey completed and saved for participant: Test User | Game=Valorant | Role=Defender | Score=80 | Type=Balanced
+[2025-12-02 14:38:33] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:33] Survey completed and saved for participant: Test User | Game=Valorant | Role=Supporter | Score=60 | Type=Balanced
+[2025-12-02 14:38:33] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:33] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:38:33] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:33] Survey skipped (already completed) for participant: Existing User
+[2025-12-02 14:38:33] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:33] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:33] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:38:33] Loaded 4 participant accounts from file.
+[2025-12-02 14:38:33] Survey completed and saved for participant: Test User | Game=Valorant | Role=Defender | Score=80 | Type=Balanced
+[2025-12-02 14:39:08] Loaded 4 participant accounts from file.
+[2025-12-02 14:39:08] Survey completed and saved for participant: Test User | Game=Valorant | Role=Supporter | Score=60 | Type=Balanced
+[2025-12-02 14:39:17] Loaded 4 participant accounts from file.
+[2025-12-02 14:39:17] Survey completed and saved for participant: Test User | Game=Valorant | Role=Supporter | Score=60 | Type=Balanced
+[2025-12-02 14:39:23] TeamBuilder: building teams. participants=8, teamSize=4
+[2025-12-02 14:39:23] TeamBuilder: global average skill=5.0
+[2025-12-02 14:39:23] TeamBuilder: no small teams to fix (minSize=3).
+[2025-12-02 14:39:23] TeamBuilder: created 2 teams.
+[2025-12-02 14:39:23] Team summary: Team 1 | size=4 | avgSkill=5.0 | games=2 | roles=1 | leaders=0 | thinkers=0 | balanced=4
+[2025-12-02 14:39:23] Team summary: Team 2 | size=4 | avgSkill=5.0 | games=2 | roles=1 | leaders=0 | thinkers=0 | balanced=4
+[2025-12-02 14:39:23] TeamBuilder: building teams. participants=6, teamSize=3
+[2025-12-02 14:39:23] TeamBuilder: global average skill=5.5
+[2025-12-02 14:39:23] TeamBuilder: no small teams to fix (minSize=3).
+[2025-12-02 14:39:23] TeamBuilder: created 2 teams.
+[2025-12-02 14:39:23] Team summary: Team 1 | size=3 | avgSkill=4.666666666666667 | games=1 | roles=2 | leaders=0 | thinkers=0 | balanced=3
+[2025-12-02 14:39:23] Team summary: Team 2 | size=3 | avgSkill=6.333333333333333 | games=1 | roles=3 | leaders=0 | thinkers=0 | balanced=3
+[2025-12-02 14:39:23] TeamBuilder: building teams. participants=5, teamSize=4
+[2025-12-02 14:39:23] TeamBuilder: global average skill=5.6
+[2025-12-02 14:39:23] Small team detected: Team 1 | size=2
+[2025-12-02 14:39:23] TeamBuilder: fixing small teams (<3). Small teams=1
+[2025-12-02 14:39:23] Redistributing members from small team: Team 1
+[2025-12-02 14:39:23] Excluding team from candidate list: Team 1
+[2025-12-02 14:39:23] Moving participant C from Team 1 to Team 2
+[2025-12-02 14:39:23] Excluding team from candidate list: Team 1
+[2025-12-02 14:39:23] Moving participant D from Team 1 to Team 2
+[2025-12-02 14:39:23] TeamBuilder: after fixing, totalTeams=1
+[2025-12-02 14:39:23] TeamBuilder: created 1 teams.
+[2025-12-02 14:39:23] Team summary: Team 2 | size=5 | avgSkill=5.6 | games=1 | roles=4 | leaders=0 | thinkers=0 | balanced=5
+[2025-12-02 14:39:23] TeamBuilder: building teams. participants=5, teamSize=3
+[2025-12-02 14:39:23] TeamBuilder: global average skill=5.0
+[2025-12-02 14:39:23] Small team detected: Team 1 | size=2
+[2025-12-02 14:39:23] TeamBuilder: fixing small teams (<3). Small teams=1
+[2025-12-02 14:39:23] Redistributing members from small team: Team 1
+[2025-12-02 14:39:23] Excluding team from candidate list: Team 1
+[2025-12-02 14:39:23] Moving participant P2 from Team 1 to Team 2
+[2025-12-02 14:39:23] Excluding team from candidate list: Team 1
+[2025-12-02 14:39:23] Moving participant P4 from Team 1 to Team 2
+[2025-12-02 14:39:23] TeamBuilder: after fixing, totalTeams=1
+[2025-12-02 14:39:23] TeamBuilder: created 1 teams.
+[2025-12-02 14:39:23] Team summary: Team 2 | size=5 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=0 | balanced=5
+[2025-12-02 14:39:23] TeamBuilder: no participants available to build teams.
+[2025-12-02 14:39:23] TeamBuilder: building teams. participants=8, teamSize=4
+[2025-12-02 14:39:23] TeamBuilder: global average skill=5.0
+[2025-12-02 14:39:23] TeamBuilder: no small teams to fix (minSize=3).
+[2025-12-02 14:39:23] TeamBuilder: created 2 teams.
+[2025-12-02 14:39:23] Team summary: Team 1 | size=4 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=3 | balanced=1
+[2025-12-02 14:39:23] Team summary: Team 2 | size=4 | avgSkill=5.0 | games=1 | roles=1 | leaders=0 | thinkers=3 | balanced=1
+[2025-12-02 14:39:23] TeamBuilder: building teams. participants=8, teamSize=4
+[2025-12-02 14:39:23] TeamBuilder: global average skill=6.0
+[2025-12-02 14:39:23] TeamBuilder: no small teams to fix (minSize=3).
+[2025-12-02 14:39:23] TeamBuilder: created 2 teams.
+[2025-12-02 14:39:23] Team summary: Team 1 | size=4 | avgSkill=6.0 | games=1 | roles=1 | leaders=2 | thinkers=0 | balanced=2
+[2025-12-02 14:39:23] Team summary: Team 2 | size=4 | avgSkill=6.0 | games=1 | roles=1 | leaders=2 | thinkers=0 | balanced=2
+[2025-12-02 14:39:23] TeamBuilder: building teams. participants=10, teamSize=4
+[2025-12-02 14:39:23] TeamBuilder: global average skill=5.5
+[2025-12-02 14:39:23] TeamBuilder: no small teams to fix (minSize=3).
+[2025-12-02 14:39:23] TeamBuilder: created 3 teams.
+[2025-12-02 14:39:23] Team summary: Team 1 | size=3 | avgSkill=5.333333333333333 | games=2 | roles=2 | leaders=1 | thinkers=0 | balanced=2
+[2025-12-02 14:39:23] Team summary: Team 2 | size=3 | avgSkill=5.666666666666667 | games=2 | roles=2 | leaders=0 | thinkers=0 | balanced=3
+[2025-12-02 14:39:23] Team summary: Team 3 | size=4 | avgSkill=5.5 | games=2 | roles=2 | leaders=1 | thinkers=0 | balanced=3
+[2025-12-02 14:39:23] Excluding team from candidate list: B
+[2025-12-02 14:54:55] Loaded 4 participant accounts from file.
+[2025-12-02 14:54:55] Survey completed and saved for participant: Test User | Game=Valorant | Role=Strategist | Score=60 | Type=Balanced
+[2025-12-02 14:54:55] Loaded 4 participant accounts from file.
+[2025-12-02 14:54:55] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:54:55] Loaded 4 participant accounts from file.
+[2025-12-02 14:54:55] Survey skipped (already completed) for participant: Existing User
+[2025-12-02 14:54:55] Loaded 4 participant accounts from file.
+[2025-12-02 14:54:55] Loaded 4 participant accounts from file.
+[2025-12-02 14:54:55] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:54:55] Loaded 4 participant accounts from file.
+[2025-12-02 14:54:55] Survey completed and saved for participant: Test User | Game=Valorant | Role=Defender | Score=80 | Type=Balanced
+[2025-12-02 14:55:58] Loaded 4 participant accounts from file.
+[2025-12-02 14:55:58] Survey completed and saved for participant: Test User | Game=Valorant | Role=Strategist | Score=60 | Type=Balanced
+[2025-12-02 14:55:58] Loaded 4 participant accounts from file.
+[2025-12-02 14:55:58] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:55:58] Loaded 4 participant accounts from file.
+[2025-12-02 14:55:58] Survey skipped (already completed) for participant: Existing User
+[2025-12-02 14:55:58] Loaded 4 participant accounts from file.
+[2025-12-02 14:55:58] Loaded 4 participant accounts from file.
+[2025-12-02 14:55:58] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:55:58] Loaded 4 participant accounts from file.
+[2025-12-02 14:55:58] Survey completed and saved for participant: Test User | Game=Valorant | Role=Defender | Score=80 | Type=Balanced
+[2025-12-02 14:57:02] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:02] Survey completed and saved for participant: Test User | Game=Valorant | Role=Strategist | Score=60 | Type=Balanced
+[2025-12-02 14:57:02] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:02] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:57:02] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:02] Survey skipped (already completed) for participant: Existing User
+[2025-12-02 14:57:02] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:02] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:02] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:57:02] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:02] Survey completed and saved for participant: Test User | Game=Valorant | Role=Defender | Score=80 | Type=Balanced
+[2025-12-02 14:57:39] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:39] Survey completed and saved for participant: Test User | Game=Valorant | Role=Strategist | Score=60 | Type=Balanced
+[2025-12-02 14:57:39] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:39] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:57:39] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:39] Survey skipped (already completed) for participant: Existing User
+[2025-12-02 14:57:39] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:39] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:39] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:57:40] Loaded 4 participant accounts from file.
+[2025-12-02 14:57:40] Survey completed and saved for participant: Test User | Game=Valorant | Role=Defender | Score=80 | Type=Balanced
+[2025-12-02 14:58:35] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:35] Participant permanently updated: Test
+[2025-12-02 14:58:35] Participant deleted: A
+[2025-12-02 14:58:42] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:42] Organizer login FAILED for username=admin
+[2025-12-02 14:58:42] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:42] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-12-02 14:58:42] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:42] Organizer login success for username=admin
+[2025-12-02 14:58:42] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:42] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:42] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-12-02 14:58:42] All participant accounts saved to file (with IDs and survey data).
+[2025-12-02 14:58:42] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:42] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-12-02 14:58:42] Participant login success: username=john
+[2025-12-02 14:58:42] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:42] Participant signup success: username=john, id=P101, email=user101@university.edu
+[2025-12-02 14:58:42] Participant login FAILED for username=john
+[2025-12-02 14:58:42] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:49] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_missing_score1999983508647999597.csv
+[2025-12-02 14:58:49] Teams saved to CSV: src\teammate\TeamMembers\teams_20251202_145849.csv (teams=2)
+[2025-12-02 14:58:49] CSV load warning: invalid skill 'abc' on line 2 in file C:\Users\thiru\AppData\Local\Temp\participants_invalid_skill3604969725179840630.csv
+[2025-12-02 14:58:49] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_invalid_skill3604969725179840630.csv
+[2025-12-02 14:58:49] CSV load finished with 2 participants from C:\Users\thiru\AppData\Local\Temp\participants_test13840509127426424377.csv
+[2025-12-02 14:58:49] CSV load finished with 0 valid participants from C:\Users\thiru\AppData\Local\Temp\participants_header_only15508768429101797865.csv
+[2025-12-02 14:58:49] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_blanklines11601508449814572479.csv
+[2025-12-02 14:58:49] CSV load warning: line 2 missing columns in C:\Users\thiru\AppData\Local\Temp\participants_missing9758357655783700647.csv
+[2025-12-02 14:58:49] CSV load finished with 1 participants from C:\Users\thiru\AppData\Local\Temp\participants_missing9758357655783700647.csv
+[2025-12-02 14:58:49] Teams saved to CSV: src\teammate\TeamMembers\teams_20251202_145849.csv (teams=1)
+[2025-12-02 14:58:49] Teams saved to CSV: src\teammate\TeamMembers\teams_20251202_145849.csv (teams=1)
+[2025-12-02 14:58:55] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:55] Survey completed and saved for participant: Test User | Game=Valorant | Role=Strategist | Score=60 | Type=Balanced
+[2025-12-02 14:58:55] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:55] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:58:55] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:55] Survey skipped (already completed) for participant: Existing User
+[2025-12-02 14:58:55] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:56] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:56] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:58:56] Loaded 4 participant accounts from file.
+[2025-12-02 14:58:56] Survey completed and saved for participant: Test User | Game=Valorant | Role=Defender | Score=80 | Type=Balanced
+[2025-12-02 14:59:03] Loaded 4 participant accounts from file.
+[2025-12-02 14:59:03] Survey completed and saved for participant: Test User | Game=Valorant | Role=Strategist | Score=60 | Type=Balanced
+[2025-12-02 14:59:03] Loaded 4 participant accounts from file.
+[2025-12-02 14:59:03] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:59:03] Loaded 4 participant accounts from file.
+[2025-12-02 14:59:03] Survey skipped (already completed) for participant: Existing User
+[2025-12-02 14:59:03] Loaded 4 participant accounts from file.
+[2025-12-02 14:59:03] Loaded 4 participant accounts from file.
+[2025-12-02 14:59:03] Survey completed and saved for participant: Test User | Game=Valorant | Role=Attacker | Score=84 | Type=Leader
+[2025-12-02 14:59:03] Loaded 4 participant accounts from file.
+[2025-12-02 14:59:03] Survey completed and saved for participant: Test User | Game=Valorant | Role=Defender | Score=80 | Type=Balanced
