@@ -11,7 +11,7 @@ public class ParticipantSurveyService {
     };
 
     public static final String[] GAME_OPTIONS = {
-            "Valorant", "DOTA 2", "FIFA", "Basketball", "Badminton", "Chess", "CS:GP"
+            "Valorant", "DOTA 2", "FIFA", "Basketball", "Badminton", "Chess", "CS:GO"
     };
 
     // 5 questions text

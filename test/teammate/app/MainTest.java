@@ -1,6 +1,9 @@
 package teammate.app;
 
 import org.junit.jupiter.api.Test;
+import teammate.model.Participant;
+import teammate.service.AuthService;
+import teammate.service.LoggerService;
 
 import java.io.ByteArrayInputStream;
 import java.nio.charset.StandardCharsets;
@@ -179,4 +182,66 @@ class MainTest {
 
         assertEquals(8, result, "Numbers above max must be rejected");
     }
+
+    @Test
+    void deleteParticipantByNumber_removesCorrectParticipant() {
+
+        // prepare participants list
+        Main.participants.clear();
+        Participant p1 = new Participant("A", "a@mail.com", "Valorant", 5, "Attacker");
+        Participant p2 = new Participant("B", "b@mail.com", "FIFA", 7, "Defender");
+        Main.participants.add(p1);
+        Main.participants.add(p2);
+
+        // user types: "1"
+        String input = "1\n";
+        Scanner sc = new Scanner(
+                new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8))
+        );
+
+        LoggerService logger = LoggerService.getInstance();
+
+        Main.deleteParticipantByNumber(sc, logger);
+
+        // check result
+        assertEquals(1, Main.participants.size());
+        assertEquals("B", Main.participants.get(0).getName());
+    }
+
+    @Test
+    void updateParticipantByNumber_updatesFieldsCorrectly() {
+
+        Main.participants.clear();
+        Participant p1 = new Participant("Test", "mail@mail.com", "FIFA", 5, "Strategist");
+        Main.participants.add(p1);
+
+        // user flow:
+        // choose participant 1
+        // new game = 1 (Valorant)
+        // new role = 2 (Attacker)
+        // new skill = 7
+        // save = Y
+        String input = "1\n1\n2\n7\nY\n";
+
+        Scanner sc = new Scanner(
+                new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8))
+        );
+
+        AuthService fakeAuth = new AuthService() {
+            @Override
+            public void saveAllAccountsToFile(String f) {
+                // prevent file writes
+            }
+        };
+
+        LoggerService logger = LoggerService.getInstance();
+
+        Main.updateParticipantByNumber(sc, logger, fakeAuth);
+
+        assertEquals("Valorant", p1.getPreferredGame());
+        assertEquals("Attacker", p1.getRole());
+        assertEquals(7, p1.getSkillLevel());
+    }
+
+
 }

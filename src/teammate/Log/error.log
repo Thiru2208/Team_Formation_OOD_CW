@@ -95,3 +95,4 @@ java.lang.NumberFormatException: For input string: ""
 [2025-11-30 22:00:26] ERROR: CSV load failed – empty file: C:\Users\thiru\AppData\Local\Temp\participants_empty18087959468438601160.csv
 [2025-11-30 22:00:26] ERROR: CSV load failed – not a CSV: C:\Users\thiru\AppData\Local\Temp\participants_test7372304889891598752.txt
 [2025-11-30 22:00:26] ERROR: CSV load failed – file not found: this_file_does_not_exist.csv
+[2025-12-01 15:41:29] ERROR: Organizer entered out-of-range index for update: 102

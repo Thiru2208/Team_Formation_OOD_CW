@@ -1,0 +1,42 @@
+[2025-12-02 14:12:19] Participant deleted: A
+[2025-12-02 14:12:19] Loaded 4 participant accounts from file.
+[2025-12-02 14:12:19] Participant permanently updated: Test
+[2025-12-02 14:12:25] Participant deleted: A
+[2025-12-02 14:12:25] Loaded 4 participant accounts from file.
+[2025-12-02 14:12:25] Participant permanently updated: Test
+[2025-12-02 14:13:11] Loaded 4 participant accounts from file.
+[2025-12-02 14:13:11] Participant permanently updated: Test
+[2025-12-02 14:13:11] Participant deleted: A
+[2025-12-02 14:13:56] Loaded 4 participant accounts from file.
+[2025-12-02 14:13:56] Application started
+[2025-12-02 14:14:27] Organizer login success for username=organizer
+[2025-12-02 14:14:27] Organizer logged in
+[2025-12-02 14:14:53] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-12-02 14:14:53] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-12-02 14:15:32] Update kept in memory only (not saved to file) for participant: Participant_100
+[2025-12-02 14:20:50] Loaded 4 participant accounts from file.
+[2025-12-02 14:20:50] Participant permanently updated: Test
+[2025-12-02 14:20:50] Participant deleted: A
+[2025-12-02 14:21:30] Loaded 4 participant accounts from file.
+[2025-12-02 14:21:30] Application started
+[2025-12-02 14:21:43] Organizer login success for username=organizer
+[2025-12-02 14:21:43] Organizer logged in
+[2025-12-02 14:21:47] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-12-02 14:21:47] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-12-02 14:23:08] Participant deleted: Participant_100
+[2025-12-02 14:23:38] Update kept in memory only (not saved to file) for participant: Participant_99
+[2025-12-02 14:24:34] All participant accounts saved to file (with IDs and survey data).
+[2025-12-02 14:24:34] Participant permanently updated: Participant_99
+[2025-12-02 14:27:36] Participant login FAILED for username=p4
+[2025-12-02 14:27:36] Participant login failed
+[2025-12-02 14:27:44] Participant login success: username=p3
+[2025-12-02 14:27:44] Participant logged in: Participant_104
+[2025-12-02 14:27:46] Starting SurveyProcessingThread for Participant_104
+[2025-12-02 14:27:46] SurveyProcessingTask START for participant=Participant_104
+[2025-12-02 14:27:46] Survey skipped (already completed) for participant: Participant_104
+[2025-12-02 14:27:46] SurveyProcessingTask END for participant=Participant_104
+[2025-12-02 14:27:46] SurveyProcessingThread finished for Participant_104
+[2025-12-02 14:27:58] Organizer login success for username=organizer
+[2025-12-02 14:27:58] Organizer logged in
+[2025-12-02 14:28:21] All participant accounts saved to file (with IDs and survey data).
+[2025-12-02 14:28:21] Participant permanently updated: Participant_104

@@ -1,0 +1,10 @@
+[2025-12-01 16:05:31] Loaded 4 participant accounts from file.
+[2025-12-01 16:05:31] Application started
+[2025-12-01 16:05:49] Organizer login success for username=organizer
+[2025-12-01 16:05:49] Organizer logged in
+[2025-12-01 16:06:01] Participant login success: username=p1
+[2025-12-01 16:06:01] Participant logged in: Participant_102
+[2025-12-01 16:06:13] Organizer login success for username=organizer
+[2025-12-01 16:06:13] Organizer logged in
+[2025-12-01 16:06:59] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-12-01 16:06:59] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv

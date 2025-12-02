@@ -14,7 +14,7 @@ import static teammate.service.ParticipantSurveyService.ROLE_OPTIONS;
 
 public class Main {
 
-    private static ArrayList<Participant> participants = new ArrayList<>();
+    static ArrayList<Participant> participants = new ArrayList<>();
     private static ArrayList<Team> teams = new ArrayList<>();
     private static final LoggerService logger = LoggerService.getInstance();
     private static final String ACCOUNTS_FILE =
@@ -28,7 +28,6 @@ public class Main {
         CSVHandler csvHandler = new CSVHandler();
         TeamBuilder teamBuilder = new TeamBuilder();
         AuthService authService = new AuthService();
-        //LoggerService logger = new LoggerService();
         ParticipantSurveyService surveyService = new ParticipantSurveyService();
         ExecutorService executor = Executors.newFixedThreadPool(4);
         logger.info("Application started");
@@ -268,7 +267,7 @@ public class Main {
         }
     }
 
-    private static void updateParticipantByNumber(Scanner sc,
+    public static void updateParticipantByNumber(Scanner sc,
                                                   LoggerService logger,
                                                   AuthService authService) {
 
@@ -413,7 +412,7 @@ public class Main {
         }
     }
 
-    private static void deleteParticipantByNumber(Scanner sc, LoggerService logger) {
+    public static void deleteParticipantByNumber(Scanner sc, LoggerService logger) {
         if (participants.isEmpty()) {
             System.out.println("No participants loaded.");
             return;

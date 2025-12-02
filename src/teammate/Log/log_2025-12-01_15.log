@@ -1,0 +1,17 @@
+[2025-12-01 15:39:51] Loaded 4 participant accounts from file.
+[2025-12-01 15:39:51] Application started
+[2025-12-01 15:40:21] Loaded 4 participant accounts from file.
+[2025-12-01 15:40:21] Application started
+[2025-12-01 15:40:30] Participant login FAILED for username=p4
+[2025-12-01 15:40:30] Participant login failed
+[2025-12-01 15:40:36] Participant login success: username=p1
+[2025-12-01 15:40:36] Participant logged in: Participant_102
+[2025-12-01 15:40:40] Starting SurveyProcessingThread for Participant_102
+[2025-12-01 15:40:40] SurveyProcessingTask START for participant=Participant_102
+[2025-12-01 15:40:40] Survey skipped (already completed) for participant: Participant_102
+[2025-12-01 15:40:40] SurveyProcessingTask END for participant=Participant_102
+[2025-12-01 15:40:40] SurveyProcessingThread finished for Participant_102
+[2025-12-01 15:40:50] Organizer login success for username=organizer
+[2025-12-01 15:40:50] Organizer logged in
+[2025-12-01 15:41:13] CSV load finished with 100 participants from C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
+[2025-12-01 15:41:13] Organizer loaded 100 participants from CSV: C:\Users\thiru\OneDrive\Documents\Stage 2\SEM 1\OOP\Coursework2601\src\teammate\auth\participants_sample.csv
