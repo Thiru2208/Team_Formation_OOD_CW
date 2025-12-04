@@ -4,6 +4,8 @@ package teammate.model;
  * Base class for all humans in the system.
  * Organizer and Participant both extend this.
  */
+// Abstract base class storing common fields for both Organizer and Participant.
+
 public abstract class Human {
 
     protected String name;

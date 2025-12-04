@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+// Handles organizer/participant authentication, password changes, and account file loading/saving.
+
 public class AuthService {
 
     private static final LoggerService logger = LoggerService.getInstance();

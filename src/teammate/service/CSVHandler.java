@@ -11,6 +11,8 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+// Handles loading participants from CSV files and exporting formed teams to CSV with logging.
+
 public class CSVHandler {
     private final LoggerService logger = LoggerService.getInstance();
 
