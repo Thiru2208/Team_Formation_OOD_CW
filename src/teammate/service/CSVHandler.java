@@ -19,7 +19,6 @@ public class CSVHandler {
     /**
      * Loads participants from a CSV file with full validation.
      * CSV Format expected:
-     *
      * ID,Name,Email,PreferredGame,SkillLevel,PreferredRole,PersonalityScore,PersonalityType
      */
     public ArrayList<Participant> loadParticipants(String filePath, LoggerService logger) {
@@ -141,7 +140,7 @@ public class CSVHandler {
             File folder = new File("src/teammate/TeamMembers");
             if (!folder.exists()) folder.mkdirs();
 
-            // Proper timestamp: yyyyMMdd_HHmmss
+            /* Proper timestamp: yyyyMMdd_HHmmss */
             String timestamp = java.time.LocalDateTime.now()
                     .format(java.time.format.DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
 

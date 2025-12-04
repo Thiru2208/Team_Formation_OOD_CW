@@ -8,6 +8,8 @@ import java.util.Scanner;
  * Background task: "processing survey data" using a separate thread.
  * You can imagine this as validating / analysing survey results.
  */
+// Runs the participant survey in a background thread and saves the updated survey data.
+
 public class SurveyProcessingTask implements Runnable {
 
     private final ParticipantSurveyService surveyService;

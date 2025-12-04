@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+// Provides a simple logging system that writes info and error messages to timestamped log files.
 public class LoggerService {
 
     private static final String LOG_DIR = "src/teammate/Log/";

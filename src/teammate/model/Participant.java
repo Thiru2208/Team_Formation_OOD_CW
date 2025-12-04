@@ -9,6 +9,8 @@ public class Participant extends Human {
     private String personalityType;
     private int personalityScore;
 
+    // Represents a participant with game preferences, skill level, role, and personality attributes.
+
     public Participant(String name, String email,
                        String preferredGame, int skillLevel, String role) {
         // username/password are handled by AuthService; not needed here

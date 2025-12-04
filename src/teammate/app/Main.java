@@ -13,15 +13,20 @@ import static teammate.service.ParticipantSurveyService.GAME_OPTIONS;
 import static teammate.service.ParticipantSurveyService.ROLE_OPTIONS;
 
 public class Main {
-
+    //Stores all participant records in memory
     static ArrayList<Participant> participants = new ArrayList<>();
+   //Holds all formed teams
     private static ArrayList<Team> teams = new ArrayList<>();
+    //Logger instance for tracking system activities
     private static final LoggerService logger = LoggerService.getInstance();
+    //File path fot participant data
     private static final String ACCOUNTS_FILE =
             "src/teammate/auth/participant_accounts.csv";
+    //File path for organizer data
     private static final String ORGANIZER_FILE =
             "src/teammate/auth/organizer_account.csv";
 
+    //Starts the system, shows main menu, and handles all user actions.
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -96,6 +101,7 @@ public class Main {
     }
 
     // ================= ORGANIZER MENU ===================
+    //Handles login, signup, survey ,team formation
     private static void organizerMenu(Scanner sc,
                                       CSVHandler csvHandler,
                                       TeamBuilder teamBuilder, AuthService authService,
@@ -214,6 +220,7 @@ public class Main {
         }
     }
 
+    //Gets a valid team size from the user, ensuring it is between 3 and 15
     static int askTeamSize(Scanner sc, int max) {
         while (true) {
             System.out.print("Enter team size (min 3): ");
@@ -231,6 +238,7 @@ public class Main {
         }
     }
 
+    //Displays all formed teams with each member's details
     private static void showTeams() {
         if (teams.isEmpty()) {
             System.out.println("No teams formed yet.");
@@ -267,6 +275,7 @@ public class Main {
         }
     }
 
+    // Updates a selected participant’s details by number, with validation and optional file saving.
     public static void updateParticipantByNumber(Scanner sc,
                                                   LoggerService logger,
                                                   AuthService authService) {

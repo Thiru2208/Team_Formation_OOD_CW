@@ -9,6 +9,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+// Builds balanced teams using game, role, personality, and skill constraints, and fixes uneven team sizes.
+
 public class TeamBuilder {
 
     // === CONFIGURABLE CONSTRAINTS for SMART MODE ===

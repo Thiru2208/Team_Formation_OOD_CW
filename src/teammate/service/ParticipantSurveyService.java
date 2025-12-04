@@ -157,3 +157,5 @@ public class ParticipantSurveyService {
     }
 
 }
+
+// Manages the participant survey, collects answers, calculates personality type, and saves updated profiles.
