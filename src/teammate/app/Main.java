@@ -276,40 +276,44 @@ public class Main {
     }
 
     // Updates a selected participant’s details by number, with validation and optional file saving.
+    // [UPD 1] Select "Update participant data"
     public static void updateParticipantByNumber(Scanner sc,
                                                   LoggerService logger,
                                                   AuthService authService) {
 
+        // [UPD 1.1] check if participants list is empty
         if (participants.isEmpty()) {
-            System.out.println("No participants loaded.");
+            System.out.println("No participants loaded.");  // [UPD 1.1.1] show "No participants loaded"
             return;
         }
 
-        printParticipantsWithNumbers();
+        printParticipantsWithNumbers(); // [UPD 1.2.1] printParticipantsWithNumber()
         System.out.println();
         System.out.println("--- Update Participant Details ---");
-        System.out.print("Enter participant number to UPDATE: ");
-        String updStr = sc.nextLine().trim();
+        System.out.print("Enter participant number to UPDATE: ");    // [UPD 1.2.2] ask "Enter participant number to UPDATE"
+        String updStr = sc.nextLine().trim();     // [UPD 1.2.3] enter participant number (string)
         int updIndex;
 
         try {
-            updIndex = Integer.parseInt(updStr);
+            updIndex = Integer.parseInt(updStr); // [UPD 1.2.4] parse participant number (Integer.parseInt)
         } catch (NumberFormatException e) {
-            System.out.println("Invalid number.");
+            System.out.println("Invalid number.");  // [UPD 1.2.4.1] show "Invalid number"
             logger.error("Organizer entered invalid participant index for update: " + updStr, e);
             return;
         }
 
+        // [UPD 1.2.4.3] check index in range (1..size)
         if (updIndex < 1 || updIndex > participants.size()) {
             System.out.println("Index out of range.");
-            logger.error("Organizer entered out-of-range index for update: " + updIndex);
+            logger.error("Organizer entered out-of-range index for update: " + updIndex);   // [UPD 1.2.4.5] error "out-of-range index for update"
             return;
         }
 
-        Participant target = participants.get(updIndex - 1);
+        Participant target = participants.get(updIndex - 1);    // [UPD 1.3.1] get participant by index
         System.out.println("Updating: " + target.getName());
 
         // ---- backup old values (for cancel) ----
+        // [UPD 1.3.3] backup oldGame, oldRole, oldSkill
         String oldGame  = target.getPreferredGame();
         String oldRole  = target.getRole();
         int    oldSkill = target.getSkillLevel();
@@ -317,13 +321,13 @@ public class Main {
         // ================== UPDATE GAME (with options) ==================
         System.out.println("\nSelect NEW Game (or 0 to keep current)");
         System.out.println("Current game: " + target.getPreferredGame());
-        System.out.println("0. Keep current");
+        System.out.println("0. Keep current");   // [UPD 2.1] show current game
         for (int i = 0; i < GAME_OPTIONS.length; i++) {
             System.out.println((i + 1) + ". " + GAME_OPTIONS[i]);
         }
         while (true) {
-            System.out.print("Enter choice: ");
-            String gameChoice = sc.nextLine().trim();
+            System.out.print("Enter choice: "); // [UPD 2.2.1] ask choices for game / role / skill
+            String gameChoice = sc.nextLine().trim();   // [UPD 2.2.2] enter choices
             try {
                 int gc = Integer.parseInt(gameChoice);
                 if (gc == 0) {
@@ -375,18 +379,21 @@ public class Main {
                 int sv = Integer.parseInt(skillStr);
                 if (sv == 0) {
                     break; // keep old skill
-                } else if (sv >= 1 && sv <= 10) {
+                    // [UPD 2.3.1.1] all choices valid or kept
+                } else if (sv >= 1 && sv <= 10) {   //[UPD 2.3.1.1.1] update target game / role / skill as needed
                     target.setSkillLevel(sv);
                     break;
                 } else {
-                    System.out.println("Please enter 0 or a value from 1 to 10.");
+                    System.out.println("Please enter 0 or a value from 1 to 10.");  // [UPD 2.3.2] some choice invalid
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Please enter a valid number.");
+                System.out.println("Please enter a valid number.");   // [UPD 2.3.2.3.2.1] show "Please enter valid option"
+                // loop continues
             }
         }
 
         // ---- show summary of new values ----
+        // [UPD 3.1] show updated summary
         System.out.println("\nReview updated details:");
         System.out.println("Name : " + target.getName());
         System.out.println("Game : " + target.getPreferredGame());
@@ -395,27 +402,31 @@ public class Main {
 
         // ---- confirm permanent save ----
         while (true) {
-            System.out.print("Save these changes permanently to file? (Y/N): ");
-            String ans = sc.nextLine().trim();
+            System.out.print("Save these changes permanently to file? (Y/N): ");     // [UPD 3.2.1] ask "Save these changes permanently? (Y/N)?"
+            String ans = sc.nextLine().trim();    // [UPD 3.2.2] enter answer
 
-            if (ans.equalsIgnoreCase("Y")) {
+            if (ans.equalsIgnoreCase("Y")) {    // [UPD 3.2.3] alt Answer Y
                 try {
-                    authService.saveAllAccountsToFile("src/teammate/auth/participant_accounts.csv");
-                    logger.info("Participant permanently updated: " + target.getName());
-                    System.out.println("Successfully updated & saved: " + target.getName());
+                    authService.saveAllAccountsToFile("src/teammate/auth/participant_accounts.csv");    // [UPD 3.2.3.1.1] saveAllAccountsToFile()
+                    logger.info("Participant permanently updated: " + target.getName());     // [UPD 3.2.3.1.1.2] info "Participant permanently updated"
+                    System.out.println("Successfully updated & saved: " + target.getName());     // [UPD 3.2.3.1.3] show "Successful updated & saved"
                 } catch (Exception e) {
+                    // [UPD 3.2.3.2.1] save failed (exception)
+                    // [UPD 3.2.3.2.2] error "Failed to save updated participant"
                     logger.error("Failed to save updated participant to file: " + target.getName(), e);
                     System.out.println("Failed to save changes. Please try again.");
                 }
                 break;
 
-            } else if (ans.equalsIgnoreCase("N")) {
+            } else if (ans.equalsIgnoreCase("N")) { //[UPD 3.2.4] Answer N
                 // KEEP new values in memory, just don't write to file
-                logger.info("Update kept in memory only (not saved to file) for participant: " + target.getName());
-                System.out.println("Changes kept for this session only (not saved to file).");
+                logger.info("Update kept in memory only (not saved to file) for participant: " + target.getName()); // [UPD 3.2.4.1] info "Update kept in memory only (not saved to file)"
+                System.out.println("Changes kept for this session only (not saved to file).");  // [UPD 3.2.4.2] show "Changes kept for this session only"
                 break;
 
             } else {
+                // [UPD 3.2.5] Other input
+                // [UPD 3.2.5.1] show "Please enter Y or N."
                 System.out.println("Please enter Y or N.");
             }
         }
