@@ -41,6 +41,10 @@ public class LoggerService {
     public void info(String message) {
         writeInfo(message);
     }
+    // [UPD 1.2.4.5] log invalid index for update
+    // [UPD 3.2.3.1.1.2] info "Participant permanently updated"
+    // [UPD 3.2.3.2.2] error "Failed to save updated participant"
+    // [UPD 3.2.4.1] info "Update kept in memory only"
 
     public void error(String message) {
         writeError(message, null);

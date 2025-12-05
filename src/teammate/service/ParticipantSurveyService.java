@@ -78,15 +78,18 @@ public class ParticipantSurveyService {
     }
 
     // Survey for an EXISTING logged-in participant (p2, etc.)
+    // [SURV 1.4.2] runSurveyForExistingParticipant(scanner, participant, authService, ACCOUNTS_FILE)
     public void runSurveyForExistingParticipant(Scanner sc,
                                                 Participant p,
                                                 AuthService authService, String ACCOUNTS_FILE) {
 
         LoggerService logger = LoggerService.getInstance();
 
+        // [SURV 2.1] check if participant already has a completed survey
         if (p.getPersonalityType() != null &&
                 !p.getPersonalityType().equalsIgnoreCase("Not selected")) {
 
+            // [SURV 2.1.1] display "You already completed the survey" and show saved profile
             System.out.println("\nYou already completed the survey earlier.");
             System.out.println("Your saved profile will be used for team formation:");
             System.out.println("Name       : " + p.getName());
@@ -95,28 +98,36 @@ public class ParticipantSurveyService {
             System.out.println("Skill      : " + p.getSkillLevel());
             System.out.println("Personality: " + p.getPersonalityType());
             System.out.println("Score      : " + p.getPersonalityScore());
-
+            // [SURV 2.1.2]
             logger.info("Survey skipped (already completed) for participant: " + p.getName());
-            return;
+            return; // [SURV 2.1.3]
         }
-
+        // [SURV 2.2] New survey required
         // Preferred game
+        // [SURV 2.2.1]
         String game = chooseFromOptions(sc, "Select Preferred Game:", GAME_OPTIONS);
+        // [SURV 2.2.2] Game Choice
         System.out.println();
 
         // Skill
+        // [SURV 2.2.3]
         int skillLevel = askIntInRange(sc,
                 "Enter Skill Level (1–10): ", 1, 10);
+        // [SURV 2.2.4]
         System.out.println();
         // Role
+        // [SURV 2.2.5]
         String role = chooseFromOptions(sc, "Select Preferred Role:", ROLE_OPTIONS);
+        // [SURV 2.2.6]
         System.out.println();
-        // Questions Q1–Q5
+        // [SURV 2.3] Questions Q1–Q5
         int[] answers = new int[5];
         for (int q = 0; q < QUESTIONS.length; q++) {
+            // [SURV 2.3.1] Display question + Rating prompt
             System.out.println(QUESTIONS[q]);
             answers[q] = askIntInRange(sc,
                     "Rate 1 (Strongly Disagree) to 5 (Strongly Agree): ", 1, 5);
+            // [SURV 2.3.2] Rating (1-5)
             System.out.println();
         }
 
@@ -127,6 +138,7 @@ public class ParticipantSurveyService {
         int q5 = answers[4];
 
         int totalScore = q1 + q2 + q3 + q4 + q5;
+        // [SURV 2.4] Calculate Personality()
         int personalityScore = totalScore * 4;
         String personalityType = calculatePersonality(q1, q2, q3, q4, q5);
 
@@ -136,26 +148,28 @@ public class ParticipantSurveyService {
         p.setRole(role);
         p.setPersonalityScore(personalityScore);
         p.setPersonalityType(personalityType);
+        // [SURV 2.5] Display updated profile(game, role, skill, type)
         System.out.println("Updated profile: " + p.getName()
                 + " | " + game + " | Skill " + skillLevel
                 + " | Role " + role
                 + " | Type " + personalityType);
-
         // NOW MAKE IT PERMANENT
         try {
+            // [SURV 2.6]
             authService.saveAllAccountsToFile(ACCOUNTS_FILE);
             logger.info("Survey completed and saved for participant: " + p.getName() +
                     " | Game=" + game +
                     " | Role=" + role +
                     " | Score=" + personalityScore +
                     " | Type=" + personalityType);
+            // [SURV 2.6.1.1]
             System.out.println("Survey completed and saved for participant: " + p.getName());
+            // [SURV 2.7] return
         } catch (Exception e) {
             LoggerService.getInstance().error("Failed to save survey data for " + p.getName(), e);
             System.out.println("Survey failed to save for " + p.getName());
         }
     }
-
 }
 
 // Manages the participant survey, collects answers, calculates personality type, and saves updated profiles.

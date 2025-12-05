@@ -20,36 +20,38 @@ public class TeamBuilder {
     private static final int MAX_THINKERS_PER_TEAM   = 3;  // soft max
 
     // ================== MODE: SMART / BALANCED TEAMS ==================
-
+    // [FORM 2.2] buildTeams
     public ArrayList<Team> buildTeams(ArrayList<Participant> participants,
                                       int teamSize,
                                       LoggerService logger) {
 
         ArrayList<Team> teams = new ArrayList<>();
-
         try {
-
+            // [FORM 2.2.1] Teambuilder runs successfully
             if (participants == null || participants.isEmpty()) {
             logger.info("TeamBuilder: no participants available to build teams.");
             System.out.println("TeamBuilder: no participants available to build teams.");
-            return teams;
+            return teams;   // return empty team list
             }
 
             logger.info("TeamBuilder: building teams. participants=" + participants.size()
-                    + ", teamSize=" + teamSize);
+                    + ", teamSize=" + teamSize);    // Log start of team building with size and teamSize
             System.out.println("TeamBuilder: building teams. participants=" + participants.size() + ", teamSize=" + teamSize);
 
             // ----- how many teams? -----
+            // [FORM 2.2.1.1] calculate number of teams and create Team objects
             int teamCount = (int) Math.ceil((double) participants.size() / teamSize);
             for (int i = 1; i <= teamCount; i++) {
                 teams.add(new Team("Team " + i));
             }
 
             // ----- prepare participants list -----
+            // [FORM 2.2.1.2] shuffle and sort participants by skill (high → low)
             Collections.shuffle(participants);
             participants.sort((a, b) -> Integer.compare(b.getSkillLevel(), a.getSkillLevel()));
 
             // global average skill
+            // [FORM 2.2.1.3] compute global average skill
             int totalSkill = 0;
             for (Participant p : participants) {
                 totalSkill += p.getSkillLevel();
@@ -61,6 +63,7 @@ public class TeamBuilder {
             System.out.println("TeamBuilder: global average skill=" + globalAvgSkill);
 
             // ----- assign each participant to best team (heuristic scoring) -----
+            // [FORM 2.2.1.4] For each participant p, loop over participants and assign to best team using evaluatePlacementScore()
             for (Participant p : participants) {
 
                 Team bestTeam = null;
@@ -73,7 +76,7 @@ public class TeamBuilder {
                     if (t.getMembers().size() >= teamSize) {
                         continue; // team already full
                     }
-
+                    // [FORM 2.2.1.4.1] Evaluate Placement Score
                     int score = evaluatePlacementScore(t, p, globalAvgSkill);
 
                     if (score > bestScore) {
@@ -82,17 +85,21 @@ public class TeamBuilder {
                     }
                 }
 
+                // if no best team found (all full), fallback to smallest team
                 if (bestTeam == null) {
                     bestTeam = findSmallestTeam(teams, teamSize);
                 }
 
+                // [FORM 2.2.1.4.2] add participant to chosen team
                 bestTeam.addMember(p);
             }
 
-            // EXTRA STEP: ensure all teams have at least 3 members
+            // ensure all teams have at least 3 members
+            // [FORM 2.2.1.5] ensureMinTeamSize() to fix very small teams
             ensureMinTeamSize(teams, 3, logger);
 
             // ----- logging summary -----
+            // [FORM 2.2.1.6] Log final team summaries
             logger.info("TeamBuilder: created " + teams.size() + " teams.");
             System.out.println("TeamBuilder: created " + teams.size() + " teams.");
 
@@ -107,6 +114,7 @@ public class TeamBuilder {
 
                 double avgSkill = averageSkill(t);
 
+                // log per-team composition (size, avgSkill, roles, personalities)
                 logger.info("Team summary: " + t.getTeamName()
                         + " | size=" + size
                         + " | avgSkill=" + avgSkill
@@ -115,7 +123,7 @@ public class TeamBuilder {
                         + " | leaders=" + leaders
                         + " | thinkers=" + thinkers
                         + " | balanced=" + balanced);
-
+                // [FORM 2.2.1.7] Return final teams list
                 System.out.println("Team summary: " + t.getTeamName()
                         + " | size=" + size
                         + " | avgSkill=" + avgSkill
@@ -126,12 +134,15 @@ public class TeamBuilder {
                         + " | balanced=" + balanced);
             }
         } catch (Exception e) {
+            // [FORM 2.2.2] Exception inside team builder
+                // [FORM 2.2.2.1] catch any unexpected errors in team building
                 logger.error("TeamBuilder FAILED: " + e.getMessage(), e);
                 System.out.println("Error occurred during team formation: " + e.getMessage());
 
-                // fail-safe empty list
+                // [FORM 2.2.2.2] fail-safe empty list
                 return new ArrayList<>();
             }
+
         return teams;
     }
 
@@ -147,9 +158,9 @@ public class TeamBuilder {
             int sameGameCount = countGameInTeam(t, game);
 
             if (sameGameCount >= MAX_PER_GAME_PER_TEAM) {
-                score -= 1000;
+                score -= 1000; // hard penalty if limit exceeded
             } else {
-                score += (MAX_PER_GAME_PER_TEAM - sameGameCount) * 5;
+                score += (MAX_PER_GAME_PER_TEAM - sameGameCount) * 5;    // reward more variety
             }
 
             // ---------- 2. Role variety ----------
@@ -160,7 +171,7 @@ public class TeamBuilder {
             int effectiveMinRoles = Math.min(MIN_DISTINCT_ROLES, t.getMembers().size() + 1);
 
             if (!roleAlreadyExists && currentRoles.size() < effectiveMinRoles) {
-                score += 15;
+                score += 15;    // strong reward for new role up to target
             } else if (!roleAlreadyExists) {
                 score += 5;
             } else {
@@ -174,18 +185,19 @@ public class TeamBuilder {
 
             if (type.equalsIgnoreCase("Leader")) {
                 if (leaders >= MAX_LEADERS_PER_TEAM) {
-                    score -= 400;
+                    score -= 400;   // penalty if too many leaders
                 } else {
-                    score += (MAX_LEADERS_PER_TEAM - leaders) * 10;
+                    score += (MAX_LEADERS_PER_TEAM - leaders) * 10;  // reward
                 }
             } else if (type.equalsIgnoreCase("Thinker")) {
                 if (thinkers >= MAX_THINKERS_PER_TEAM) {
-                    score -= 250;
+                    score -= 250;    // penalty if too many thinkers
                 } else {
-                    score += (MAX_THINKERS_PER_TEAM - thinkers) * 6;
+                    score += (MAX_THINKERS_PER_TEAM - thinkers) * 6;    // reward
                 }
             } else {
                 score += 4; // Balanced
+                // small boost for "Balanced"
             }
 
             // ---------- 4. Skill balancing ----------
@@ -290,6 +302,7 @@ public class TeamBuilder {
             List<Team> smallTeams = new ArrayList<>();
 
             // 1) identify small teams
+            // [FORM 2.2.1] detect teams with size < minSize and > 0
             for (Team t : teams) {
                 if (t.getMembers().size() > 0 && t.getMembers().size() < minSize) {
                     smallTeams.add(t);
@@ -314,6 +327,7 @@ public class TeamBuilder {
             System.out.println("TeamBuilder: fixing small teams (<" + minSize + "). Small teams=" + smallTeams.size());
 
             // 2) redistribute members from small teams into other teams
+            // [FORM 2.2.2] redistribute participants from each small team
             for (Team small : smallTeams) {
                 logger.info("Redistributing members from small team: " + small.getTeamName());
                 System.out.println("Redistributing members from small team: " + small.getTeamName());
@@ -343,6 +357,7 @@ public class TeamBuilder {
             }
 
             // 3) remove teams that ended up empty
+            // [FORM 2.2.3] remove empty teams and log final count
             teams.removeIf(t -> t.getMembers().isEmpty());
             logger.info("TeamBuilder: after fixing, totalTeams=" + teams.size());
             System.out.println("TeamBuilder: after fixing, totalTeams=" + teams.size());

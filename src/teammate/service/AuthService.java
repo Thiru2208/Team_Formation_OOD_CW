@@ -471,6 +471,8 @@ public class AuthService {
 
     // 🔹 called after survey updates so everything (including survey) is saved permanently
     public void saveAllAccountsToFile(String ACCOUNTS_FILE) {
+        // [UPD 3.2.3.1.1] saveAllAccountsToFile()
+        // [SURV 2.6] saveAllAccountsToFile()      (from Complete Survey)
         try {
             File file = new File(ACCOUNTS_FILE);
             File parent = file.getParentFile();
@@ -515,11 +517,19 @@ public class AuthService {
                 }
             }
 
+            // [UPD 3.2.3.1.1.1]
+            // [SURV 2.6.1] Save success
             logger.info("All participant accounts saved to file (with IDs and survey data).");
+            // [SURV 2.6.1.2]
+            // [SURV 2.6.1.3]
             System.out.println("All participant accounts saved to file.");
 
         } catch (IOException e) {
+            // [UPD 3.2.3.2.1] save failed (exception)
+            // [SURV 2.6.2]    save failed (exception)
             logger.error("Error saving all accounts to file: " + ACCOUNTS_FILE, e);
+            // [SURV 2.6.2.1]
+            // [SURV 2.6.2.2]
             System.out.println("Error saving all accounts: " + e.getMessage());
         }
     }
